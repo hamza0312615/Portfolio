@@ -1009,136 +1009,230 @@ function runNeonCircuitGame(ctx, width, height) {
   loop();
 }
 
-// Balloon Pop Game Logic
+// Project Balloon Pop Engine - Interactive Project Bubble Popping Game
 function runBalloonPopGame(ctx, width, height) {
   let score = 0;
   let balloons = [];
+  let particles = [];
+  let floatTexts = [];
+  let frameCount = 0;
+
+  let userActive = false;
+  let userActiveTimeout = null;
+
+  const projectItems = [
+    { name: '⚡ VisionDX Mega', color: '#06b6d4' },
+    { name: '🚨 ResQNet AI', color: '#ec4899' },
+    { name: '🛰️ AQUORA Water', color: '#38bdf8' },
+    { name: '📚 Study Lens AI', color: '#8b5cf6' },
+    { name: '📱 Balloon Pop Deluxe', color: '#f59e0b' },
+    { name: '🤟 PSL Sign AI', color: '#10b981' },
+    { name: '🗣️ VoiceDoc Scribe', color: '#a855f7' },
+    { name: '📖 Historical Novel', color: '#f43f5e' }
+  ];
+
+  const triggerUserActive = () => {
+    userActive = true;
+    if (userActiveTimeout) clearTimeout(userActiveTimeout);
+    userActiveTimeout = setTimeout(() => { userActive = false; }, 4000);
+  };
+
+  // Web Audio API Synthesizer Pop Sound
+  function playPopSound() {
+    try {
+      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(450, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(120, audioCtx.currentTime + 0.12);
+
+      gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.12);
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.12);
+    } catch (e) {}
+  }
 
   function spawnBalloon() {
-    if (Math.random() < 0.05) {
+    if (Math.random() < 0.045) {
+      const item = projectItems[Math.floor(Math.random() * projectItems.length)];
       balloons.push({
-        x: Math.random() * (width - 60) + 30,
-        y: height + 40,
-        radius: Math.random() * 15 + 20,
-        color: ['#ec4899', '#06b6d4', '#f59e0b', '#10b981', '#a855f7'][Math.floor(Math.random() * 5)],
-        speed: Math.random() * 2 + 1.5
+        x: Math.random() * (width - 120) + 60,
+        y: height + 50,
+        radius: Math.random() * 10 + 26,
+        name: item.name,
+        color: item.color,
+        speed: Math.random() * 1.5 + 1.8,
+        wobble: Math.random() * Math.PI * 2
       });
     }
   }
 
+  function popBalloon(index, isAuto = false) {
+    const b = balloons[index];
+    if (!b) return;
+
+    playPopSound();
+    score += 50;
+
+    floatTexts.push({
+      x: b.x,
+      y: b.y,
+      text: isAuto ? `🤖 AUTO-POP! +50 XP` : `💥 POP! +50 XP`,
+      color: b.color,
+      life: 35
+    });
+
+    // Particle Burst
+    for (let p = 0; p < 18; p++) {
+      particles.push({
+        x: b.x,
+        y: b.y,
+        vx: (Math.random() - 0.5) * 8,
+        vy: (Math.random() - 0.5) * 8,
+        color: b.color,
+        life: 25
+      });
+    }
+
+    balloons.splice(index, 1);
+  }
+
   const canvasEl = document.getElementById('arcade-canvas');
-  canvasEl.onclick = (e) => {
+
+  const handlePointerPop = (clientX, clientY) => {
+    triggerUserActive();
     const rect = canvasEl.getBoundingClientRect();
-    const clickX = e.clientX - rect.left;
-    const clickY = e.clientY - rect.top;
+    const clickX = clientX - rect.left;
+    const clickY = clientY - rect.top;
 
     for (let i = balloons.length - 1; i >= 0; i--) {
       const b = balloons[i];
       const dist = Math.hypot(clickX - b.x, clickY - b.y);
-      if (dist < b.radius + 10) {
-        balloons.splice(i, 1);
-        score += 25;
+      if (dist < b.radius + 20) {
+        popBalloon(i, false);
         break;
       }
     }
   };
 
+  canvasEl.onclick = (e) => handlePointerPop(e.clientX, e.clientY);
+  canvasEl.ontouchstart = (e) => {
+    if (e.touches && e.touches[0]) {
+      handlePointerPop(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  };
+
   function loop() {
-    ctx.fillStyle = '#0d121d';
+    frameCount++;
+    ctx.fillStyle = '#080c16';
     ctx.fillRect(0, 0, width, height);
+
+    // Floating background bubbles
+    ctx.strokeStyle = 'rgba(168, 85, 247, 0.1)';
+    ctx.lineWidth = 1;
+    for (let y = (frameCount * 0.5) % 60; y < height; y += 60) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(width, y);
+      ctx.stroke();
+    }
 
     spawnBalloon();
 
+    // AI Auto-Pop Showcase when user is idle
+    if (!userActive && frameCount % 45 === 0 && balloons.length > 0) {
+      const randomIndex = Math.floor(Math.random() * balloons.length);
+      popBalloon(randomIndex, true);
+    }
+
+    // Render & Update Balloons
     for (let i = balloons.length - 1; i >= 0; i--) {
       const b = balloons[i];
       b.y -= b.speed;
+      b.wobble += 0.04;
+      b.x += Math.sin(b.wobble) * 0.8;
 
+      // Draw Balloon Sphere
       ctx.beginPath();
       ctx.arc(b.x, b.y, b.radius, 0, Math.PI * 2);
       ctx.fillStyle = b.color;
       ctx.shadowColor = b.color;
-      ctx.shadowBlur = 12;
+      ctx.shadowBlur = 18;
       ctx.fill();
       ctx.shadowBlur = 0;
+
+      // Specular highlight reflection
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+      ctx.beginPath();
+      ctx.arc(b.x - b.radius * 0.3, b.y - b.radius * 0.3, b.radius * 0.25, 0, Math.PI * 2);
+      ctx.fill();
 
       // Balloon string
       ctx.beginPath();
       ctx.moveTo(b.x, b.y + b.radius);
-      ctx.lineTo(b.x, b.y + b.radius + 15);
-      ctx.strokeStyle = 'rgba(255,255,255,0.4)';
+      ctx.lineTo(b.x + Math.sin(b.wobble) * 4, b.y + b.radius + 20);
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.35)';
+      ctx.lineWidth = 1.5;
       ctx.stroke();
 
-      if (b.y < -50) balloons.splice(i, 1);
+      // Project Badge Label below balloon
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.9)';
+      ctx.strokeStyle = b.color;
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.roundRect(b.x - 65, b.y + b.radius + 22, 130, 22, 6);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 11px Plus Jakarta Sans, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(b.name, b.x, b.y + b.radius + 37);
+
+      if (b.y < -70) balloons.splice(i, 1);
     }
 
-    document.getElementById('arcade-score-text').innerText = `BALLOONS POPPED: ${score} (Click balloons to pop!)`;
-    arcadeAnimId = requestAnimationFrame(loop);
-  }
+    // Render & Update Particles
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life--;
 
-  loop();
-}
-
-// Mob Control Evolution Logic
-function runMobControlGame(ctx, width, height) {
-  let score = 0;
-  let mobs = [];
-  const gates = [
-    { x: width * 0.3, y: height * 0.4, label: 'x3', multiplier: 3 },
-    { x: width * 0.7, y: height * 0.4, label: 'x5', multiplier: 5 }
-  ];
-
-  const canvasEl = document.getElementById('arcade-canvas');
-  canvasEl.onclick = () => {
-    mobs.push({ x: width / 2, y: height - 40, vy: -3, radius: 8 });
-  };
-
-  function loop() {
-    ctx.fillStyle = '#0b0f19';
-    ctx.fillRect(0, 0, width, height);
-
-    // Gates
-    gates.forEach(g => {
-      ctx.fillStyle = 'rgba(99, 102, 241, 0.3)';
-      ctx.border = '2px solid #6366f1';
-      ctx.fillRect(g.x - 40, g.y - 20, 80, 40);
-      ctx.fillStyle = '#fff';
-      ctx.font = 'bold 18px Outfit';
-      ctx.textAlign = 'center';
-      ctx.fillText(g.label, g.x, g.y + 6);
-    });
-
-    for (let i = mobs.length - 1; i >= 0; i--) {
-      const m = mobs[i];
-      m.y += m.vy;
-
+      ctx.fillStyle = p.color;
       ctx.beginPath();
-      ctx.arc(m.x, m.y, m.radius, 0, Math.PI * 2);
-      ctx.fillStyle = '#06b6d4';
+      ctx.arc(p.x, p.y, Math.max(1, p.life / 5), 0, Math.PI * 2);
       ctx.fill();
 
-      // Check gate collision
-      gates.forEach(g => {
-        if (Math.abs(m.x - g.x) < 40 && Math.abs(m.y - g.y) < 20) {
-          mobs.splice(i, 1);
-          for (let k = 0; k < g.multiplier; k++) {
-            mobs.push({
-              x: g.x + (Math.random() - 0.5) * 30,
-              y: g.y - 30,
-              vy: -3.5,
-              radius: 7
-            });
-          }
-          score += 15;
-        }
-      });
-
-      if (m.y < 30) {
-        mobs.splice(i, 1);
-        score += 50;
-      }
+      if (p.life <= 0) particles.splice(i, 1);
     }
 
-    document.getElementById('arcade-score-text').innerText = `MOB POWER: ${mobs.length} units | SCORE: ${score} (Click Cannon to Fire!)`;
+    // Render Floating Text
+    for (let i = floatTexts.length - 1; i >= 0; i--) {
+      const ft = floatTexts[i];
+      ft.y -= 1.2;
+      ft.life--;
+
+      ctx.fillStyle = ft.color;
+      ctx.font = 'bold 14px Outfit';
+      ctx.textAlign = 'center';
+      ctx.fillText(ft.text, ft.x, ft.y);
+
+      if (ft.life <= 0) floatTexts.splice(i, 1);
+    }
+
+    // HUD Text Display
+    document.getElementById('arcade-score-text').innerText = userActive 
+      ? `PROJECT BUBBLES POPPED SCORE: ${score} XP | MANUAL BUBBLE POPPING (Click/Touch)` 
+      : `PROJECT BUBBLES POPPED SCORE: ${score} XP | 🎈 AI AUTO-POP SHOWCASE (Click/Touch balloons to pop!)`;
+
     arcadeAnimId = requestAnimationFrame(loop);
   }
 
@@ -1153,6 +1247,7 @@ function openResumeModal() {
 
   container.innerHTML = `
     <div style="text-align:center; margin-bottom: 1.5rem;">
+      <img src="assets/hamza_avatar.png" alt="Muhammad Hamza" style="width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--accent-cyan); box-shadow: var(--shadow-neon-cyan); object-fit: cover; margin-bottom: 0.75rem;">
       <h2 style="font-size: 2.2rem;" class="gradient-text">Muhammad Hamza</h2>
       <p style="color: var(--accent-amber); font-weight:700; margin-top:0.25rem;">🏆 Top 12 Finalist @ Google AI Seekho Builders Day • Top 10 Finalist @ GDG IST</p>
       <p style="color: var(--accent-cyan); font-weight:600; margin-top:0.25rem;">Computer Science Student @ Institute of Space Technology (IST)</p>
