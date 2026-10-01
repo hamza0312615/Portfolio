@@ -322,28 +322,6 @@ const PROJECTS_DATA = [
     playable: true
   },
   {
-    id: "mob-control-evolution",
-    title: "⚔️ Mob Control Evolution Strategy",
-    category: "games",
-    categoryLabel: "Web & Mobile Games",
-    status: "Playable Web Game",
-    image: "assets/balloon_pop_gameplay.png",
-    summary: "Tactical crowd multiplication strategy game with multiplier gates, base defense cannons, card upgrades, and mob boss battles.",
-    description: "Players shoot mob units through x2, x3, and x5 multiplier gates to overrun enemy towers, unlock champion cards, and upgrade cannon fire rates.",
-    tech: ["JavaScript", "HTML5 Canvas Engine", "Web Audio", "CSS3 Animations"],
-    architecture: "Entity Component System (ECS) managing 500+ active on-screen sprites with quad-tree collision optimization.",
-    features: [
-      "Massive crowd physics rendering at smooth 60fps",
-      "Dynamic gate multiplication logic & bonus rewards",
-      "In-game upgrade shop with persistent progression",
-      "Boss level challenges and tower destruction FX"
-    ],
-    github: "https://github.com/hamza0312615",
-    liveUrl: "#arcade",
-    localPath: "d:/data from drive f/ALL projects/games/mob-control-evolution",
-    playable: true
-  },
-  {
     id: "ist-gym-system",
     title: "🏋️ IST Gym Management System",
     category: "fullstack",
