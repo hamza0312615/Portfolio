@@ -235,6 +235,11 @@ html {
 
 body {
   background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(ellipse at 15% 10%, rgba(2, 132, 199, 0.2), transparent 45%),
+    radial-gradient(ellipse at 85% 30%, rgba(126, 34, 206, 0.18), transparent 50%),
+    radial-gradient(ellipse at 50% 85%, rgba(190, 24, 93, 0.14), transparent 55%);
+  background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-main);
   line-height: 1.6;
