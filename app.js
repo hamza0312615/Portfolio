@@ -33,7 +33,7 @@ const PROJECTS_DATA = [
     category: "ai-health",
     categoryLabel: "AI & HealthTech",
     status: "🏆 Top 12 Google AI Seekho | Top 10 GDG IST",
-    image: "assets/vdx_hero.png",
+    image: "assets/visiondx_ai_showcase_1790828020658.png",
     summary: "Offline-first AI health diagnostics platform with 12 AI modules, 71-gesture PSL sign language translation, and VoiceDoc interface.",
     description: "VisionDX Mega is an offline-first AI healthcare ecosystem designed for underserved communities in Pakistan. Built with 12 AI modules including skin/eye/hair analysis, audio cough detection, lab report parser, 71-gesture Pakistan Sign Language translator, and automated WhatsApp triage backend.",
     tech: ["React", "Python", "Groq LLM", "TensorFlow", "MediaPipe", "OpenPose", "WhatsApp API", "Vite"],
@@ -521,9 +521,13 @@ function renderProjects() {
     <div class="glass-card project-card">
       <div class="project-thumb-container">
         <img src="${p.image}" alt="${p.title}" class="project-thumb" loading="lazy" onError="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'200\'><rect width=\'400\' height=\'200\' fill=\'%230f172a\'/><text x=\'200\' y=\'100\' fill=\'%2306b6d4\' text-anchor=\'middle\'>${encodeURIComponent(p.title)}</text></svg>'">
-        <span class="project-badge-top">${p.categoryLabel}</span>
+        <div class="project-thumb-vignette"></div>
       </div>
       <div class="project-body">
+        <div class="project-meta-row">
+          <span class="project-category-chip">${p.categoryLabel}</span>
+          ${p.status ? `<span class="project-status-chip">${p.status}</span>` : ''}
+        </div>
         <h3 class="project-title">${p.title}</h3>
         <p class="project-desc">${p.summary}</p>
         <div class="tech-stack-pills">

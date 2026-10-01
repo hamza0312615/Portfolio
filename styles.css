@@ -156,10 +156,21 @@ body.light-theme .search-box input {
   color: #0f172a;
 }
 
-body.light-theme .tech-pill {
-  background: #f1f5f9;
-  border: 1px solid #cbd5e1;
-  color: #1e293b;
+body.light-theme .project-category-chip {
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284c7;
+  border-color: rgba(2, 132, 199, 0.3);
+}
+
+body.light-theme .project-status-chip {
+  background: rgba(126, 34, 206, 0.1);
+  color: #7e22ce;
+  border-color: rgba(126, 34, 206, 0.3);
+}
+
+body.light-theme .project-thumb-container {
+  background: #e2e8f0;
+  border-bottom-color: #cbd5e1;
 }
 
 body.light-theme .innovation-radar-card {
@@ -890,35 +901,65 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-thumb-container {
   position: relative;
-  height: 200px;
+  height: 225px;
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #080c16;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
 }
 
 .project-thumb {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: center top;
   transition: transform var(--transition-slow);
 }
 
 .project-card:hover .project-thumb {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
-.project-badge-top {
+.project-thumb-vignette {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background: rgba(7, 9, 14, 0.85);
-  backdrop-filter: blur(8px);
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10, 14, 26, 0.15) 0%, transparent 25%, transparent 75%, rgba(10, 14, 26, 0.75) 100%);
+  pointer-events: none;
+}
+
+.project-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.project-category-chip {
+  background: rgba(56, 189, 248, 0.12);
   color: var(--accent-cyan);
-  border: 1px solid rgba(6, 182, 212, 0.3);
-  font-size: 0.75rem;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  font-size: 0.74rem;
   font-weight: 700;
-  padding: 0.25rem 0.75rem;
+  padding: 0.22rem 0.65rem;
   border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+}
+
+.project-status-chip {
+  background: rgba(168, 85, 247, 0.12);
+  color: var(--accent-purple);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.22rem 0.65rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
 }
 
 .project-body {
