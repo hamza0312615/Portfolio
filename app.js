@@ -771,14 +771,14 @@ function runNeonCircuitGame(ctx, width, height) {
   };
 
   function spawnProjectTarget() {
-    if (Math.random() < 0.038) {
+    if (Math.random() < 0.06) {
       const item = projectItems[Math.floor(Math.random() * projectItems.length)];
       projectTargets.push({
         x: Math.random() * (width - 160) + 80,
         y: -40,
         name: item.name,
         color: item.color,
-        speed: Math.random() * 1.5 + 2,
+        speed: Math.random() * 1.5 + 2.5,
         width: 140,
         height: 32,
         hp: 2
@@ -801,7 +801,7 @@ function runNeonCircuitGame(ctx, width, height) {
         }
       }
       if (nearestTarget) {
-        playerX += (nearestTarget.x - playerX) * 0.12;
+        playerX += (nearestTarget.x - playerX) * 0.25;
       }
     }
 
@@ -825,9 +825,9 @@ function runNeonCircuitGame(ctx, width, height) {
     }
 
     // Auto-fire dual plasma lasers continuously
-    if (frameCount % 8 === 0) {
-      lasers.push({ x: playerX - 12, y: height - 60, vy: -12 });
-      lasers.push({ x: playerX + 12, y: height - 60, vy: -12 });
+    if (frameCount % 5 === 0) {
+      lasers.push({ x: playerX - 12, y: height - 60, vy: -16 });
+      lasers.push({ x: playerX + 12, y: height - 60, vy: -16 });
     }
 
     spawnProjectTarget();
@@ -1038,7 +1038,7 @@ function runBalloonPopGame(ctx, width, height) {
   }
 
   function spawnBalloon() {
-    if (Math.random() < 0.045) {
+    if (Math.random() < 0.08) {
       const item = projectItems[Math.floor(Math.random() * projectItems.length)];
       balloons.push({
         x: Math.random() * (width - 120) + 60,
@@ -1046,7 +1046,7 @@ function runBalloonPopGame(ctx, width, height) {
         radius: Math.random() * 10 + 26,
         name: item.name,
         color: item.color,
-        speed: Math.random() * 1.5 + 1.8,
+        speed: Math.random() * 2 + 2.5,
         wobble: Math.random() * Math.PI * 2
       });
     }
@@ -1125,7 +1125,7 @@ function runBalloonPopGame(ctx, width, height) {
     spawnBalloon();
 
     // AI Auto-Pop Showcase when user is idle
-    if (!userActive && frameCount % 45 === 0 && balloons.length > 0) {
+    if (!userActive && frameCount % 20 === 0 && balloons.length > 0) {
       const randomIndex = Math.floor(Math.random() * balloons.length);
       popBalloon(randomIndex, true);
     }
