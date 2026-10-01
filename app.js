@@ -1,0 +1,1111 @@
+/* ==========================================================================
+   MUHAMMAD HAMZA - ENGINEERING & AI PORTFOLIO ENGINE
+   Institute of Space Technology (IST) | Google AI Seekho Top 12 Finalist
+   DevTech Labs | Google Play Store Published App Developer
+   ========================================================================== */
+
+// --- 1. PROJECTS DATABASE WITH ALL 27+ PROJECTS & DIRECT LIVE LINKS ---
+const PROJECTS_DATA = [
+  {
+    id: "balloon-pop-deluxe-play",
+    title: "🎈 Balloon Pop Deluxe (Google Play Store)",
+    category: "games",
+    categoryLabel: "📱 Published Play Store App",
+    status: "🚀 Published on Google Play (DevTech Labs)",
+    image: "assets/balloon_pop_store_1.png",
+    summary: "Published Google Play arcade puzzle adventure with Prism Peaks world map, Lumi Fox companion, Thunder Slash boosters, and Play Achievements.",
+    description: "Balloon Pop Deluxe is a published mobile Android arcade game on the Google Play Store under DevTech Labs. Features Prism Peaks crystalline caverns level progression, Lumi Fox companion, 120x Thunder Slash score boosters, Google Play Achievements, and coin economy.",
+    tech: ["Android SDK", "HTML5 Canvas Engine", "Web Audio API", "Google Play Games Services", "Vite", "JavaScript ES6+"],
+    architecture: "Entity Component System (ECS) with persistent level save state, Play Games leaderboard API, and touch-optimized input listeners.",
+    features: [
+      "Published on Google Play Store under DevTech Labs (Rated 3+)",
+      "Prism Peaks & Crystalline Caverns multi-stage world map",
+      "Lumi Fox companion & 120x Thunder Lightning Slash boosters",
+      "Google Play Achievements integration & heart energy system"
+    ],
+    github: "https://github.com/hamza0312615",
+    liveUrl: "https://play.google.com/store/apps/details?id=com.devtechlabs.balloonpopdeluxe",
+    localPath: "d:/data from drive f/ALL projects/games/balloon-pop-web"
+  },
+  {
+    id: "visiondx-mega",
+    title: "VisionDX Mega (AI Diagnostics Platform)",
+    category: "ai-health",
+    categoryLabel: "AI & HealthTech",
+    status: "🏆 Top 12 Google AI Seekho | Top 10 GDG IST",
+    image: "assets/vdx_hero.png",
+    summary: "Offline-first AI health diagnostics platform with 12 AI modules, 71-gesture PSL sign language translation, and VoiceDoc interface.",
+    description: "VisionDX Mega is an offline-first AI healthcare ecosystem designed for underserved communities in Pakistan. Built with 12 AI modules including skin/eye/hair analysis, audio cough detection, lab report parser, 71-gesture Pakistan Sign Language translator, and automated WhatsApp triage backend.",
+    tech: ["React", "Python", "Groq LLM", "TensorFlow", "MediaPipe", "OpenPose", "WhatsApp API", "Vite"],
+    architecture: "Offline-first local inference engine with Groq LLM fallback, WebSocket real-time frame processing, and Community Health Worker dispatch mode.",
+    features: [
+      "12 AI diagnostic modules (skin, eye, hair, cough & lab reports)",
+      "71-gesture Pakistan Sign Language (PSL) real-time translator",
+      "Hands-free VoiceDoc patient symptom interface",
+      "Offline-first Community Health Worker mode & WhatsApp alerts"
+    ],
+    github: "https://github.com/hamza0312615/visiondxmega",
+    liveUrl: "https://visiondxmega.vercel.app",
+    localPath: "d:/data from drive f/ALL projects/VisionDX-Mega"
+  },
+  {
+    id: "resqnet-disaster",
+    title: "🚨 ResQNet (AI Disaster Response Platform)",
+    category: "ai-health",
+    categoryLabel: "AI & Disaster Tech",
+    status: "Live Deployed System",
+    image: "assets/resqnet_dashboard.png",
+    summary: "AI-powered disaster response and fleet management platform featuring Claude 3.5 Sonnet damage analyzer, live tactical map, and instant SOS alerts.",
+    description: "ResQNet is an intelligent disaster mitigation platform coordinating rescue fleets, tracking active incidents, evaluating damage from aerial photography, and broadcasting multilingual early warnings.",
+    tech: ["React", "Claude 3.5 Sonnet AI", "Leaflet Maps", "Node.js", "TailwindCSS", "GitHub Pages"],
+    architecture: "Real-time incident stream with Claude vision API damage classification and spatial rescue team dispatch routing.",
+    features: [
+      "Claude 3.5 Sonnet visual AI damage analyzer",
+      "Tactical rescue team fleet deployment & evacuation metrics",
+      "Urdu & English bilingual early warning system",
+      "One-tap emergency SOS broadcast trigger"
+    ],
+    github: "https://github.com/hamza0312615/ResQNet",
+    liveUrl: "https://hamza0312615.github.io/ResQNet/",
+    localPath: "d:/data from drive f/ALL projects/disaster-manag2-feat-resqnet-dashboard-15552565467352973265"
+  },
+  {
+    id: "studylens-ai",
+    title: "📚 Study Lens AI Scanner",
+    category: "fullstack",
+    categoryLabel: "Full-Stack & Mobile App",
+    status: "Active Mobile App",
+    image: "assets/studylens_home.png",
+    summary: "Mobile textbook OCR scanner & AI study companion generating instant concept breakdowns, quiz flashcards, and subject libraries.",
+    description: "Study Lens AI transforms physical textbook notes into digital learning assets. Captures pages via mobile camera, applies OCR for formula extraction, and organizes notes into subject folders with streak rewards.",
+    tech: ["React Native / Android", "Python", "Tesseract OCR", "Gemini API", "TailwindCSS"],
+    architecture: "Mobile camera viewfinder with edge detection OCR and Gemini LLM prompt chains producing structured study notes.",
+    features: [
+      "Mobile camera document scanner with guide overlay",
+      "Auto-categorized Subject Library (Math, Physics, CS)",
+      "Instant quiz generator with 92%+ score tracking",
+      "5-day learning streak & time-saved metrics"
+    ],
+    github: "https://github.com/hamza0312615/study-lens",
+    liveUrl: "https://github.com/hamza0312615/study-lens",
+    localPath: "d:/data from drive f/ALL projects/study-lens"
+  },
+  {
+    id: "aquora-water",
+    title: "💧 AQUORA / EQUORA (Water Watch)",
+    category: "fullstack",
+    categoryLabel: "Full-Stack & Satellite",
+    status: "Indus Basin Remote Sensing",
+    image: "assets/aquora_satellite.png",
+    summary: "Hyperlocal water intelligence platform mapping canal depletion, flow rates, and silt anomalies across the Indus Basin using satellite imagery & AI.",
+    description: "A native hybrid Android & Web platform mapping water flow, canal depletion, and algae risks across the Indus Basin. Integrates NDWI remote sensing from Sentinel & Landsat satellites and Gemini LLM alerts via WhatsApp.",
+    tech: ["React", "Kotlin", "Vite", "Gemini LLM", "Sentinel / Landsat API", "Python", "TailwindCSS"],
+    architecture: "Remote sensing satellite API ingestion with satellite accountability models flagging blockages, water theft, and algae risks.",
+    features: [
+      "NDWI Remote Sensing via Sentinel & Landsat imagery",
+      "Indus Basin flow-rate auditing & blockage detection",
+      "Gemini LLM plain-language localized WhatsApp alerts",
+      "Native hybrid Android & Web operational dashboard"
+    ],
+    github: "https://github.com/hamza0312615/AQUORA",
+    liveUrl: "https://github.com/hamza0312615/AQUORA",
+    localPath: "d:/data from drive f/ALL projects/AQUORA"
+  },
+  {
+    id: "psl-translator",
+    title: "🤟 PSL Sign Language Real-Time AI Translator",
+    category: "vision-ml",
+    categoryLabel: "Computer Vision & ML",
+    status: "71 Gestures Active",
+    image: "assets/psl_sign_language_ai_1790828069103.png",
+    summary: "71-gesture Pakistan Sign Language translator converting skeletal pose tracking into instant text and synthetic spoken audio.",
+    description: "An assistive technology system bridging communication barriers for deaf and mute individuals. Uses OpenPose and MediaPipe 3D joint tracking to classify continuous Pakistan Sign Language gestures into natural Urdu/English speech.",
+    tech: ["Python", "OpenPose", "MediaPipe", "OpenCV", "TensorFlow", "Text-To-Speech Engine"],
+    architecture: "3D hand & body skeletal tracking running frame-by-frame LSTM gesture classification with real-time audio synthesis.",
+    features: [
+      "71-gesture Pakistan Sign Language continuous translation",
+      "Sub-100ms skeletal joint estimation pipeline",
+      "Instant Text-to-Speech (TTS) audio output",
+      "Integrated into VisionDX Mega accessibility suite"
+    ],
+    github: "https://github.com/hamza0312615/paksigntranslation",
+    liveUrl: "https://github.com/hamza0312615/paksigntranslation",
+    localPath: "d:/data from drive f/ALL projects/paksigntranslation"
+  },
+  {
+    id: "wifi-heartbeat",
+    title: "📡 WiFi Vitals Detection (Contactless Sensing)",
+    category: "ai-health",
+    categoryLabel: "AI & HealthTech",
+    status: "Biomedical Signal Processing",
+    image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%230b0f19'/><path d='M20,100 Q60,100 80,40 T120,160 T160,100 T240,100 Q260,100 280,20 T320,180 T360,100' fill='none' stroke='%2306b6d4' stroke-width='4'/><text x='200' y='180' font-family='sans-serif' font-size='14' font-weight='bold' fill='%23f8fafc' text-anchor='middle'>WiFi Vitals Detection</text></svg>",
+    summary: "Experimental system detecting human micro-movements (breathing & heartbeats) through ambient WiFi signal variance (RSSI/CSI).",
+    description: "Contactless biomedical monitoring system extracting cardiac frequencies and respiratory rhythms by processing subtle RF signal amplitude and phase fluctuations using Fast Fourier Transform (FFT).",
+    tech: ["Flask", "Python", "Vite", "React", "SciPy", "FFT Signal Processing"],
+    architecture: "FFT frequency spectrum analysis filtering cardiac rhythm harmonics from raw ambient WiFi RSSI telemetry.",
+    features: [
+      "Zero-hardware wearable contactless heart & breathing monitor",
+      "Real-time streaming React telemetry dashboard",
+      "Human presence & room occupancy detection",
+      "Sleep apnea & cardiac anomaly warning flags"
+    ],
+    github: "https://github.com/hamza0312615/sleep-sense-",
+    liveUrl: "https://github.com/hamza0312615/sleep-sense-",
+    localPath: "d:/data from drive f/ALL projects/wifi-heartbeat-sensing-main"
+  },
+  {
+    id: "smarthire-ai",
+    title: "💼 SmartHire AI Recruitment Pipeline",
+    category: "fullstack",
+    categoryLabel: "Full-Stack & SaaS",
+    status: "Gemini LLM Driven",
+    image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%230f172a'/><rect x='130' y='40' width='140' height='110' fill='none' stroke='%236366f1' stroke-width='3' rx='8'/><line x1='150' y1='70' x2='230' y2='70' stroke='%2394a3b8' stroke-width='3'/><line x1='150' y1='95' x2='210' y2='95' stroke='%2394a3b8' stroke-width='3'/><text x='200' y='180' font-family='sans-serif' font-size='14' font-weight='bold' fill='%23f8fafc' text-anchor='middle'>SmartHire AI Pipeline</text></svg>",
+    summary: "AI-powered recruitment pipeline leveraging Gemini API to streamline candidate screening, parse resumes, and eliminate hiring bias.",
+    description: "Automated candidate evaluation platform that ingests CVs, parses skill sets against job descriptions, computes match confidence scores, and generates structured interview questions.",
+    tech: ["React", "Node.js", "Gemini API", "Express", "TailwindCSS"],
+    architecture: "Gemini LLM prompt chain performing semantic resume parsing and candidate ranking based on job competency matrices.",
+    features: [
+      "Automated PDF resume parsing & skill extraction",
+      "AI candidate suitability scoring & ranking",
+      "Unbiased screening with anonymous evaluation mode",
+      "Custom interview question generator"
+    ],
+    github: "https://github.com/hamza0312615",
+    liveUrl: "https://github.com/hamza0312615"
+  },
+  {
+    id: "mediconnect-ai",
+    title: "🏥 MediConnect AI Tele-Health",
+    category: "ai-health",
+    categoryLabel: "AI & HealthTech",
+    status: "Mind to Machine Finalist",
+    image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%230f172a'/><rect x='170' y='40' width='60' height='120' fill='%2310b981' rx='10'/><rect x='140' y='70' width='120' height='60' fill='%2310b981' rx='10'/><text x='200' y='185' font-family='sans-serif' font-size='14' font-weight='bold' fill='%23f8fafc' text-anchor='middle'>MediConnect AI</text></svg>",
+    summary: "AI-assisted telemedicine system featuring automated symptom evaluation, virtual waiting rooms, and electronic prescriptions.",
+    description: "Integrated clinical platform providing instant AI symptom analysis to route patients to appropriate specialists, schedule video calls, and securely store EHR records.",
+    tech: ["React", "Node.js", "WebRTC", "Express", "TailwindCSS", "MongoDB"],
+    architecture: "WebRTC peer-to-peer video streaming with encrypted socket signaling and microservice symptom checker backend.",
+    features: [
+      "AI symptom assessment bot with clinical decision support",
+      "HD peer-to-peer video consultation",
+      "E-Prescription generator with QR verification",
+      "Multi-doctor appointment calendar"
+    ],
+    github: "https://github.com/hamza0312615",
+    liveUrl: "https://github.com/hamza0312615",
+    localPath: "d:/data from drive f/ALL projects/mediconnect-ai"
+  },
+  {
+    id: "voicedoc-scribe",
+    title: "🗣️ VoiceDoc Hands-Free Scribe",
+    category: "ai-health",
+    categoryLabel: "AI & HealthTech",
+    status: "Clinical AI Dictation",
+    image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%23111827'/><circle cx='200' cy='90' r='40' fill='none' stroke='%238b5cf6' stroke-width='4'/><rect x='192' y='70' width='16' height='35' fill='%238b5cf6' rx='8'/><text x='200' y='170' font-family='sans-serif' font-size='15' font-weight='bold' fill='%23f8fafc' text-anchor='middle'>VoiceDoc AI Scribe</text></svg>",
+    summary: "Hands-free AI voice assistant that transcribes physician consultations into structured SOAP clinical notes in real time.",
+    description: "Eliminates documentation burnout for doctors by listening to patient-doctor dialogue, recognizing complex medical terminology, and auto-filling EHR charts.",
+    tech: ["Python", "Whisper AI", "NLP", "FastAPI", "React", "TailwindCSS"],
+    architecture: "Streaming audio WebSockets to Whisper AI transformer models with custom medical vocabulary fine-tuning.",
+    features: [
+      "Real-time audio streaming transcription",
+      "SOAP note extraction (Subjective, Objective, Assessment, Plan)",
+      "Medical entity recognition (ICD-10 code suggestions)",
+      "Export directly to standard EHR formats"
+    ],
+    github: "https://github.com/hamza0312615",
+    liveUrl: "https://github.com/hamza0312615",
+    localPath: "d:/data from drive f/ALL projects/voicedoc"
+  },
+  {
+    id: "neon-circuit",
+    title: "⚡ Neon Circuit Cyber Arcade",
+    category: "games",
+    categoryLabel: "Web & Mobile Games",
+    status: "Playable Web Game",
+    image: "assets/neon_circuit_game_1790828143558.png",
+    summary: "High-speed cyberpunk rhythm and reflex game engine built from scratch with neon particle FX, dynamic soundtrack, and score leaderboards.",
+    description: "An ultra-responsive 60fps HTML5 Canvas game featuring custom vector physics, procedural level generation, dynamic audio synching, and retro synthwave aesthetic.",
+    tech: ["HTML5 Canvas", "Vanilla JavaScript", "Web Audio API", "CSS Glassmorphism", "Vite"],
+    architecture: "Custom delta-time game loop with spatial partitioning collision detection and Web Audio procedural synthesis.",
+    features: [
+      "Zero-dependency custom 2D rendering engine",
+      "Procedural obstacle placement and speed multiplier physics",
+      "High-score persistence via Web Storage & local encryption",
+      "Touch & Keyboard responsive steering controls"
+    ],
+    github: "https://github.com/hamza0312615",
+    liveUrl: "#arcade",
+    localPath: "d:/data from drive f/ALL projects/games/neon-circuit",
+    playable: true
+  },
+  {
+    id: "mob-control-evolution",
+    title: "⚔️ Mob Control Evolution Strategy",
+    category: "games",
+    categoryLabel: "Web & Mobile Games",
+    status: "Playable Web Game",
+    image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%230f172a'/><circle cx='120' cy='100' r='30' fill='%236366f1'/><circle cx='180' cy='100' r='20' fill='%236366f1'/><circle cx='240' cy='100' r='25' fill='%236366f1'/><rect x='280' y='70' width='60' height='60' fill='%23ec4899' rx='8'/><text x='200' y='170' font-family='sans-serif' font-size='16' font-weight='bold' fill='%23f8fafc' text-anchor='middle'>Mob Control Evolution</text></svg>",
+    summary: "Tactical crowd multiplication strategy game with multiplier gates, base defense cannons, card upgrades, and mob boss battles.",
+    description: "Players shoot mob units through x2, x3, and x5 multiplier gates to overrun enemy towers, unlock champion cards, and upgrade cannon fire rates.",
+    tech: ["JavaScript", "HTML5 Canvas Engine", "Web Audio", "CSS3 Animations"],
+    architecture: "Entity Component System (ECS) managing 500+ active on-screen sprites with quad-tree collision optimization.",
+    features: [
+      "Massive crowd physics rendering at smooth 60fps",
+      "Dynamic gate multiplication logic & bonus rewards",
+      "In-game upgrade shop with persistent progression",
+      "Boss level challenges and tower destruction FX"
+    ],
+    github: "https://github.com/hamza0312615",
+    liveUrl: "#arcade",
+    localPath: "d:/data from drive f/ALL projects/games/mob-control-evolution",
+    playable: true
+  }
+];
+
+// --- 2. PARTICLE CONSTELLATION CANVAS WITH LIGHT THEME SUPPORT ---
+function initParticleCanvas() {
+  const canvas = document.getElementById('bg-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  });
+
+  const particles = [];
+  const particleCount = Math.min(Math.floor(width / 18), 70);
+
+  for (let i = 0; i < particleCount; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6,
+      radius: Math.random() * 2 + 1,
+      color: i % 3 === 0 ? '#06b6d4' : i % 3 === 1 ? '#6366f1' : '#a855f7'
+    });
+  }
+
+  let mouseX = -1000, mouseY = -1000;
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function render() {
+    ctx.clearRect(0, 0, width, height);
+    const isLight = document.body.classList.contains('light-theme');
+
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+
+      p.x += p.vx;
+      p.y += p.vy;
+
+      if (p.x < 0 || p.x > width) p.vx *= -1;
+      if (p.y < 0 || p.y > height) p.vy *= -1;
+
+      // Mouse magnetic reaction
+      const dx = mouseX - p.x;
+      const dy = mouseY - p.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 120) {
+        p.x -= (dx / dist) * 0.8;
+        p.y -= (dy / dist) * 0.8;
+      }
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = isLight ? (i % 2 === 0 ? 'rgba(2,132,199,0.5)' : 'rgba(126,34,206,0.5)') : p.color;
+      ctx.fill();
+
+      // Connect nearby particles
+      for (let j = i + 1; j < particles.length; j++) {
+        const p2 = particles[j];
+        const dist2 = Math.hypot(p.x - p2.x, p.y - p2.y);
+        if (dist2 < 130) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          const alpha = 0.2 * (1 - dist2 / 130);
+          ctx.strokeStyle = isLight ? `rgba(67, 56, 202, ${alpha * 0.6})` : `rgba(99, 102, 241, ${alpha})`;
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(render);
+  }
+
+  render();
+}
+
+// --- 3. DYNAMIC PROJECTS GALLERY RENDERER ---
+let currentCategory = 'all';
+let searchQuery = '';
+
+function renderProjects() {
+  const container = document.getElementById('projects-container');
+  if (!container) return;
+
+  const filtered = PROJECTS_DATA.filter(p => {
+    const matchesCat = currentCategory === 'all' || p.category === currentCategory;
+    const matchesSearch = searchQuery === '' || 
+      p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.tech.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCat && matchesSearch;
+  });
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1/-1; text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
+        <p style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">No projects found matching "${searchQuery}"</p>
+        <p>Try searching for technologies like "React", "Python", "Gemini", "OpenPose", or "Kotlin".</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = filtered.map(p => `
+    <div class="glass-card project-card">
+      <div class="project-thumb-container">
+        <img src="${p.image}" alt="${p.title}" class="project-thumb" loading="lazy" onError="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'200\'><rect width=\'400\' height=\'200\' fill=\'%230f172a\'/><text x=\'200\' y=\'100\' fill=\'%2306b6d4\' text-anchor=\'middle\'>${encodeURIComponent(p.title)}</text></svg>'">
+        <span class="project-badge-top">${p.categoryLabel}</span>
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">${p.title}</h3>
+        <p class="project-desc">${p.summary}</p>
+        <div class="tech-stack-pills">
+          ${p.tech.map(t => `<span class="tech-pill">${t}</span>`).join('')}
+        </div>
+        <div class="project-footer">
+          <button class="btn-card-action" onclick="openProjectModal('${p.id}')">
+            Specs & Details →
+          </button>
+          <a href="${p.liveUrl || p.github}" target="_blank" class="btn-card-action" style="color: var(--accent-cyan);">
+            🌐 Live Project Link
+          </a>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// --- 4. INNOVATION DROP RADAR ENGINE ---
+let currentDropIndex = 0;
+
+function dropNextInnovation() {
+  currentDropIndex = (currentDropIndex + 1) % PROJECTS_DATA.length;
+  const p = PROJECTS_DATA[currentDropIndex];
+  
+  const display = document.getElementById('innovation-drop-display');
+  if (!display) return;
+
+  display.style.opacity = '0';
+  display.style.transform = 'translateY(-15px)';
+
+  setTimeout(() => {
+    display.innerHTML = `
+      <span class="drop-pulse-badge">🟢 Live Radar Spot #${currentDropIndex + 1}</span>
+      <div style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+        ${p.categoryLabel} • ${p.status}
+      </div>
+      <h3 style="font-size: 1.6rem; margin-bottom: 0.75rem;" class="gradient-text">${p.title}</h3>
+      <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.6;">${p.description}</p>
+      
+      <div class="tech-stack-pills" style="margin-bottom: 1.5rem;">
+        ${p.tech.map(t => `<span class="tech-pill">${t}</span>`).join('')}
+      </div>
+
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="${p.liveUrl || p.github}" target="_blank" class="btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">
+          🚀 Open Live Project Link
+        </a>
+        <button onclick="openProjectModal('${p.id}')" class="btn-secondary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">
+          Inspect System Architecture
+        </button>
+      </div>
+    `;
+
+    display.style.opacity = '1';
+    display.style.transform = 'translateY(0)';
+  }, 200);
+
+  showToast(`⚡ Innovation spotlight: ${p.title}`);
+}
+
+// --- 5. MODAL DIALOG CONTROLLER ---
+function openProjectModal(id) {
+  const p = PROJECTS_DATA.find(item => item.id === id);
+  if (!p) return;
+
+  const overlay = document.getElementById('modal-overlay');
+  const container = document.getElementById('modal-content');
+  if (!overlay || !container) return;
+
+  container.innerHTML = `
+    <div class="banner-tag">${p.categoryLabel} • ${p.status}</div>
+    <h2 style="font-size: 2.2rem; margin-bottom: 1rem;" class="gradient-text">${p.title}</h2>
+    
+    <img src="${p.image}" alt="${p.title}" style="width: 100%; height: 260px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.1);">
+
+    <div style="margin-bottom: 1.5rem;">
+      <h4 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Overview</h4>
+      <p style="color: var(--text-secondary); line-height: 1.7;">${p.description}</p>
+    </div>
+
+    <div style="margin-bottom: 1.5rem;">
+      <h4 style="color: var(--accent-purple); margin-bottom: 0.5rem;">Key Innovations & Features</h4>
+      <ul style="color: var(--text-secondary); padding-left: 1.25rem; line-height: 1.8;">
+        ${p.features.map(f => `<li>${f}</li>`).join('')}
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 1.5rem;">
+      <h4 style="color: var(--accent-indigo); margin-bottom: 0.5rem;">System Architecture</h4>
+      <p style="color: var(--text-secondary); font-family: var(--font-code); font-size: 0.9rem; background: rgba(0,0,0,0.15); padding: 1rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+        ${p.architecture}
+      </p>
+    </div>
+
+    <div style="margin-bottom: 2rem;">
+      <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Technologies Used</h4>
+      <div class="tech-stack-pills">
+        ${p.tech.map(t => `<span class="tech-pill" style="font-size: 0.85rem; padding: 0.3rem 0.8rem;">${t}</span>`).join('')}
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+      <a href="${p.github}" target="_blank" class="btn-primary" style="font-size: 0.9rem; padding: 0.6rem 1.4rem;">
+        📂 GitHub Repository / Live Code
+      </a>
+      ${p.localPath ? `
+        <a href="file:///${p.localPath}" target="_blank" class="btn-secondary" style="font-size: 0.9rem; padding: 0.6rem 1.4rem;">
+          📁 Local Workspace Folder
+        </a>
+      ` : ''}
+      ${p.privacyUrl && p.privacyUrl !== '#' ? `
+        <a href="file:///${p.privacyUrl}" target="_blank" class="btn-secondary" style="font-size: 0.9rem; padding: 0.6rem 1.4rem;">
+          📜 Privacy Policy
+        </a>
+      ` : ''}
+      ${p.playable ? `
+        <button onclick="closeModal(); scrollToArcade('${p.id}');" class="btn-primary" style="background: var(--accent-purple); font-size: 0.9rem; padding: 0.6rem 1.4rem;">
+          🎮 Play Game Now
+        </button>
+      ` : ''}
+    </div>
+  `;
+
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  const overlay = document.getElementById('modal-overlay');
+  if (overlay) overlay.classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
+function scrollToArcade(gameId) {
+  const arcade = document.getElementById('arcade');
+  if (arcade) {
+    arcade.scrollIntoView({ behavior: 'smooth' });
+    if (gameId === 'neon-circuit') switchArcadeGame('neon');
+    else if (gameId === 'balloon-pop-web') switchArcadeGame('balloon');
+    else if (gameId === 'mob-control-evolution') switchArcadeGame('mob');
+  }
+}
+
+// --- 6. BUILT-IN HTML5 PLAYABLE ARCADE ENGINE (DYNAMIC CANVAS SCALING) ---
+let activeArcadeGame = 'neon';
+let arcadeAnimId = null;
+
+function switchArcadeGame(game) {
+  activeArcadeGame = game;
+  document.querySelectorAll('.arcade-tab').forEach(t => t.classList.remove('active'));
+  const activeBtn = document.getElementById(`tab-${game}`);
+  if (activeBtn) activeBtn.classList.add('active');
+  initArcadeGame();
+}
+
+function initArcadeGame() {
+  if (arcadeAnimId) cancelAnimationFrame(arcadeAnimId);
+
+  const canvas = document.getElementById('arcade-canvas');
+  if (!canvas) return;
+  const stage = canvas.parentElement;
+
+  // Full-stage dynamic width scaling fix
+  const width = (canvas.width = stage.clientWidth || 800);
+  const height = (canvas.height = stage.clientHeight || 480);
+
+  const ctx = canvas.getContext('2d');
+
+  if (activeArcadeGame === 'neon') {
+    runNeonCircuitGame(ctx, width, height);
+  } else if (activeArcadeGame === 'balloon') {
+    runBalloonPopGame(ctx, width, height);
+  } else if (activeArcadeGame === 'mob') {
+    runMobControlGame(ctx, width, height);
+  }
+}
+
+// Window resize listener to scale canvas dynamically
+window.addEventListener('resize', () => {
+  const canvas = document.getElementById('arcade-canvas');
+  if (canvas && canvas.parentElement) {
+    canvas.width = canvas.parentElement.clientWidth;
+    canvas.height = canvas.parentElement.clientHeight;
+  }
+});
+
+// Cyber Project Defender Engine - Touch & Mobile Responsive Arcade
+function runNeonCircuitGame(ctx, width, height) {
+  let playerX = width / 2;
+  let score = 0;
+  let multiplier = 1;
+  let lasers = [];
+  let projectTargets = [];
+  let particles = [];
+  let floatTexts = [];
+  let frameCount = 0;
+
+  const projectItems = [
+    { name: '⚡ VisionDX Mega', color: '#06b6d4' },
+    { name: '🚨 ResQNet AI', color: '#ec4899' },
+    { name: '🛰️ AQUORA Water', color: '#38bdf8' },
+    { name: '📚 Study Lens AI', color: '#8b5cf6' },
+    { name: '📱 Balloon Pop Deluxe', color: '#f59e0b' },
+    { name: '🤟 PSL Sign AI', color: '#10b981' },
+    { name: '🗣️ VoiceDoc Scribe', color: '#a855f7' },
+    { name: '📖 Historical Novel', color: '#f43f5e' }
+  ];
+
+  const canvasEl = document.getElementById('arcade-canvas');
+
+  // Desktop Mouse Movement
+  const handleMouseMove = (e) => {
+    const rect = canvasEl.getBoundingClientRect();
+    playerX = Math.max(30, Math.min(width - 30, e.clientX - rect.left));
+  };
+
+  // Mobile Touch Dragging
+  const handleTouchMove = (e) => {
+    if (e.touches && e.touches[0]) {
+      const rect = canvasEl.getBoundingClientRect();
+      playerX = Math.max(30, Math.min(width - 30, e.touches[0].clientX - rect.left));
+    }
+  };
+
+  canvasEl.addEventListener('mousemove', handleMouseMove);
+  canvasEl.addEventListener('touchmove', handleTouchMove, { passive: true });
+  canvasEl.addEventListener('touchstart', handleTouchMove, { passive: true });
+
+  window.onkeydown = (e) => {
+    if (e.key === 'ArrowLeft' || e.key === 'a') playerX = Math.max(30, playerX - 30);
+    if (e.key === 'ArrowRight' || e.key === 'd') playerX = Math.min(width - 30, playerX + 30);
+  };
+
+  function spawnProjectTarget() {
+    if (Math.random() < 0.035) {
+      const item = projectItems[Math.floor(Math.random() * projectItems.length)];
+      projectTargets.push({
+        x: Math.random() * (width - 160) + 80,
+        y: -40,
+        name: item.name,
+        color: item.color,
+        speed: Math.random() * 1.5 + 2,
+        width: 140,
+        height: 32,
+        hp: 2
+      });
+    }
+  }
+
+  function loop() {
+    frameCount++;
+    ctx.fillStyle = '#060911';
+    ctx.fillRect(0, 0, width, height);
+
+    // Cyber background grid lines
+    ctx.strokeStyle = 'rgba(6, 182, 212, 0.12)';
+    ctx.lineWidth = 1;
+    for (let x = 0; x < width; x += 40) {
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, height);
+      ctx.stroke();
+    }
+    for (let y = (frameCount * 2) % 40; y < height; y += 40) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(width, y);
+      ctx.stroke();
+    }
+
+    // Auto-fire dual plasma lasers continuously
+    if (frameCount % 8 === 0) {
+      lasers.push({ x: playerX - 12, y: height - 60, vy: -12 });
+      lasers.push({ x: playerX + 12, y: height - 60, vy: -12 });
+    }
+
+    spawnProjectTarget();
+
+    // Render & Update Lasers
+    for (let i = lasers.length - 1; i >= 0; i--) {
+      const l = lasers[i];
+      l.y += l.vy;
+
+      ctx.fillStyle = '#38bdf8';
+      ctx.shadowColor = '#38bdf8';
+      ctx.shadowBlur = 10;
+      ctx.fillRect(l.x - 2, l.y, 4, 14);
+      ctx.shadowBlur = 0;
+
+      if (l.y < -20) lasers.splice(i, 1);
+    }
+
+    // Render & Update Descending Project Targets
+    for (let i = projectTargets.length - 1; i >= 0; i--) {
+      const target = projectTargets[i];
+      target.y += target.speed;
+
+      // Draw glowing project card node
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.85)';
+      ctx.strokeStyle = target.color;
+      ctx.lineWidth = 2;
+      ctx.shadowColor = target.color;
+      ctx.shadowBlur = 12;
+
+      ctx.beginPath();
+      ctx.roundRect(target.x - target.width / 2, target.y - target.height / 2, target.width, target.height, 8);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 12px Plus Jakarta Sans, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(target.name, target.x, target.y + 4);
+
+      // Check collision with dual lasers
+      for (let j = lasers.length - 1; j >= 0; j--) {
+        const l = lasers[j];
+        if (Math.abs(l.x - target.x) < target.width / 2 && Math.abs(l.y - target.y) < target.height / 2) {
+          lasers.splice(j, 1);
+          target.hp--;
+
+          // Spark particles
+          for (let p = 0; p < 5; p++) {
+            particles.push({
+              x: l.x,
+              y: l.y,
+              vx: (Math.random() - 0.5) * 6,
+              vy: (Math.random() - 0.5) * 6,
+              color: target.color,
+              life: 20
+            });
+          }
+
+          if (target.hp <= 0) {
+            score += 50 * multiplier;
+            floatTexts.push({ x: target.x, y: target.y, text: `+${50 * multiplier} XP`, color: target.color, life: 30 });
+
+            // Explosion particle cluster
+            for (let p = 0; p < 15; p++) {
+              particles.push({
+                x: target.x,
+                y: target.y,
+                vx: (Math.random() - 0.5) * 8,
+                vy: (Math.random() - 0.5) * 8,
+                color: target.color,
+                life: 30
+              });
+            }
+
+            projectTargets.splice(i, 1);
+            break;
+          }
+        }
+      }
+
+      // Reached baseline shield line
+      if (target && target.y > height - 40) {
+        projectTargets.splice(i, 1);
+        multiplier = 1;
+        score = Math.max(0, score - 20);
+      }
+    }
+
+    // Render & Update Particles
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life--;
+
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, Math.max(1, p.life / 6), 0, Math.PI * 2);
+      ctx.fill();
+
+      if (p.life <= 0) particles.splice(i, 1);
+    }
+
+    // Render Floating Score Text
+    for (let i = floatTexts.length - 1; i >= 0; i--) {
+      const ft = floatTexts[i];
+      ft.y -= 1.2;
+      ft.life--;
+
+      ctx.fillStyle = ft.color;
+      ctx.font = 'bold 14px Outfit';
+      ctx.textAlign = 'center';
+      ctx.fillText(ft.text, ft.x, ft.y);
+
+      if (ft.life <= 0) floatTexts.splice(i, 1);
+    }
+
+    // Render Baseline Cyber Shield
+    ctx.strokeStyle = '#06b6d4';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = '#06b6d4';
+    ctx.shadowBlur = 10;
+    ctx.beginPath();
+    ctx.moveTo(0, height - 30);
+    ctx.lineTo(width, height - 30);
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+
+    // Render Player Cyber Defender Ship
+    ctx.fillStyle = '#06b6d4';
+    ctx.shadowColor = '#06b6d4';
+    ctx.shadowBlur = 20;
+    ctx.beginPath();
+    ctx.moveTo(playerX, height - 55);
+    ctx.lineTo(playerX - 22, height - 15);
+    ctx.lineTo(playerX + 22, height - 15);
+    ctx.closePath();
+    ctx.fill();
+
+    // Core glow cockpit
+    ctx.fillStyle = '#ffffff';
+    ctx.beginPath();
+    ctx.arc(playerX, height - 35, 5, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.shadowBlur = 0;
+
+    // HUD Display Text
+    document.getElementById('arcade-score-text').innerText = `DEFENDER SCORE: ${score} XP | AUTO-FIRE LASERS ACTIVE (Touch / Mouse / Arrow Steering)`;
+
+    arcadeAnimId = requestAnimationFrame(loop);
+  }
+
+  loop();
+}
+
+// Balloon Pop Game Logic
+function runBalloonPopGame(ctx, width, height) {
+  let score = 0;
+  let balloons = [];
+
+  function spawnBalloon() {
+    if (Math.random() < 0.05) {
+      balloons.push({
+        x: Math.random() * (width - 60) + 30,
+        y: height + 40,
+        radius: Math.random() * 15 + 20,
+        color: ['#ec4899', '#06b6d4', '#f59e0b', '#10b981', '#a855f7'][Math.floor(Math.random() * 5)],
+        speed: Math.random() * 2 + 1.5
+      });
+    }
+  }
+
+  const canvasEl = document.getElementById('arcade-canvas');
+  canvasEl.onclick = (e) => {
+    const rect = canvasEl.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const clickY = e.clientY - rect.top;
+
+    for (let i = balloons.length - 1; i >= 0; i--) {
+      const b = balloons[i];
+      const dist = Math.hypot(clickX - b.x, clickY - b.y);
+      if (dist < b.radius + 10) {
+        balloons.splice(i, 1);
+        score += 25;
+        break;
+      }
+    }
+  };
+
+  function loop() {
+    ctx.fillStyle = '#0d121d';
+    ctx.fillRect(0, 0, width, height);
+
+    spawnBalloon();
+
+    for (let i = balloons.length - 1; i >= 0; i--) {
+      const b = balloons[i];
+      b.y -= b.speed;
+
+      ctx.beginPath();
+      ctx.arc(b.x, b.y, b.radius, 0, Math.PI * 2);
+      ctx.fillStyle = b.color;
+      ctx.shadowColor = b.color;
+      ctx.shadowBlur = 12;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+
+      // Balloon string
+      ctx.beginPath();
+      ctx.moveTo(b.x, b.y + b.radius);
+      ctx.lineTo(b.x, b.y + b.radius + 15);
+      ctx.strokeStyle = 'rgba(255,255,255,0.4)';
+      ctx.stroke();
+
+      if (b.y < -50) balloons.splice(i, 1);
+    }
+
+    document.getElementById('arcade-score-text').innerText = `BALLOONS POPPED: ${score} (Click balloons to pop!)`;
+    arcadeAnimId = requestAnimationFrame(loop);
+  }
+
+  loop();
+}
+
+// Mob Control Evolution Logic
+function runMobControlGame(ctx, width, height) {
+  let score = 0;
+  let mobs = [];
+  const gates = [
+    { x: width * 0.3, y: height * 0.4, label: 'x3', multiplier: 3 },
+    { x: width * 0.7, y: height * 0.4, label: 'x5', multiplier: 5 }
+  ];
+
+  const canvasEl = document.getElementById('arcade-canvas');
+  canvasEl.onclick = () => {
+    mobs.push({ x: width / 2, y: height - 40, vy: -3, radius: 8 });
+  };
+
+  function loop() {
+    ctx.fillStyle = '#0b0f19';
+    ctx.fillRect(0, 0, width, height);
+
+    // Gates
+    gates.forEach(g => {
+      ctx.fillStyle = 'rgba(99, 102, 241, 0.3)';
+      ctx.border = '2px solid #6366f1';
+      ctx.fillRect(g.x - 40, g.y - 20, 80, 40);
+      ctx.fillStyle = '#fff';
+      ctx.font = 'bold 18px Outfit';
+      ctx.textAlign = 'center';
+      ctx.fillText(g.label, g.x, g.y + 6);
+    });
+
+    for (let i = mobs.length - 1; i >= 0; i--) {
+      const m = mobs[i];
+      m.y += m.vy;
+
+      ctx.beginPath();
+      ctx.arc(m.x, m.y, m.radius, 0, Math.PI * 2);
+      ctx.fillStyle = '#06b6d4';
+      ctx.fill();
+
+      // Check gate collision
+      gates.forEach(g => {
+        if (Math.abs(m.x - g.x) < 40 && Math.abs(m.y - g.y) < 20) {
+          mobs.splice(i, 1);
+          for (let k = 0; k < g.multiplier; k++) {
+            mobs.push({
+              x: g.x + (Math.random() - 0.5) * 30,
+              y: g.y - 30,
+              vy: -3.5,
+              radius: 7
+            });
+          }
+          score += 15;
+        }
+      });
+
+      if (m.y < 30) {
+        mobs.splice(i, 1);
+        score += 50;
+      }
+    }
+
+    document.getElementById('arcade-score-text').innerText = `MOB POWER: ${mobs.length} units | SCORE: ${score} (Click Cannon to Fire!)`;
+    arcadeAnimId = requestAnimationFrame(loop);
+  }
+
+  loop();
+}
+
+// --- 7. RESUME GENERATOR / MODAL FOR MUHAMMAD HAMZA ---
+function openResumeModal() {
+  const overlay = document.getElementById('modal-overlay');
+  const container = document.getElementById('modal-content');
+  if (!overlay || !container) return;
+
+  container.innerHTML = `
+    <div style="text-align:center; margin-bottom: 1.5rem;">
+      <h2 style="font-size: 2.2rem;" class="gradient-text">Muhammad Hamza</h2>
+      <p style="color: var(--accent-amber); font-weight:700; margin-top:0.25rem;">🏆 Top 12 Finalist @ Google AI Seekho Builders Day • Top 10 Finalist @ GDG IST</p>
+      <p style="color: var(--accent-cyan); font-weight:600; margin-top:0.25rem;">Computer Science Student @ Institute of Space Technology (IST)</p>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; font-style: italic; margin-top:0.25rem;">"Turning ideas into impact from satellite-based water monitoring to community-driven projects."</p>
+    </div>
+
+    <div style="background: rgba(0,0,0,0.15); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08); margin-bottom: 1.5rem;">
+      <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Professional Summary</h3>
+      <p style="color: var(--text-secondary); line-height: 1.7;">
+        Passionate Computer Science student at the <strong>Institute of Space Technology (IST)</strong>, <strong>Google AI Seekho Builders Day Top 12 Finalist</strong>, <strong>GDG IST Challenge Top 10 Finalist</strong>, and published author (pen name HAMANNAN). Experienced in building offline-first AI healthcare diagnostics (VisionDX Mega), remote-sensing water monitoring platforms (AQUORA Water Watch), sign language translation pipelines, and custom HTML5 web games.
+      </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+      <div style="background: rgba(0,0,0,0.15); padding: 1.25rem; border-radius: var(--radius-md);">
+        <h4 style="color: var(--accent-indigo); margin-bottom: 0.5rem;">Specialized Skills</h4>
+        <ul style="color: var(--text-secondary); padding-left: 1rem; font-size: 0.9rem; line-height: 1.7;">
+          <li>Gemini API, Groq LLM, MediaPipe, OpenCV, OpenPose</li>
+          <li>React, Vite, Kotlin, Python, Flask, Node.js, TailwindCSS</li>
+          <li>Satellite Remote Sensing (NDWI / Sentinel / Landsat)</li>
+          <li>HTML5 Canvas Engine, 2D Physics & Web Audio</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.15); padding: 1.25rem; border-radius: var(--radius-md);">
+        <h4 style="color: var(--accent-purple); margin-bottom: 0.5rem;">Honors & Achievements</h4>
+        <ul style="color: var(--text-secondary); padding-left: 1rem; font-size: 0.9rem; line-height: 1.7;">
+          <li>🏆 <strong>Google AI Seekho Builders Day Top 12 Finalist</strong></li>
+          <li>🏆 <strong>GDG IST Challenge Top 10 Finalist</strong> (VisionDX Mega)</li>
+          <li>⚙️ <strong>Mind to Machine (MTM) Competition Finalist</strong></li>
+          <li>📖 Published Novelist (<em>The Vase Beneath the Ashes</em>)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; gap: 1rem;">
+      <button onclick="downloadResumePDF()" class="btn-primary">
+        📥 Download Muhammad Hamza's CV
+      </button>
+      <button onclick="closeModal()" class="btn-secondary">
+        Close Window
+      </button>
+    </div>
+  `;
+
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function downloadResumePDF() {
+  const content = `
+MUHAMMAD HAMZA - CV & PROFILE
+=============================
+Education: Computer Science Student @ Institute of Space Technology (IST)
+Contact: hamza302616@gmail.com
+LinkedIn: https://www.linkedin.com/in/muhammad-hamza-55368a3b4/
+GitHub: https://github.com/hamza0312615
+
+HONORS & ACHIEVEMENTS:
+- Top 12 Finalist, Google AI Seekho Builders Day 2026
+- Top 10 Finalist, GDG IST Challenge (VisionDX Mega)
+- Finalist, Mind to Machine (MTM) Competition
+- Published Author: "The Vase Beneath the Ashes" (Historical Fiction Novel under pen name HAMANNAN)
+- Philanthropy: Khairul Nas (خير الناس) Aid Channel
+
+SUMMARY:
+"Turning ideas into impact from satellite-based water monitoring to community-driven projects."
+Computer Science student at IST building AI-powered diagnostic tools, remote sensing water platforms, and assistive technologies for underserved communities.
+  `;
+
+  const blob = new Blob([content], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Muhammad_Hamza_Resume.txt';
+  a.click();
+  showToast('📄 Muhammad Hamza\'s Resume downloaded successfully!');
+}
+
+// --- 8. TOAST NOTIFICATION & CONTACT FORM ---
+function showToast(message) {
+  let toast = document.getElementById('toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+  }
+  toast.innerHTML = `<span>🟢</span> <div>${message}</div>`;
+  toast.classList.add('active');
+  setTimeout(() => toast.classList.remove('active'), 3500);
+}
+
+function handleContactSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('contact-name').value;
+  showToast(`Thank you, ${name}! Your message has been sent to Muhammad Hamza.`);
+  e.target.reset();
+}
+
+// --- 9. INITIALIZATION ON DOM READY & MOBILE MENU TOGGLE ---
+document.addEventListener('DOMContentLoaded', () => {
+  initParticleCanvas();
+  renderProjects();
+  initArcadeGame();
+  dropNextInnovation(); // Initialize first innovation drop
+
+  // Mobile navigation drawer toggle
+  const mobileBtn = document.getElementById('mobile-toggle');
+  const navLinks = document.getElementById('nav-links');
+  if (mobileBtn && navLinks) {
+    mobileBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+  }
+
+  // Category filter tabs
+  document.querySelectorAll('.filter-pill').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      currentCategory = e.target.getAttribute('data-filter');
+      renderProjects();
+    });
+  });
+
+  // Search input filter
+  const searchInput = document.getElementById('project-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderProjects();
+    });
+  }
+
+  // Theme Toggle
+  const themeBtn = document.getElementById('theme-toggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+      themeBtn.innerText = document.body.classList.contains('light-theme') ? '🌙' : '☀️';
+    });
+  }
+
+  // Modal overlay click outside
+  const overlay = document.getElementById('modal-overlay');
+  if (overlay) {
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeModal();
+    });
+  }
+});

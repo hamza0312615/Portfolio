@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Hamza | CS @ IST | AI Systems & Play Store App Developer</title>
+  <meta name="description" content="Official Portfolio of Muhammad Hamza - Computer Science student at Institute of Space Technology (IST), Google AI Seekho Top 12 Finalist, Published Mobile App Developer (DevTech Labs), and Author.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Particle Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <div class="brand-badge">H</div>
+        <span>Muhammad <span class="gradient-text">Hamza</span></span>
+      </a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Mobile Menu">☰</button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#mobile-apps">Published Apps</a></li>
+        <li><a href="#innovation">Innovation Radar</a></li>
+        <li><a href="#projects">Projects & AI</a></li>
+        <li><a href="#honors">Honors & Books</a></li>
+        <li><a href="#arcade">Playable Arcade</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-icon" id="theme-toggle" title="Toggle Light/Dark Theme">☀️</button>
+        <button onclick="openResumeModal()" class="btn-secondary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">
+          📄 Resume
+        </button>
+        <a href="#contact" class="btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">
+          Get In Touch
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            <span>🏆 Top 12 Finalist @ Google AI Seekho • Top 10 @ GDG IST</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Muhammad Hamza</span>
+          </h1>
+
+          <p style="font-size: 1.15rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 0.5rem; font-style: italic;">
+            "Turning ideas into impact from satellite-based water monitoring to community-driven projects."
+          </p>
+
+          <p class="hero-subtitle">
+            Computer Science student at the <strong>Institute of Space Technology (IST)</strong> building AI diagnostic tools, remote-sensing water monitoring platforms for the Indus Basin, published Google Play Store games under <strong>DevTech Labs</strong>, and sign language AI translators.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn-primary">
+              🚀 Explore 25+ Projects
+            </a>
+            <a href="#mobile-apps" class="btn-secondary">
+              📱 Google Play Apps
+            </a>
+          </div>
+
+          <!-- Stats Counter -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">Top 12</div>
+              <div class="stat-label">Google AI Seekho 2026</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">Top 10</div>
+              <div class="stat-label">GDG IST Challenge</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">25+</div>
+              <div class="stat-label">Projects & Apps</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">1</div>
+              <div class="stat-label">Published Novel</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Banner Card -->
+        <div class="hero-banner-card">
+          <img src="assets/visiondx_ai_showcase_1790828020658.png" alt="VisionDX Mega Showcase" class="hero-banner-img">
+          <div class="hero-banner-overlay">
+            <span class="banner-tag">🏆 Top 12 Google AI Seekho Finalist</span>
+            <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 0.25rem;">VisionDX Mega AI Platform</h3>
+            <p style="color: var(--text-secondary); font-size: 0.85rem;">Offline-first health diagnostics with 12 AI modules, 71 PSL Sign Gestures & VoiceDoc interface.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLISHED MOBILE APPS & GOOGLE PLAY STORE SECTION -->
+  <section class="section" id="mobile-apps" style="padding: 4.5rem 0; background: rgba(13, 18, 29, 0.5);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">DevTech Labs Store Listing</span>
+        <h2 class="section-title">Published <span class="gradient-text-pink">Google Play Mobile Apps</span></h2>
+        <p class="section-desc">
+          Official mobile applications published on the Google Play Store under DevTech Labs.
+        </p>
+      </div>
+
+      <div class="glass-card" style="padding: 2.5rem; border: 1px solid rgba(236, 72, 153, 0.3); box-shadow: 0 0 40px rgba(236, 72, 153, 0.15);">
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: center;">
+          <div>
+            <span class="banner-tag" style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple)); margin-bottom: 0.75rem;">
+              📱 Google Play Store • DevTech Labs
+            </span>
+            <h3 style="font-size: 2rem; margin-bottom: 0.75rem;" class="gradient-text">Balloon Pop Deluxe (Early Access)</h3>
+            <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.7; margin-bottom: 1.25rem;">
+              Fun, colorful & addictive balloon popping puzzle adventure! Features <strong>Prism Peaks Crystalline Caverns</strong> level progression, <strong>Lumi Fox</strong> companion, <strong>120x Thunder Lightning Slash boosters</strong>, and Google Play Achievements.
+            </p>
+
+            <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+              <div style="background: rgba(0,0,0,0.3); padding: 0.75rem 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+                <div style="font-size: 0.8rem; color: var(--text-muted);">PLAY STORE RATING</div>
+                <div style="font-weight: 800; color: var(--accent-amber); font-size: 1.1rem;">⭐ Rated 3+</div>
+              </div>
+              <div style="background: rgba(0,0,0,0.3); padding: 0.75rem 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+                <div style="font-size: 0.8rem; color: var(--text-muted);">GAMEPLAY STAGE</div>
+                <div style="font-weight: 800; color: var(--accent-cyan); font-size: 1.1rem;">Prism Peaks Level 20</div>
+              </div>
+              <div style="background: rgba(0,0,0,0.3); padding: 0.75rem 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+                <div style="font-size: 0.8rem; color: var(--text-muted);">ACHIEVEMENTS</div>
+                <div style="font-weight: 800; color: var(--accent-emerald); font-size: 1.1rem;">Play Services Sync</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="https://play.google.com/store/apps/details?id=com.devtechlabs.balloonpopdeluxe" target="_blank" class="btn-primary">
+                ▶️ Get on Google Play Store
+              </a>
+              <button onclick="scrollToArcade('balloon-pop-web')" class="btn-secondary">
+                🎮 Play Web Edition Live
+              </button>
+            </div>
+          </div>
+
+          <!-- Real Play Store Screenshot Gallery Carousel -->
+          <div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;">
+              <img src="assets/balloon_pop_store_1.png" alt="Google Play Store Screenshot 1" style="width: 100%; height: 260px; object-fit: cover; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
+              <img src="assets/balloon_pop_store_2.png" alt="Google Play Store Screenshot 2" style="width: 100%; height: 260px; object-fit: cover; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
+              <img src="assets/balloon_pop_gameplay.png" alt="In-Game Level Map" style="width: 100%; height: 260px; object-fit: cover; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INNOVATION RADAR & PROJECT DROP STREAM SECTION -->
+  <section class="innovation-section" id="innovation">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-tag">Live Innovation Radar</span>
+        <h2 class="section-title">Interactive <span class="gradient-text">Project Drop Stream</span></h2>
+        <p class="section-desc">
+          Experience incoming software innovations dropping live in real time. Click below to trigger the next innovation spotlight!
+        </p>
+      </div>
+
+      <div class="innovation-radar-card">
+        <div class="innovation-header">
+          <div>
+            <h3 style="font-size: 1.5rem; color: var(--text-primary);">⚡ Active Project Radar Feed</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Real-time architecture inspection & project spotlights</p>
+          </div>
+          <button onclick="dropNextInnovation()" class="btn-primary" style="background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));">
+            ✨ Drop Next Innovation
+          </button>
+        </div>
+
+        <div class="innovation-stream-grid">
+          <div class="innovation-drop-display" id="innovation-drop-display">
+            <!-- Dynamically populated by app.js dropNextInnovation() -->
+          </div>
+
+          <div style="background: rgba(0,0,0,0.3); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08);">
+            <h4 style="color: var(--accent-cyan); margin-bottom: 0.75rem; font-size: 1.15rem;">🛰️ Innovation Stream Metrics</h4>
+            
+            <div style="margin-bottom: 1rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">
+                <span>INDUS BASIN SATELLITE SYNC (AQUORA)</span>
+                <span style="color: var(--accent-emerald);">ONLINE (100%)</span>
+              </div>
+              <div class="skill-progress-bg" style="margin-top: 0.3rem;"><div class="skill-progress-fill" style="width: 100%; background: var(--accent-emerald);"></div></div>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">
+                <span>AI DIAGNOSTIC MODULES (VisionDX)</span>
+                <span style="color: var(--accent-cyan);">12 ACTIVE</span>
+              </div>
+              <div class="skill-progress-bg" style="margin-top: 0.3rem;"><div class="skill-progress-fill" style="width: 95%;"></div></div>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">
+                <span>PSL SIGN LANGUAGE POSE RECOGNITION</span>
+                <span style="color: var(--accent-purple);">71 GESTURES</span>
+              </div>
+              <div class="skill-progress-bg" style="margin-top: 0.3rem;"><div class="skill-progress-fill" style="width: 90%; background: var(--accent-purple);"></div></div>
+            </div>
+
+            <div style="margin-bottom: 0.5rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">
+                <span>WIFI CONTACTLESS RSSI/CSI FFT FREQ</span>
+                <span style="color: var(--accent-pink);">ACTIVE</span>
+              </div>
+              <div class="skill-progress-bg" style="margin-top: 0.3rem;"><div class="skill-progress-fill" style="width: 88%; background: var(--accent-pink);"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS GALLERY SECTION -->
+  <section class="section" id="projects" style="padding: 5rem 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio Showcase</span>
+        <h2 class="section-title">Flagship AI & <span class="gradient-text">Engineering Projects</span></h2>
+        <p class="section-desc">
+          Browse through my software solutions built with Gemini API, Groq LLM, MediaPipe, OpenPose, React, Kotlin, and Python.
+        </p>
+      </div>
+
+      <!-- Controls & Filter Bar -->
+      <div class="portfolio-controls">
+        <div class="filter-pills">
+          <button class="filter-pill active" data-filter="all">All Projects (25+)</button>
+          <button class="filter-pill" data-filter="ai-health">AI & HealthTech</button>
+          <button class="filter-pill" data-filter="fullstack">Full-Stack & Satellite</button>
+          <button class="filter-pill" data-filter="games">Web & Mobile Games</button>
+          <button class="filter-pill" data-filter="vision-ml">Computer Vision & Sign AI</button>
+        </div>
+
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="project-search" placeholder="Search by tech stack (e.g. Gemini, OpenPose, Kotlin)...">
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-container">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- HONORS, COMPETITIONS & LITERATURE SECTION -->
+  <section class="section" id="honors" style="padding: 4.5rem 0; background: rgba(13, 18, 29, 0.6);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Recognitions & Beyond Code</span>
+        <h2 class="section-title">Honors, Competitions & <span class="gradient-text-gold">Literature</span></h2>
+        <p class="section-desc">
+          Recognized across national AI hackathons, developer competitions, and published historical literature.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        <!-- Card 1: Google AI Seekho Builders Day -->
+        <div class="glass-card" style="padding: 2rem; border: 1px solid rgba(245, 158, 11, 0.3);">
+          <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏆</div>
+          <span class="banner-tag" style="background: var(--gradient-gold);">Top 12 Team • DevTech</span>
+          <h3 style="font-size: 1.4rem; margin: 0.75rem 0 0.5rem 0;">Google AI Seekho Builders Day 2026</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            Selected in the <strong>Top 12 out of 84 Teams</strong> at Google AI Seekho Builders Day 2026 with Team DevTech. Presented on stage with official Certificate of Participation.
+          </p>
+        </div>
+
+        <!-- Card 2: GDG IST Challenge -->
+        <div class="glass-card" style="padding: 2rem;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏆</div>
+          <span class="banner-tag" style="background: var(--accent-indigo);">Top 10 Finalist</span>
+          <h3 style="font-size: 1.4rem; margin: 0.75rem 0 0.5rem 0;">GDGoc IST Innovators Challenge</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            Achieved <strong>Top 10 Finalist</strong> standing with <em>VisionDX Mega</em>, presenting an offline-first AI health diagnostic suite for Pakistan's rural areas.
+          </p>
+        </div>
+
+        <!-- Card 3: Mind to Machine -->
+        <div class="glass-card" style="padding: 2rem;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">⚙️</div>
+          <span class="banner-tag" style="background: var(--accent-cyan);">Competition Finalist</span>
+          <h3 style="font-size: 1.4rem; margin: 0.75rem 0 0.5rem 0;">Mind to Machine (MTM) Competition</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            Showcased Team DevTech innovations at the national Mind to Machine competition, presenting <em>MediConnect AI</em> & vital monitoring prototypes.
+          </p>
+        </div>
+
+        <!-- Card 4: Published Novel -->
+        <div class="glass-card" style="padding: 2rem;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📖</div>
+          <span class="banner-tag" style="background: var(--accent-purple);">Published Author • HAMANNAN</span>
+          <h3 style="font-size: 1.4rem; margin: 0.75rem 0 0.5rem 0;">The Vase Beneath the Ashes</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            Published historical fiction novel set during the 1258 CE Mongol destruction of Baghdad (under pen name HAMANNAN). Available on Amazon KDP.
+          </p>
+          <a href="https://www.amazon.com/dp/B08V51FLQ9" target="_blank" class="btn-card-action">
+            View on Amazon KDP →
+          </a>
+        </div>
+
+        <!-- Card 5: Philanthropy YouTube -->
+        <div class="glass-card" style="padding: 2rem;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎥</div>
+          <span class="banner-tag" style="background: var(--accent-pink);">Humanitarian Initiative</span>
+          <h3 style="font-size: 1.4rem; margin: 0.75rem 0 0.5rem 0;">Khairul Nas (خير الناس)</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            Charitable channel documenting philanthropic work supporting hospital patients and distribution of community aid.
+          </p>
+          <a href="https://youtube.com/@KhairulNas" target="_blank" class="btn-card-action">
+            Visit YouTube Channel →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAYABLE GAME ARCADE SECTION -->
+  <section class="arcade-section" id="arcade">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Playground</span>
+        <h2 class="section-title">Play My <span class="gradient-text-pink">Custom Web Games</span></h2>
+        <p class="section-desc">
+          Experience live HTML5 game engines right inside the portfolio! Click between games to test reflex mechanics, particle physics, and sound synthesis.
+        </p>
+      </div>
+
+      <div class="arcade-container">
+        <div class="arcade-tabs">
+          <button class="arcade-tab active" id="tab-neon" onclick="switchArcadeGame('neon')">⚡ Neon Circuit (Cyber Racer)</button>
+          <button class="arcade-tab" id="tab-balloon" onclick="switchArcadeGame('balloon')">🎈 Balloon Pop Web (Arcade)</button>
+          <button class="arcade-tab" id="tab-mob" onclick="switchArcadeGame('mob')">⚔️ Mob Control Evolution (Strategy)</button>
+        </div>
+
+        <div class="arcade-stage">
+          <div class="arcade-hud">
+            <span id="arcade-score-text">SCORE: 0</span>
+            <span>CONTROLS: ARROWS / MOUSE / CLICK</span>
+          </div>
+          <canvas id="arcade-canvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS DASHBOARD SECTION -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Competencies</span>
+        <h2 class="section-title">Skills & <span class="gradient-text-cyan">Engineering Arsenal</span></h2>
+        <p class="section-desc">
+          Demonstrated technical arsenal spanning artificial intelligence, full-stack frameworks, satellite remote sensing, and computer vision.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- AI & Computer Vision Card -->
+        <div class="glass-card skill-category-card">
+          <div class="skill-category-title">
+            <div class="skill-icon-badge">🧠</div>
+            <h3>AI & Computer Vision</h3>
+          </div>
+          
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>Python & Deep Learning</span><span>95%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 95%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>Gemini API & Groq LLM</span><span>92%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 92%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>OpenPose, MediaPipe & OpenCV</span><span>94%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 94%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>FFT Signal Processing & WiFi CSI</span><span>88%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+          </div>
+        </div>
+
+        <!-- Full-Stack Web & Android Card -->
+        <div class="glass-card skill-category-card">
+          <div class="skill-category-title">
+            <div class="skill-icon-badge">💻</div>
+            <h3>Full-Stack & Android</h3>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>React & Vite</span><span>94%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 94%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>Kotlin & Android Hybrid</span><span>88%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>Node.js, Express & Flask</span><span>90%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>TailwindCSS & HTML5/CSS3</span><span>96%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 96%;"></div></div>
+          </div>
+        </div>
+
+        <!-- Game Engines & Remote Sensing Card -->
+        <div class="glass-card skill-category-card">
+          <div class="skill-category-title">
+            <div class="skill-icon-badge">🛰️</div>
+            <h3>Remote Sensing & Game Engines</h3>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>NDWI Remote Sensing (Sentinel/Landsat)</span><span>90%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>HTML5 Canvas 2D Physics</span><span>95%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 95%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>Web Audio API & Sound Synching</span><span>88%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>Git, GitHub Analytics & C++</span><span>92%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 92%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Connect With <span class="gradient-text">Muhammad Hamza</span></h2>
+        <p class="section-desc">
+          Interested in collaborating on AI projects, software engineering roles, or tech workshops? Send a direct message!
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="glass-card contact-info-card">
+          <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Direct Contact Channels</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+            Feel free to reach out directly via email, GitHub, or LinkedIn. I'm always open to high-impact projects and software development opportunities.
+          </p>
+
+          <div class="contact-method">
+            <div class="contact-icon">📧</div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Email Address</div>
+              <a href="mailto:hamza302616@gmail.com" style="font-weight: 700; color: var(--accent-cyan); text-decoration:none;">hamza302616@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">💼</div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">LinkedIn Profile</div>
+              <a href="https://www.linkedin.com/in/muhammad-hamza-55368a3b4/" target="_blank" style="font-weight: 700; color: var(--accent-cyan); text-decoration:none;">linkedin.com/in/muhammad-hamza</a>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">🐙</div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">GitHub Workspace</div>
+              <a href="https://github.com/hamza0312615" target="_blank" style="font-weight: 700; color: var(--accent-cyan); text-decoration:none;">github.com/hamza0312615</a>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Institution</div>
+              <div style="font-weight: 700; color: var(--text-primary);">Institute of Space Technology (IST), Islamabad</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="glass-card" style="padding: 2.5rem;">
+          <form onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label for="contact-name">Your Full Name</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="sarah@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Inquiry Type</label>
+              <select id="contact-subject" class="form-control">
+                <option value="fulltime">Engineering Role / Internship</option>
+                <option value="ai-consulting">AI & HealthTech Collaboration</option>
+                <option value="gamedev">Custom Web / Game Project</option>
+                <option value="other">General Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-msg">Message</label>
+              <textarea id="contact-msg" class="form-control" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+              🚀 Send Message to Hamza
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p style="margin-bottom: 0.5rem;">
+        © 2026 Muhammad Hamza • Institute of Space Technology (IST) • DevTech Labs.
+      </p>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">
+        "Turning ideas into impact from satellite-based water monitoring to community-driven projects."
+      </p>
+    </div>
+  </footer>
+
+  <!-- MODAL CONTAINER -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
