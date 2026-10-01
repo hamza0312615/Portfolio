@@ -1190,14 +1190,38 @@ textarea.form-control {
   opacity: 1;
 }
 
+/* PUBLISHED APP SHOWCASE GRID & SCREENSHOTS */
+.app-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.store-screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.store-screenshot-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
 /* HIGH-PERFORMANCE MOBILE RESPONSIVE DRAWER & SMALL SCREEN OPTIMIZATION */
 @media (max-width: 992px) {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .hero-title {
-    font-size: 2.75rem;
+  .app-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
   }
   .innovation-stream-grid {
     grid-template-columns: 1fr;
@@ -1241,6 +1265,29 @@ textarea.form-control {
   }
 }
 
+@media (max-width: 768px) {
+  .filter-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.5rem;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .filter-pills::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-pill {
+    flex-shrink: 0;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 576px) {
   .container {
     padding: 0 1rem;
@@ -1249,45 +1296,46 @@ textarea.form-control {
     padding: 0.6rem 0;
   }
   .brand-logo {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     gap: 0.5rem;
   }
   .brand-badge {
-    width: 34px;
-    height: 34px;
-    font-size: 1rem;
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
     border-radius: var(--radius-sm);
   }
   .nav-actions .btn-secondary,
   .nav-actions .btn-primary {
-    padding: 0.4rem 0.85rem !important;
-    font-size: 0.78rem !important;
+    padding: 0.4rem 0.75rem !important;
+    font-size: 0.76rem !important;
   }
   .hero {
-    padding-top: 6rem;
-    padding-bottom: 3rem;
+    padding-top: 5.5rem;
+    padding-bottom: 2.5rem;
   }
   .hero-badge {
-    font-size: 0.75rem;
-    padding: 0.35rem 0.75rem;
+    font-size: 0.72rem;
+    padding: 0.35rem 0.7rem;
     line-height: 1.4;
   }
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.85rem;
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
   .hero-subtitle {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
   }
   .hero-cta {
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
     gap: 0.75rem;
+    flex-direction: column;
   }
   .btn-primary, .btn-secondary {
-    padding: 0.6rem 1.2rem;
+    padding: 0.65rem 1.2rem;
     font-size: 0.88rem;
     width: 100%;
     justify-content: center;
@@ -1295,77 +1343,108 @@ textarea.form-control {
   .hero-stats {
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
-    padding: 1rem;
+    padding: 0.85rem;
   }
   .stat-number {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   .stat-label {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
   }
   .section-title {
-    font-size: 1.85rem;
+    font-size: 1.7rem;
   }
   .section-desc {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .store-screenshots-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0.75rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .store-screenshots-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .store-screenshot-img {
+    width: 220px !important;
+    height: 240px !important;
+    flex-shrink: 0;
+    scroll-snap-align: center;
   }
   .portfolio-controls {
     flex-direction: column;
     align-items: stretch;
-    padding: 1rem;
-  }
-  .filter-pills {
-    justify-content: center;
-  }
-  .filter-pill {
-    padding: 0.4rem 0.85rem;
-    font-size: 0.8rem;
+    padding: 0.85rem;
+    gap: 0.75rem;
   }
   .search-box {
     max-width: 100%;
   }
   .glass-card {
-    padding: 1.25rem;
+    padding: 1.15rem;
     border-radius: var(--radius-md);
   }
+  .project-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .btn-card-action {
+    width: 100%;
+    justify-content: center;
+  }
   .innovation-radar-card {
-    padding: 1.25rem;
+    padding: 1.15rem;
   }
   .innovation-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.85rem;
   }
   .arcade-container {
-    padding: 1rem;
+    padding: 0.75rem;
   }
   .arcade-stage {
-    height: 380px;
+    height: 340px;
   }
   .arcade-hud {
-    font-size: 0.72rem;
-    top: 0.5rem;
-    left: 0.5rem;
-    right: 0.5rem;
+    font-size: 0.68rem;
+    top: 0.4rem;
+    left: 0.4rem;
+    right: 0.4rem;
+  }
+  .arcade-tabs {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .arcade-tab {
+    font-size: 0.78rem;
+    padding: 0.5rem 0.85rem;
   }
   .contact-info-card {
-    padding: 1.25rem;
+    padding: 1.15rem;
   }
   .modal-container {
-    padding: 1.5rem;
-    max-height: 95vh;
+    padding: 1.25rem;
+    max-width: 94vw;
+    max-height: 92vh;
+  }
+  .form-control {
+    font-size: 16px; /* Prevents auto-zoom on iOS Safari */
   }
 }
 
 @media (max-width: 380px) {
   .hero-title {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
   .brand-logo span {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+  }
+  .arcade-stage {
+    height: 300px;
   }
 }
