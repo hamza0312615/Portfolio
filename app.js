@@ -573,9 +573,11 @@ function dropNextInnovation() {
 
   setTimeout(() => {
     display.innerHTML = `
-      <span class="drop-pulse-badge">🟢 Live Radar Spot #${currentDropIndex + 1}</span>
-      <div style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
-        ${p.categoryLabel} • ${p.status}
+      <div class="drop-header-row">
+        <div class="drop-category-meta">
+          ${p.categoryLabel} • ${p.status}
+        </div>
+        <span class="drop-pulse-badge">🟢 Live Radar Spot #${currentDropIndex + 1}</span>
       </div>
       <h3 style="font-size: 1.6rem; margin-bottom: 0.75rem;" class="gradient-text">${p.title}</h3>
       <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.6;">${p.description}</p>
