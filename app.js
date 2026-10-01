@@ -520,6 +520,7 @@ function renderProjects() {
   container.innerHTML = filtered.map(p => `
     <div class="glass-card project-card">
       <div class="project-thumb-container">
+        <img src="${p.image}" alt="" class="project-thumb-bg" aria-hidden="true" onError="this.style.display='none'">
         <img src="${p.image}" alt="${p.title}" class="project-thumb" loading="lazy" onError="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'200\'><rect width=\'400\' height=\'200\' fill=\'%230f172a\'/><text x=\'200\' y=\'100\' fill=\'%2306b6d4\' text-anchor=\'middle\'>${encodeURIComponent(p.title)}</text></svg>'">
         <div class="project-thumb-vignette"></div>
       </div>
@@ -775,14 +776,14 @@ function runNeonCircuitGame(ctx, width, height) {
   };
 
   function spawnProjectTarget() {
-    if (Math.random() < 0.06) {
+    if (Math.random() < 0.02) {
       const item = projectItems[Math.floor(Math.random() * projectItems.length)];
       projectTargets.push({
         x: Math.random() * (width - 160) + 80,
         y: -40,
         name: item.name,
         color: item.color,
-        speed: Math.random() * 1.5 + 2.5,
+        speed: Math.random() * 0.6 + 0.9,
         width: 140,
         height: 32,
         hp: 2
@@ -805,7 +806,7 @@ function runNeonCircuitGame(ctx, width, height) {
         }
       }
       if (nearestTarget) {
-        playerX += (nearestTarget.x - playerX) * 0.25;
+        playerX += (nearestTarget.x - playerX) * 0.1;
       }
     }
 
@@ -821,7 +822,7 @@ function runNeonCircuitGame(ctx, width, height) {
       ctx.lineTo(x, height);
       ctx.stroke();
     }
-    for (let y = (frameCount * 2) % 40; y < height; y += 40) {
+    for (let y = (frameCount * 0.6) % 40; y < height; y += 40) {
       ctx.beginPath();
       ctx.moveTo(0, y);
       ctx.lineTo(width, y);
@@ -829,9 +830,9 @@ function runNeonCircuitGame(ctx, width, height) {
     }
 
     // Auto-fire dual plasma lasers continuously
-    if (frameCount % 5 === 0) {
-      lasers.push({ x: playerX - 12, y: height - 60, vy: -16 });
-      lasers.push({ x: playerX + 12, y: height - 60, vy: -16 });
+    if (frameCount % 12 === 0) {
+      lasers.push({ x: playerX - 12, y: height - 60, vy: -10 });
+      lasers.push({ x: playerX + 12, y: height - 60, vy: -10 });
     }
 
     spawnProjectTarget();
