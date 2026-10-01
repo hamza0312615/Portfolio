@@ -304,6 +304,60 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
 }
 
+/* UNIQUE DESIGN ACCENTS - CYBER HUD & LIVE TICKER BAR */
+.cyber-ticker-bar {
+  background: rgba(10, 14, 26, 0.95);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 0.35rem 0;
+  font-family: var(--font-code);
+  font-size: 0.78rem;
+  color: var(--accent-cyan);
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  z-index: 101;
+}
+
+.cyber-ticker-content {
+  display: inline-block;
+  animation: tickerSlide 28s linear infinite;
+}
+
+@keyframes tickerSlide {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+}
+
+.avatar-hud-wrapper {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.avatar-hud-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px dashed var(--accent-cyan);
+  animation: spinHudRing 14s linear infinite;
+  pointer-events: none;
+}
+
+.avatar-hud-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 1px solid rgba(192, 132, 252, 0.35);
+  pointer-events: none;
+}
+
+@keyframes spinHudRing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* Glass Card Component */
 .glass-card {
   background: linear-gradient(145deg, rgba(20, 29, 48, 0.88), rgba(13, 20, 35, 0.94));
@@ -317,11 +371,46 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid var(--accent-cyan);
+  border-left: 2px solid var(--accent-cyan);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid var(--accent-purple);
+  border-right: 2px solid var(--accent-purple);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
 .glass-card:hover {
   background: linear-gradient(145deg, rgba(28, 41, 68, 0.95), rgba(18, 27, 46, 0.98));
   border-color: rgba(56, 189, 248, 0.45);
   transform: translateY(-4px);
   box-shadow: 0 20px 45px -10px rgba(56, 189, 248, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.glass-card:hover::before,
+.glass-card:hover::after {
+  width: 26px;
+  height: 26px;
+  opacity: 1;
 }
 
 /* Top Navbar with Responsive Mobile Support */
