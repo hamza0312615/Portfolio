@@ -4,7 +4,7 @@
    DevTech Labs | Google Play Store Published App Developer
    ========================================================================== */
 
-// --- 1. PROJECTS DATABASE WITH ALL 27+ PROJECTS & DIRECT LIVE LINKS ---
+// --- 1. PROJECTS DATABASE WITH ALL 25+ PROJECTS & DIRECT LIVE LINKS ---
 const PROJECTS_DATA = [
   {
     id: "balloon-pop-deluxe-play",
@@ -138,7 +138,7 @@ const PROJECTS_DATA = [
     category: "ai-health",
     categoryLabel: "AI & HealthTech",
     status: "Biomedical Signal Processing",
-    image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%230b0f19'/><path d='M20,100 Q60,100 80,40 T120,160 T160,100 T240,100 Q260,100 280,20 T320,180 T360,100' fill='none' stroke='%2306b6d4' stroke-width='4'/><text x='200' y='180' font-family='sans-serif' font-size='14' font-weight='bold' fill='%23f8fafc' text-anchor='middle'>WiFi Vitals Detection</text></svg>",
+    image: "assets/user_project_1.png",
     summary: "Experimental system detecting human micro-movements (breathing & heartbeats) through ambient WiFi signal variance (RSSI/CSI).",
     description: "Contactless biomedical monitoring system extracting cardiac frequencies and respiratory rhythms by processing subtle RF signal amplitude and phase fluctuations using Fast Fourier Transform (FFT).",
     tech: ["Flask", "Python", "Vite", "React", "SciPy", "FFT Signal Processing"],
@@ -159,7 +159,7 @@ const PROJECTS_DATA = [
     category: "fullstack",
     categoryLabel: "Full-Stack & SaaS",
     status: "Gemini LLM Driven",
-    image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%230f172a'/><rect x='130' y='40' width='140' height='110' fill='none' stroke='%236366f1' stroke-width='3' rx='8'/><line x1='150' y1='70' x2='230' y2='70' stroke='%2394a3b8' stroke-width='3'/><line x1='150' y1='95' x2='210' y2='95' stroke='%2394a3b8' stroke-width='3'/><text x='200' y='180' font-family='sans-serif' font-size='14' font-weight='bold' fill='%23f8fafc' text-anchor='middle'>SmartHire AI Pipeline</text></svg>",
+    image: "assets/user_project_2.png",
     summary: "AI-powered recruitment pipeline leveraging Gemini API to streamline candidate screening, parse resumes, and eliminate hiring bias.",
     description: "Automated candidate evaluation platform that ingests CVs, parses skill sets against job descriptions, computes match confidence scores, and generates structured interview questions.",
     tech: ["React", "Node.js", "Gemini API", "Express", "TailwindCSS"],
@@ -179,7 +179,7 @@ const PROJECTS_DATA = [
     category: "ai-health",
     categoryLabel: "AI & HealthTech",
     status: "Mind to Machine Finalist",
-    image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%230f172a'/><rect x='170' y='40' width='60' height='120' fill='%2310b981' rx='10'/><rect x='140' y='70' width='120' height='60' fill='%2310b981' rx='10'/><text x='200' y='185' font-family='sans-serif' font-size='14' font-weight='bold' fill='%23f8fafc' text-anchor='middle'>MediConnect AI</text></svg>",
+    image: "assets/user_project_3.png",
     summary: "AI-assisted telemedicine system featuring automated symptom evaluation, virtual waiting rooms, and electronic prescriptions.",
     description: "Integrated clinical platform providing instant AI symptom analysis to route patients to appropriate specialists, schedule video calls, and securely store EHR records.",
     tech: ["React", "Node.js", "WebRTC", "Express", "TailwindCSS", "MongoDB"],
@@ -200,7 +200,7 @@ const PROJECTS_DATA = [
     category: "ai-health",
     categoryLabel: "AI & HealthTech",
     status: "Clinical AI Dictation",
-    image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%23111827'/><circle cx='200' cy='90' r='40' fill='none' stroke='%238b5cf6' stroke-width='4'/><rect x='192' y='70' width='16' height='35' fill='%238b5cf6' rx='8'/><text x='200' y='170' font-family='sans-serif' font-size='15' font-weight='bold' fill='%23f8fafc' text-anchor='middle'>VoiceDoc AI Scribe</text></svg>",
+    image: "assets/vdx_dashboard.png",
     summary: "Hands-free AI voice assistant that transcribes physician consultations into structured SOAP clinical notes in real time.",
     description: "Eliminates documentation burnout for doctors by listening to patient-doctor dialogue, recognizing complex medical terminology, and auto-filling EHR charts.",
     tech: ["Python", "Whisper AI", "NLP", "FastAPI", "React", "TailwindCSS"],
@@ -214,6 +214,90 @@ const PROJECTS_DATA = [
     github: "https://github.com/hamza0312615",
     liveUrl: "https://github.com/hamza0312615",
     localPath: "d:/data from drive f/ALL projects/voicedoc"
+  },
+  {
+    id: "civic-ai",
+    title: "🏙️ Civic AI Urban Issue Solver",
+    category: "fullstack",
+    categoryLabel: "Full-Stack & SaaS",
+    status: "Community Reporting System",
+    image: "assets/user_project_4.png",
+    summary: "Community reporting application allowing citizens to report urban infrastructure issues with automatic AI categorization and geo-tagging.",
+    description: "Empowers citizens to capture municipal problems (potholes, water leaks, waste accumulation) and routes categorized reports directly to local government departments.",
+    tech: ["React", "Node.js", "Express", "Leaflet Maps", "PostgreSQL", "TailwindCSS"],
+    architecture: "Geo-spatial query engine mapping user reports with vision classification of urban damage severity.",
+    features: [
+      "Camera integration with automatic GPS location tagging",
+      "AI vision classification of road & water infrastructure damage",
+      "Real-time municipal issue resolution tracker map",
+      "Public voting & upvoting priority system"
+    ],
+    github: "https://github.com/hamza0312615/civic-ai",
+    liveUrl: "https://github.com/hamza0312615/civic-ai",
+    localPath: "d:/data from drive f/ALL projects/civic-ai"
+  },
+  {
+    id: "world-weather-3d",
+    title: "🌍 World Weather 3D Explorer",
+    category: "fullstack",
+    categoryLabel: "Full-Stack & Visualization",
+    status: "Interactive 3D Dashboard",
+    image: "assets/user_project_5.png",
+    summary: "Interactive global weather visualization dashboard featuring 3D climate projections, live wind vector overlays, and radar forecasts.",
+    description: "Immersive WebGL meteorological platform rendering global atmospheric currents, sea temperatures, and severe weather warnings on an interactive 3D globe.",
+    tech: ["JavaScript", "Three.js", "OpenWeather API", "Leaflet", "CSS Glassmorphism"],
+    architecture: "Three.js particle shaders animating atmospheric wind vectors on spherical 3D canvas.",
+    features: [
+      "Interactive 3D rotating globe with zoom and pan physics",
+      "Live precipitation, temperature & wind vector particle layers",
+      "7-day hyper-local weather forecast search",
+      "Severe storm & hurricane trajectory warning tracker"
+    ],
+    github: "https://github.com/hamza0312615/world-weather-explorer",
+    liveUrl: "https://github.com/hamza0312615/world-weather-explorer",
+    localPath: "d:/data from drive f/ALL projects/world-weather-explorer"
+  },
+  {
+    id: "woundcare-vision",
+    title: "🩺 WoundCare AI Computer Vision",
+    category: "vision-ml",
+    categoryLabel: "Computer Vision & ML",
+    status: "Clinical Image Segmentation",
+    image: "assets/vdx_modules.png",
+    summary: "Computer vision application for automatic wound boundary detection, tissue classification, and surface area measurement.",
+    description: "Clinical decision support software utilizing UNet image segmentation to track wound healing progression and detect signs of surgical site infection.",
+    tech: ["Python", "OpenCV", "TensorFlow", "U-Net Architecture", "React"],
+    architecture: "Convolutional neural network performing pixel-level tissue segmentation (granulation vs necrotic tissue).",
+    features: [
+      "Automated wound surface area (cm²) measurement",
+      "Tissue color breakdown (Red, Yellow, Black percentage)",
+      "Healing velocity timeline tracking over time",
+      "High-risk infection alert flags"
+    ],
+    github: "https://github.com/hamza0312615/woundcare-main",
+    liveUrl: "https://github.com/hamza0312615/woundcare-main",
+    localPath: "d:/data from drive f/ALL projects/woundcare-main"
+  },
+  {
+    id: "vdx-whatsapp-bot",
+    title: "💬 VisionDX WhatsApp Health Backend",
+    category: "ai-health",
+    categoryLabel: "AI & HealthTech",
+    status: "Rural Health Triage Bot",
+    image: "assets/user_project_6.png",
+    summary: "Microservice backend enabling remote communities to access AI health triage and consulting directly through WhatsApp.",
+    description: "Scalable WhatsApp bot microservice connecting rural patients without smartphone apps to VisionDX AI diagnostics via voice notes and text messages.",
+    tech: ["Python", "FastAPI", "WhatsApp Business API", "Groq LLM", "Node.js"],
+    architecture: "Twilio/WhatsApp webhook receiver converting voice notes to text and routing queries through Groq Llama 3.3.",
+    features: [
+      "Multilingual Urdu/English voice note symptom triage",
+      "Low-bandwidth text interface for non-smartphone users",
+      "Automated appointment routing to nearest health worker",
+      "100% private local storage queue"
+    ],
+    github: "https://github.com/hamza0312615/visiondx-whatsapp-backend",
+    liveUrl: "https://github.com/hamza0312615/visiondx-whatsapp-backend",
+    localPath: "d:/data from drive f/ALL projects/visiondx-whatsapp-backend"
   },
   {
     id: "neon-circuit",
@@ -243,7 +327,7 @@ const PROJECTS_DATA = [
     category: "games",
     categoryLabel: "Web & Mobile Games",
     status: "Playable Web Game",
-    image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%230f172a'/><circle cx='120' cy='100' r='30' fill='%236366f1'/><circle cx='180' cy='100' r='20' fill='%236366f1'/><circle cx='240' cy='100' r='25' fill='%236366f1'/><rect x='280' y='70' width='60' height='60' fill='%23ec4899' rx='8'/><text x='200' y='170' font-family='sans-serif' font-size='16' font-weight='bold' fill='%23f8fafc' text-anchor='middle'>Mob Control Evolution</text></svg>",
+    image: "assets/balloon_pop_gameplay.png",
     summary: "Tactical crowd multiplication strategy game with multiplier gates, base defense cannons, card upgrades, and mob boss battles.",
     description: "Players shoot mob units through x2, x3, and x5 multiplier gates to overrun enemy towers, unlock champion cards, and upgrade cannon fire rates.",
     tech: ["JavaScript", "HTML5 Canvas Engine", "Web Audio", "CSS3 Animations"],
@@ -258,6 +342,90 @@ const PROJECTS_DATA = [
     liveUrl: "#arcade",
     localPath: "d:/data from drive f/ALL projects/games/mob-control-evolution",
     playable: true
+  },
+  {
+    id: "ist-gym-system",
+    title: "🏋️ IST Gym Management System",
+    category: "fullstack",
+    categoryLabel: "Full-Stack & Web Apps",
+    status: "IST Campus Management",
+    image: "assets/user_project_7.png",
+    summary: "Comprehensive fitness center management web application built for the Institute of Space Technology (IST) student community.",
+    description: "Full-stack management dashboard managing gym memberships, trainer schedules, workout session tracking, and attendance analytics for IST students and faculty.",
+    tech: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "TailwindCSS"],
+    architecture: "JWT authenticated REST API with role-based access control (Admin, Student, Trainer).",
+    features: [
+      "QR code digital membership check-in pass",
+      "Trainer slot booking & workout plan generator",
+      "Student attendance & peak hour density analytics",
+      "Role-based authorization (Admin / Member)"
+    ],
+    github: "https://github.com/hamza0312615/ist-gym-management-system",
+    liveUrl: "https://github.com/hamza0312615/ist-gym-management-system",
+    localPath: "d:/data from drive f/ALL projects/ist-gym-management-system"
+  },
+  {
+    id: "student-mgmt-system",
+    title: "🎓 IST Student Management System",
+    category: "fullstack",
+    categoryLabel: "Full-Stack & Web Apps",
+    status: "Academic Administration",
+    image: "assets/user_project_8.png",
+    summary: "Academic administration portal handling course enrollments, grade calculations, transcript exports, and faculty messaging.",
+    description: "Robust administrative portal streamlining university operations, student GPA calculations, course syllabus access, and department notices.",
+    tech: ["Java / C++", "React", "Node.js", "SQL Database", "Bootstrap"],
+    architecture: "Relational database schema with transactional integrity for course registration and GPA calculation.",
+    features: [
+      "Automated SGPA / CGPA calculator engine",
+      "Interactive semester course registration grid",
+      "PDF transcript generator",
+      "Department announcement notice board"
+    ],
+    github: "https://github.com/hamza0312615/StudentManagementSystem",
+    liveUrl: "https://github.com/hamza0312615/StudentManagementSystem",
+    localPath: "d:/data from drive f/ALL projects/StudentManagementSystem"
+  },
+  {
+    id: "velora-ecommerce",
+    title: "🛍️ Velora E-Commerce AI Store",
+    category: "fullstack",
+    categoryLabel: "Full-Stack & SaaS",
+    status: "AI Recommendation Engine",
+    image: "assets/user_project_9.png",
+    summary: "Modern web shopping store with personalized AI product recommendations, instant search filters, and checkout cart engine.",
+    description: "High-performance e-commerce platform featuring sleek visual layout, smart category filtering, cart state management, and Stripe payment gateway simulation.",
+    tech: ["React", "Vite", "Node.js", "TailwindCSS", "Redux Toolkit"],
+    architecture: "Redux store managing cart state with local storage persistence and mock payment gateway.",
+    features: [
+      "Instant product search with price and rating sliders",
+      "AI visual product recommendation carousel",
+      "Responsive sliding side-cart checkout drawer",
+      "Order status tracking & receipt generator"
+    ],
+    github: "https://github.com/hamza0312615/velora",
+    liveUrl: "https://github.com/hamza0312615/velora",
+    localPath: "d:/data from drive f/ALL projects/velora"
+  },
+  {
+    id: "forge-ai-gen",
+    title: "⚡ Forge AI Code & Asset Generator",
+    category: "ai-health",
+    categoryLabel: "AI & Developer Tools",
+    status: "Developer Productivity Tool",
+    image: "assets/user_project_10.png",
+    summary: "AI development workbench automating code scaffolding, unit test generation, and API schema mocking using Gemini LLM.",
+    description: "Developer utility suite that speeds up project creation by auto-generating boilerplate code, database schemas, and documentation from natural language prompts.",
+    tech: ["Python", "Gemini API", "React", "Node.js", "TailwindCSS"],
+    architecture: "Prompt engineering pipeline generating syntax-validated code snippets and automated unit test suites.",
+    features: [
+      "Multi-language code scaffolding (React, Python, Kotlin, Java)",
+      "Instant unit test & mock data generator",
+      "Swagger API documentation builder",
+      "Code refactoring & lint suggestion engine"
+    ],
+    github: "https://github.com/hamza0312615/forge-ai",
+    liveUrl: "https://github.com/hamza0312615/forge-ai",
+    localPath: "d:/data from drive f/ALL projects/forge ai"
   }
 ];
 
@@ -565,7 +733,7 @@ window.addEventListener('resize', () => {
   }
 });
 
-// Cyber Project Defender Engine - Touch & Mobile Responsive Arcade
+// Cyber Project Defender Engine - AI Auto-Targeting & Touch Responsive Arcade
 function runNeonCircuitGame(ctx, width, height) {
   let playerX = width / 2;
   let score = 0;
@@ -575,6 +743,9 @@ function runNeonCircuitGame(ctx, width, height) {
   let particles = [];
   let floatTexts = [];
   let frameCount = 0;
+
+  let userActive = false;
+  let userActiveTimeout = null;
 
   const projectItems = [
     { name: '⚡ VisionDX Mega', color: '#06b6d4' },
@@ -589,14 +760,22 @@ function runNeonCircuitGame(ctx, width, height) {
 
   const canvasEl = document.getElementById('arcade-canvas');
 
+  const triggerUserActive = () => {
+    userActive = true;
+    if (userActiveTimeout) clearTimeout(userActiveTimeout);
+    userActiveTimeout = setTimeout(() => { userActive = false; }, 3000);
+  };
+
   // Desktop Mouse Movement
   const handleMouseMove = (e) => {
+    triggerUserActive();
     const rect = canvasEl.getBoundingClientRect();
     playerX = Math.max(30, Math.min(width - 30, e.clientX - rect.left));
   };
 
   // Mobile Touch Dragging
   const handleTouchMove = (e) => {
+    triggerUserActive();
     if (e.touches && e.touches[0]) {
       const rect = canvasEl.getBoundingClientRect();
       playerX = Math.max(30, Math.min(width - 30, e.touches[0].clientX - rect.left));
@@ -608,12 +787,13 @@ function runNeonCircuitGame(ctx, width, height) {
   canvasEl.addEventListener('touchstart', handleTouchMove, { passive: true });
 
   window.onkeydown = (e) => {
+    triggerUserActive();
     if (e.key === 'ArrowLeft' || e.key === 'a') playerX = Math.max(30, playerX - 30);
     if (e.key === 'ArrowRight' || e.key === 'd') playerX = Math.min(width - 30, playerX + 30);
   };
 
   function spawnProjectTarget() {
-    if (Math.random() < 0.035) {
+    if (Math.random() < 0.038) {
       const item = projectItems[Math.floor(Math.random() * projectItems.length)];
       projectTargets.push({
         x: Math.random() * (width - 160) + 80,
@@ -630,6 +810,23 @@ function runNeonCircuitGame(ctx, width, height) {
 
   function loop() {
     frameCount++;
+
+    // AI Auto-Pilot Tracking when user is not manually steering
+    if (!userActive && projectTargets.length > 0) {
+      let nearestTarget = null;
+      let maxY = -999;
+      for (let i = 0; i < projectTargets.length; i++) {
+        const t = projectTargets[i];
+        if (t.y > maxY && t.y < height - 60) {
+          maxY = t.y;
+          nearestTarget = t;
+        }
+      }
+      if (nearestTarget) {
+        playerX += (nearestTarget.x - playerX) * 0.12;
+      }
+    }
+
     ctx.fillStyle = '#060911';
     ctx.fillRect(0, 0, width, height);
 
@@ -802,7 +999,9 @@ function runNeonCircuitGame(ctx, width, height) {
     ctx.shadowBlur = 0;
 
     // HUD Display Text
-    document.getElementById('arcade-score-text').innerText = `DEFENDER SCORE: ${score} XP | AUTO-FIRE LASERS ACTIVE (Touch / Mouse / Arrow Steering)`;
+    document.getElementById('arcade-score-text').innerText = userActive 
+      ? `DEFENDER SCORE: ${score} XP | MANUAL STEERING ACTIVE (Touch / Mouse / Arrow)` 
+      : `DEFENDER SCORE: ${score} XP | 🤖 AI AUTO-TARGETING ACTIVE (Touch or move mouse to steer)`;
 
     arcadeAnimId = requestAnimationFrame(loop);
   }
