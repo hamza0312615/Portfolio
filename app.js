@@ -407,7 +407,7 @@ const PROJECTS_DATA = [
   }
 ];
 
-// --- 2. PARTICLE CONSTELLATION CANVAS WITH LIGHT THEME SUPPORT ---
+// --- 2. PARTICLE CONSTELLATION CANVAS WITH LIGHT THEME & MOBILE TOUCH SUPPORT ---
 function initParticleCanvas() {
   const canvas = document.getElementById('bg-canvas');
   if (!canvas) return;
@@ -421,25 +421,36 @@ function initParticleCanvas() {
     height = canvas.height = window.innerHeight;
   });
 
-  const particles = [];
-  const particleCount = Math.min(Math.floor(width / 18), 70);
+  const isMobile = width < 768;
+  const particleCount = isMobile ? 45 : Math.min(Math.floor(width / 18), 75);
 
+  const particles = [];
   for (let i = 0; i < particleCount; i++) {
     particles.push({
       x: Math.random() * width,
       y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.6,
-      vy: (Math.random() - 0.5) * 0.6,
-      radius: Math.random() * 2 + 1,
-      color: i % 3 === 0 ? '#06b6d4' : i % 3 === 1 ? '#6366f1' : '#a855f7'
+      vx: (Math.random() - 0.5) * (isMobile ? 0.9 : 0.6),
+      vy: (Math.random() - 0.5) * (isMobile ? 0.9 : 0.6),
+      radius: Math.random() * 2.2 + (isMobile ? 1.4 : 1.0),
+      color: i % 4 === 0 ? '#06b6d4' : i % 4 === 1 ? '#818cf8' : i % 4 === 2 ? '#c084fc' : '#34d399'
     });
   }
 
   let mouseX = -1000, mouseY = -1000;
-  window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
+  const updatePointer = (clientX, clientY) => {
+    mouseX = clientX;
+    mouseY = clientY;
+  };
+
+  window.addEventListener('mousemove', (e) => updatePointer(e.clientX, e.clientY));
+  window.addEventListener('touchmove', (e) => {
+    if (e.touches && e.touches[0]) updatePointer(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('touchstart', (e) => {
+    if (e.touches && e.touches[0]) updatePointer(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+
+  const connectDist = isMobile ? 145 : 130;
 
   function render() {
     ctx.clearRect(0, 0, width, height);
@@ -454,31 +465,31 @@ function initParticleCanvas() {
       if (p.x < 0 || p.x > width) p.vx *= -1;
       if (p.y < 0 || p.y > height) p.vy *= -1;
 
-      // Mouse magnetic reaction
+      // Mouse & Touch magnetic reaction
       const dx = mouseX - p.x;
       const dy = mouseY - p.y;
       const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 120) {
-        p.x -= (dx / dist) * 0.8;
-        p.y -= (dy / dist) * 0.8;
+      if (dist < 130) {
+        p.x -= (dx / dist) * 1.2;
+        p.y -= (dy / dist) * 1.2;
       }
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = isLight ? (i % 2 === 0 ? 'rgba(2,132,199,0.5)' : 'rgba(126,34,206,0.5)') : p.color;
+      ctx.fillStyle = isLight ? (i % 2 === 0 ? 'rgba(2,132,199,0.7)' : 'rgba(126,34,206,0.7)') : p.color;
       ctx.fill();
 
-      // Connect nearby particles
+      // Connect nearby particles with glowing lines
       for (let j = i + 1; j < particles.length; j++) {
         const p2 = particles[j];
         const dist2 = Math.hypot(p.x - p2.x, p.y - p2.y);
-        if (dist2 < 130) {
+        if (dist2 < connectDist) {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
-          const alpha = 0.2 * (1 - dist2 / 130);
-          ctx.strokeStyle = isLight ? `rgba(67, 56, 202, ${alpha * 0.6})` : `rgba(99, 102, 241, ${alpha})`;
-          ctx.lineWidth = 0.8;
+          const alpha = 0.28 * (1 - dist2 / connectDist);
+          ctx.strokeStyle = isLight ? `rgba(67, 56, 202, ${alpha * 0.7})` : `rgba(56, 189, 248, ${alpha})`;
+          ctx.lineWidth = isMobile ? 1.0 : 0.8;
           ctx.stroke();
         }
       }
