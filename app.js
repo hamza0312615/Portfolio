@@ -579,8 +579,14 @@ function dropNextInnovation() {
         </div>
         <span class="drop-pulse-badge">🟢 Live Radar Spot #${currentDropIndex + 1}</span>
       </div>
-      <h3 style="font-size: 1.6rem; margin-bottom: 0.75rem;" class="gradient-text">${p.title}</h3>
-      <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.6;">${p.description}</p>
+      <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;" class="gradient-text">${p.title}</h3>
+      
+      <div class="drop-img-wrapper" style="position: relative; height: 180px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.25rem; border: 1px solid rgba(255,255,255,0.12); background: #060911;">
+        <img src="${p.image}" alt="${p.title}" style="width: 100%; height: 100%; object-fit: contain; padding: 0.4rem; filter: drop-shadow(0 8px 16px rgba(0,0,0,0.6));">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(7,9,14,0.7) 0%, transparent 60%); pointer-events: none;"></div>
+      </div>
+
+      <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.25rem; line-height: 1.6;">${p.description}</p>
       
       <div class="tech-stack-pills" style="margin-bottom: 1.5rem;">
         ${p.tech.map(t => `<span class="tech-pill">${t}</span>`).join('')}
@@ -1337,11 +1343,49 @@ function showToast(message) {
   setTimeout(() => toast.classList.remove('active'), 3500);
 }
 
-function handleContactSubmit(e) {
+async function handleContactSubmit(e) {
   e.preventDefault();
   const name = document.getElementById('contact-name').value;
-  showToast(`Thank you, ${name}! Your message has been sent to Muhammad Hamza.`);
-  e.target.reset();
+  const email = document.getElementById('contact-email').value;
+  const subject = document.getElementById('contact-subject').value;
+  const message = document.getElementById('contact-msg').value;
+
+  const btn = e.target.querySelector('button[type="submit"]');
+  const originalBtnText = btn.innerHTML;
+  btn.innerHTML = `⏳ Delivering Message...`;
+  btn.disabled = true;
+
+  try {
+    const response = await fetch('https://formsubmit.co/ajax/hamza302616@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        inquiry_type: subject,
+        message: message,
+        _subject: `📩 New Portfolio Inquiry from ${name} (${subject})`,
+        _captcha: "false"
+      })
+    });
+
+    if (response.ok) {
+      showToast(`✅ Message delivered to hamza302616@gmail.com! Thank you, ${name}.`);
+      e.target.reset();
+    } else {
+      window.location.href = `mailto:hamza302616@gmail.com?subject=${encodeURIComponent(subject + " Inquiry from " + name)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
+      showToast(`📧 Opening mail app to send directly to hamza302616@gmail.com...`);
+    }
+  } catch (err) {
+    window.location.href = `mailto:hamza302616@gmail.com?subject=${encodeURIComponent(subject + " Inquiry from " + name)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
+    showToast(`📧 Opening mail app for hamza302616@gmail.com...`);
+  } finally {
+    btn.innerHTML = originalBtnText;
+    btn.disabled = false;
+  }
 }
 
 // --- 9. INITIALIZATION ON DOM READY & MOBILE MENU TOGGLE ---

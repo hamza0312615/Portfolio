@@ -1409,7 +1409,7 @@ textarea.form-control {
 
 /* PUBLISHED APP SHOWCASE GRID & SCREENSHOTS */
 .published-app-card {
-  padding: 2.5rem;
+  padding: 2.25rem;
   border: 1px solid rgba(236, 72, 153, 0.3);
   box-shadow: 0 0 40px rgba(236, 72, 153, 0.15);
   max-width: 100%;
@@ -1417,11 +1417,59 @@ textarea.form-control {
   box-sizing: border-box;
 }
 
+.published-app-title {
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  margin-bottom: 0.75rem;
+  word-break: break-word;
+}
+
 .app-showcase-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 2.5rem;
+  gap: 2.25rem;
   align-items: center;
+  max-width: 100%;
+}
+
+.app-stats-row {
+  display: flex;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.app-stat-box {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  flex: 1;
+  min-width: 120px;
+}
+
+.stat-box-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.03em;
+}
+
+.stat-box-val {
+  font-weight: 800;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.val-amber { color: var(--accent-amber); }
+.val-cyan { color: var(--accent-cyan); }
+.val-emerald { color: var(--accent-emerald); }
+
+.published-app-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .store-screenshots-grid {
@@ -1602,6 +1650,18 @@ textarea.form-control {
     height: 240px !important;
     flex-shrink: 0;
     scroll-snap-align: center;
+  }
+  .app-stats-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .app-stat-box {
+    width: 100%;
+    min-width: 0;
+  }
+  .published-app-actions {
+    flex-direction: column;
+    gap: 0.55rem;
   }
   .portfolio-controls {
     flex-direction: column;
