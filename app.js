@@ -8,10 +8,10 @@
 const PROJECTS_DATA = [
   {
     id: "balloon-pop-deluxe-play",
-    title: "🎈 Balloon Pop Deluxe (Google Play Store)",
+    title: "Balloon Pop Deluxe (Google Play Store)",
     category: "games",
-    categoryLabel: "📱 Published Play Store App",
-    status: "🚀 Published on Google Play (DevTech Labs)",
+    categoryLabel: "Published Play Store App",
+    status: "Published on Google Play (DevTech Labs)",
     image: "assets/balloon_pop_store_1.png",
     summary: "Published Google Play arcade puzzle adventure with Prism Peaks world map, Lumi Fox companion, Thunder Slash boosters, and Play Achievements.",
     description: "Balloon Pop Deluxe is a published mobile Android arcade game on the Google Play Store under DevTech Labs. Features Prism Peaks crystalline caverns level progression, Lumi Fox companion, 120x Thunder Slash score boosters, Google Play Achievements, and coin economy.",
@@ -32,7 +32,7 @@ const PROJECTS_DATA = [
     title: "VisionDX Mega (AI Diagnostics Platform)",
     category: "ai-health",
     categoryLabel: "AI & HealthTech",
-    status: "🏆 Top 12 Google AI Seekho | Top 10 GDG IST",
+    status: "Top 12 Google AI Seekho | Top 10 GDG IST",
     image: "assets/vdx_hero.png",
     summary: "Offline-first AI health diagnostics platform with 12 AI modules, 71-gesture PSL sign language translation, and VoiceDoc interface.",
     description: "VisionDX Mega is an offline-first AI healthcare ecosystem designed for underserved communities in Pakistan. Built with 12 AI modules including skin/eye/hair analysis, audio cough detection, lab report parser, 71-gesture Pakistan Sign Language translator, and automated WhatsApp triage backend.",
@@ -50,7 +50,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "resqnet-disaster",
-    title: "🚨 ResQNet (AI Disaster Response Platform)",
+    title: "ResQNet (AI Disaster Response Platform)",
     category: "ai-health",
     categoryLabel: "AI & Disaster Tech",
     status: "Live Deployed System",
@@ -71,7 +71,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "studylens-ai",
-    title: "📚 Study Lens AI Scanner",
+    title: "Study Lens AI Scanner",
     category: "fullstack",
     categoryLabel: "Full-Stack & Mobile App",
     status: "Active Mobile App",
@@ -92,7 +92,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "aquora-water",
-    title: "💧 AQUORA / EQUORA (Water Watch)",
+    title: "AQUORA / EQUORA (Water Watch)",
     category: "fullstack",
     categoryLabel: "Full-Stack & Satellite",
     status: "Indus Basin Remote Sensing",
@@ -113,7 +113,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "psl-translator",
-    title: "🤟 PSL Sign Language Real-Time AI Translator",
+    title: "PSL Sign Language Real-Time AI Translator",
     category: "vision-ml",
     categoryLabel: "Computer Vision & ML",
     status: "71 Gestures Active",
@@ -134,7 +134,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "wifi-heartbeat",
-    title: "📡 WiFi Vitals Detection (Contactless Sensing)",
+    title: "WiFi Vitals Detection (Contactless Sensing)",
     category: "ai-health",
     categoryLabel: "AI & HealthTech",
     status: "Biomedical Signal Processing",
@@ -155,7 +155,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "smarthire-ai",
-    title: "💼 SmartHire AI Recruitment Pipeline",
+    title: "SmartHire AI Recruitment Pipeline",
     category: "fullstack",
     categoryLabel: "Full-Stack & SaaS",
     status: "Gemini LLM Driven",
@@ -175,7 +175,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "mediconnect-ai",
-    title: "🏥 MediConnect AI Tele-Health",
+    title: "MediConnect AI Tele-Health",
     category: "ai-health",
     categoryLabel: "AI & HealthTech",
     status: "Mind to Machine Finalist",
@@ -196,7 +196,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "voicedoc-scribe",
-    title: "🗣️ VoiceDoc Hands-Free Scribe",
+    title: "VoiceDoc Hands-Free Scribe",
     category: "ai-health",
     categoryLabel: "AI & HealthTech",
     status: "Clinical AI Dictation",
@@ -217,7 +217,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "civic-ai",
-    title: "🏙️ Civic AI Urban Issue Solver",
+    title: "Civic AI Urban Issue Solver",
     category: "fullstack",
     categoryLabel: "Full-Stack & SaaS",
     status: "Community Reporting System",
@@ -238,7 +238,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "world-weather-3d",
-    title: "🌍 World Weather 3D Explorer",
+    title: "World Weather 3D Explorer",
     category: "fullstack",
     categoryLabel: "Full-Stack & Visualization",
     status: "Interactive 3D Dashboard",
@@ -259,7 +259,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "woundcare-vision",
-    title: "🩺 WoundCare AI Computer Vision",
+    title: "WoundCare AI Computer Vision",
     category: "vision-ml",
     categoryLabel: "Computer Vision & ML",
     status: "Clinical Image Segmentation",
@@ -280,7 +280,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "vdx-whatsapp-bot",
-    title: "💬 VisionDX WhatsApp Health Backend",
+    title: "VisionDX WhatsApp Health Backend",
     category: "ai-health",
     categoryLabel: "AI & HealthTech",
     status: "Rural Health Triage Bot",
@@ -301,7 +301,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "neon-circuit",
-    title: "⚡ Neon Circuit Cyber Arcade",
+    title: "Neon Circuit Cyber Arcade",
     category: "games",
     categoryLabel: "Web & Mobile Games",
     status: "Playable Web Game",
@@ -323,7 +323,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "ist-gym-system",
-    title: "🏋️ IST Gym Management System",
+    title: "IST Gym Management System",
     category: "fullstack",
     categoryLabel: "Full-Stack & Web Apps",
     status: "IST Campus Management",
@@ -344,7 +344,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "student-mgmt-system",
-    title: "🎓 IST Student Management System",
+    title: "IST Student Management System",
     category: "fullstack",
     categoryLabel: "Full-Stack & Web Apps",
     status: "Academic Administration",
@@ -365,7 +365,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "velora-ecommerce",
-    title: "🛍️ Velora E-Commerce AI Store",
+    title: "Velora E-Commerce AI Store",
     category: "fullstack",
     categoryLabel: "Full-Stack & SaaS",
     status: "AI Recommendation Engine",
@@ -386,7 +386,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "forge-ai-gen",
-    title: "⚡ Forge AI Code & Asset Generator",
+    title: "Forge AI Code & Asset Generator",
     category: "ai-health",
     categoryLabel: "AI & Developer Tools",
     status: "Developer Productivity Tool",
@@ -532,7 +532,7 @@ function renderProjects() {
     <div class="glass-card project-card">
       <div class="project-thumb-container">
         <img src="${p.image}" alt="" class="project-thumb-bg" aria-hidden="true" onError="this.style.display='none'">
-        <img src="${p.image}" alt="${p.title}" class="project-thumb" loading="lazy" onError="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'200\'><rect width=\'400\' height=\'200\' fill=\'%230f172a\'/><text x=\'200\' y=\'100\' fill=\'%2306b6d4\' text-anchor=\'middle\'>${encodeURIComponent(p.title)}</text></svg>'">
+        <img src="${p.image}" alt="${p.title}" class="project-thumb" loading="lazy" onError="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'200\'><rect width=\'400\' height=\'200\' fill=\'%2306111d\'/><text x=\'200\' y=\'100\' fill=\'%235cc8ff\' text-anchor=\'middle\'>${encodeURIComponent(p.title)}</text></svg>'">
         <div class="project-thumb-vignette"></div>
       </div>
       <div class="project-body">
@@ -547,15 +547,17 @@ function renderProjects() {
         </div>
         <div class="project-footer">
           <button class="btn-card-action" onclick="openProjectModal('${p.id}')">
-            Specs & Details →
+            Specs & Details <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
           </button>
           <a href="${p.liveUrl || p.github}" target="_blank" class="btn-card-action" style="color: var(--accent-cyan);">
-            🌐 Live Project Link
+            <i data-lucide="external-link" style="width: 14px; height: 14px;"></i> Live Project
           </a>
         </div>
       </div>
     </div>
   `).join('');
+
+  if (window.lucide) window.lucide.createIcons();
 }
 
 // --- 4. INNOVATION DROP RADAR ENGINE ---
@@ -577,7 +579,9 @@ function dropNextInnovation() {
         <div class="drop-category-meta">
           ${p.categoryLabel} • ${p.status}
         </div>
-        <span class="drop-pulse-badge">🟢 Live Radar Spot #${currentDropIndex + 1}</span>
+        <span class="drop-pulse-badge" style="display: inline-flex; align-items: center; gap: 0.3rem;">
+          <i data-lucide="radio" style="width: 12px; height: 12px;"></i> Live Radar Spot #${currentDropIndex + 1}
+        </span>
       </div>
       <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;" class="gradient-text">${p.title}</h3>
       
@@ -593,20 +597,21 @@ function dropNextInnovation() {
       </div>
 
       <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-        <a href="${p.liveUrl || p.github}" target="_blank" class="btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">
-          🚀 Open Live Project Link
+        <a href="${p.liveUrl || p.github}" target="_blank" class="btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <i data-lucide="external-link" style="width: 16px; height: 16px;"></i> Open Live Project
         </a>
-        <button onclick="openProjectModal('${p.id}')" class="btn-secondary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">
-          Inspect System Architecture
+        <button onclick="openProjectModal('${p.id}')" class="btn-secondary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <i data-lucide="cpu" style="width: 16px; height: 16px;"></i> Inspect System Architecture
         </button>
       </div>
     `;
 
     display.style.opacity = '1';
     display.style.transform = 'translateY(0)';
+    if (window.lucide) window.lucide.createIcons();
   }, 200);
 
-  showToast(`⚡ Innovation spotlight: ${p.title}`);
+  showToast(`Innovation spotlight: ${p.title}`);
 }
 
 // --- 5. MODAL DIALOG CONTROLLER ---
@@ -651,22 +656,12 @@ function openProjectModal(id) {
     </div>
 
     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-      <a href="${p.github}" target="_blank" class="btn-primary" style="font-size: 0.9rem; padding: 0.6rem 1.4rem;">
-        📂 GitHub Repository / Live Code
+      <a href="${p.github}" target="_blank" class="btn-primary" style="font-size: 0.9rem; padding: 0.6rem 1.4rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+        <i data-lucide="github" style="width: 16px; height: 16px;"></i> GitHub Repository
       </a>
-      ${p.localPath ? `
-        <a href="file:///${p.localPath}" target="_blank" class="btn-secondary" style="font-size: 0.9rem; padding: 0.6rem 1.4rem;">
-          📁 Local Workspace Folder
-        </a>
-      ` : ''}
-      ${p.privacyUrl && p.privacyUrl !== '#' ? `
-        <a href="file:///${p.privacyUrl}" target="_blank" class="btn-secondary" style="font-size: 0.9rem; padding: 0.6rem 1.4rem;">
-          📜 Privacy Policy
-        </a>
-      ` : ''}
       ${p.playable ? `
-        <button onclick="closeModal(); scrollToArcade('${p.id}');" class="btn-primary" style="background: var(--accent-purple); font-size: 0.9rem; padding: 0.6rem 1.4rem;">
-          🎮 Play Game Now
+        <button onclick="closeModal(); scrollToArcade('${p.id}');" class="btn-primary" style="background: var(--accent-purple); font-size: 0.9rem; padding: 0.6rem 1.4rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <i data-lucide="gamepad-2" style="width: 16px; height: 16px;"></i> Play Game Now
         </button>
       ` : ''}
     </div>
@@ -674,6 +669,7 @@ function openProjectModal(id) {
 
   overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
+  if (window.lucide) window.lucide.createIcons();
 }
 
 function closeModal() {
@@ -1003,7 +999,7 @@ function runNeonCircuitGame(ctx, width, height) {
     // HUD Display Text
     document.getElementById('arcade-score-text').innerText = userActive 
       ? `DEFENDER SCORE: ${score} XP | MANUAL STEERING ACTIVE (Touch / Mouse / Arrow)` 
-      : `DEFENDER SCORE: ${score} XP | 🤖 AI AUTO-TARGETING ACTIVE (Touch or move mouse to steer)`;
+      : `DEFENDER SCORE: ${score} XP | AI AUTO-TARGETING ACTIVE (Touch or move mouse to steer)`;
 
     arcadeAnimId = requestAnimationFrame(loop);
   }
@@ -1086,7 +1082,7 @@ function runBalloonPopGame(ctx, width, height) {
     floatTexts.push({
       x: b.x,
       y: b.y,
-      text: isAuto ? `🤖 AUTO-POP! +50 XP` : `💥 POP! +50 XP`,
+      text: isAuto ? `AUTO-POP! +50 XP` : `POP! +50 XP`,
       color: b.color,
       life: 35
     });
@@ -1233,7 +1229,7 @@ function runBalloonPopGame(ctx, width, height) {
     // HUD Text Display
     document.getElementById('arcade-score-text').innerText = userActive 
       ? `PROJECT BUBBLES POPPED SCORE: ${score} XP | MANUAL BUBBLE POPPING (Click/Touch)` 
-      : `PROJECT BUBBLES POPPED SCORE: ${score} XP | 🎈 AI AUTO-POP SHOWCASE (Click/Touch balloons to pop!)`;
+      : `PROJECT BUBBLES POPPED SCORE: ${score} XP | AI AUTO-POP SHOWCASE (Click/Touch balloons to pop!)`;
 
     arcadeAnimId = requestAnimationFrame(loop);
   }
@@ -1251,7 +1247,9 @@ function openResumeModal() {
     <div style="text-align:center; margin-bottom: 1.5rem;">
       <img src="assets/hamza_avatar.png" alt="Muhammad Hamza" style="width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--accent-cyan); box-shadow: var(--shadow-neon-cyan); object-fit: cover; margin-bottom: 0.75rem;">
       <h2 style="font-size: 2.2rem;" class="gradient-text">Muhammad Hamza</h2>
-      <p style="color: var(--accent-amber); font-weight:700; margin-top:0.25rem;">🏆 Top 12 Finalist @ Google AI Seekho Builders Day • Top 10 Finalist @ GDG IST</p>
+      <p style="color: var(--accent-amber); font-weight:700; margin-top:0.25rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+        <i data-lucide="trophy" style="width: 16px; height: 16px;"></i> Top 12 Finalist @ Google AI Seekho Builders Day • Top 10 Finalist @ GDG IST
+      </p>
       <p style="color: var(--accent-cyan); font-weight:600; margin-top:0.25rem;">Computer Science Student @ Institute of Space Technology (IST)</p>
       <p style="color: var(--text-secondary); font-size: 0.9rem; font-style: italic; margin-top:0.25rem;">"Turning ideas into impact from satellite-based water monitoring to community-driven projects."</p>
     </div>
@@ -1277,17 +1275,17 @@ function openResumeModal() {
       <div style="background: rgba(0,0,0,0.15); padding: 1.25rem; border-radius: var(--radius-md);">
         <h4 style="color: var(--accent-purple); margin-bottom: 0.5rem;">Honors & Achievements</h4>
         <ul style="color: var(--text-secondary); padding-left: 1rem; font-size: 0.9rem; line-height: 1.7;">
-          <li>🏆 <strong>Google AI Seekho Builders Day Top 12 Finalist</strong></li>
-          <li>🏆 <strong>GDG IST Challenge Top 10 Finalist</strong> (VisionDX Mega)</li>
-          <li>⚙️ <strong>Mind to Machine (MTM) Competition Finalist</strong></li>
-          <li>📖 Published Novelist (<em>The Vase Beneath the Ashes</em>)</li>
+          <li><strong>Google AI Seekho Builders Day Top 12 Finalist</strong></li>
+          <li><strong>GDG IST Challenge Top 10 Finalist</strong> (VisionDX Mega)</li>
+          <li><strong>Mind to Machine (MTM) Competition Finalist</strong></li>
+          <li>Published Novelist (<em>The Vase Beneath the Ashes</em>)</li>
         </ul>
       </div>
     </div>
 
     <div style="display: flex; justify-content: center; gap: 1rem;">
-      <button onclick="downloadResumePDF()" class="btn-primary">
-        📥 Download Muhammad Hamza's CV
+      <button onclick="downloadResumePDF()" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.4rem;">
+        <i data-lucide="download" style="width: 16px; height: 16px;"></i> Download CV
       </button>
       <button onclick="closeModal()" class="btn-secondary">
         Close Window
@@ -1297,6 +1295,7 @@ function openResumeModal() {
 
   overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
+  if (window.lucide) window.lucide.createIcons();
 }
 
 function downloadResumePDF() {
@@ -1326,7 +1325,7 @@ Computer Science student at IST building AI-powered diagnostic tools, remote sen
   a.href = url;
   a.download = 'Muhammad_Hamza_Resume.txt';
   a.click();
-  showToast('📄 Muhammad Hamza\'s Resume downloaded successfully!');
+  showToast("Muhammad Hamza's Resume downloaded successfully!");
 }
 
 // --- 8. TOAST NOTIFICATION & CONTACT FORM ---
@@ -1338,8 +1337,9 @@ function showToast(message) {
     toast.className = 'toast-notification';
     document.body.appendChild(toast);
   }
-  toast.innerHTML = `<span>🟢</span> <div>${message}</div>`;
+  toast.innerHTML = `<i data-lucide="check-circle-2" style="color: var(--accent-emerald); width: 18px; height: 18px; flex-shrink: 0;"></i> <div>${message}</div>`;
   toast.classList.add('active');
+  if (window.lucide) window.lucide.createIcons();
   setTimeout(() => toast.classList.remove('active'), 3500);
 }
 
@@ -1352,8 +1352,9 @@ async function handleContactSubmit(e) {
 
   const btn = e.target.querySelector('button[type="submit"]');
   const originalBtnText = btn.innerHTML;
-  btn.innerHTML = `⏳ Delivering Message...`;
+  btn.innerHTML = `<i data-lucide="loader-2" class="spin-icon" style="width: 18px; height: 18px;"></i> Delivering Message...`;
   btn.disabled = true;
+  if (window.lucide) window.lucide.createIcons();
 
   try {
     const response = await fetch('https://formsubmit.co/ajax/hamza302616@gmail.com', {
@@ -1367,24 +1368,25 @@ async function handleContactSubmit(e) {
         email: email,
         inquiry_type: subject,
         message: message,
-        _subject: `📩 New Portfolio Inquiry from ${name} (${subject})`,
+        _subject: `New Portfolio Inquiry from ${name} (${subject})`,
         _captcha: "false"
       })
     });
 
     if (response.ok) {
-      showToast(`✅ Message delivered to hamza302616@gmail.com! Thank you, ${name}.`);
+      showToast(`Message delivered to hamza302616@gmail.com! Thank you, ${name}.`);
       e.target.reset();
     } else {
       window.location.href = `mailto:hamza302616@gmail.com?subject=${encodeURIComponent(subject + " Inquiry from " + name)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
-      showToast(`📧 Opening mail app to send directly to hamza302616@gmail.com...`);
+      showToast(`Opening mail app to send directly to hamza302616@gmail.com...`);
     }
   } catch (err) {
     window.location.href = `mailto:hamza302616@gmail.com?subject=${encodeURIComponent(subject + " Inquiry from " + name)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
-    showToast(`📧 Opening mail app for hamza302616@gmail.com...`);
+    showToast(`Opening mail app for hamza302616@gmail.com...`);
   } finally {
     btn.innerHTML = originalBtnText;
     btn.disabled = false;
+    if (window.lucide) window.lucide.createIcons();
   }
 }
 
@@ -1394,6 +1396,10 @@ document.addEventListener('DOMContentLoaded', () => {
   renderProjects();
   initArcadeGame();
   dropNextInnovation(); // Initialize first innovation drop
+
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
 
   // Mobile navigation drawer toggle
   const mobileBtn = document.getElementById('mobile-toggle');
@@ -1431,7 +1437,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (themeBtn) {
     themeBtn.addEventListener('click', () => {
       document.body.classList.toggle('light-theme');
-      themeBtn.innerText = document.body.classList.contains('light-theme') ? '🌙' : '☀️';
+      const isLight = document.body.classList.contains('light-theme');
+      themeBtn.innerHTML = isLight
+        ? '<i data-lucide="moon" style="width: 18px; height: 18px;"></i>'
+        : '<i data-lucide="sun" style="width: 18px; height: 18px;"></i>';
+      if (window.lucide) window.lucide.createIcons();
     });
   }
 

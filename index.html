@@ -6,10 +6,11 @@
   <title>Muhammad Hamza | CS @ IST | AI Systems & Play Store App Developer</title>
   <meta name="description" content="Official Portfolio of Muhammad Hamza - Computer Science student at Institute of Space Technology (IST), Google AI Seekho Top 12 Finalist, Published Mobile App Developer (DevTech Labs), and Author.">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts & Lucide Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -27,7 +28,7 @@
         <span>Muhammad <span class="gradient-text">Hamza</span></span>
       </a>
 
-      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Mobile Menu">☰</button>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Mobile Menu"><i data-lucide="menu"></i></button>
 
       <ul class="nav-links" id="nav-links">
         <li><a href="#hero" class="active">Home</a></li>
@@ -62,7 +63,7 @@
   <!-- LIVE SYSTEM CYBER TICKER BAR -->
   <div class="cyber-ticker-bar">
     <div class="cyber-ticker-content">
-      🟢 LIVE TELEMETRY: <strong>Muhammad Hamza</strong> • Google AI Seekho Top 12 Finalist • Published Play Store Developer @ DevTech Labs • Computer Science @ Institute of Space Technology (IST) • 25+ Active Projects • Deployed Water Remote Sensing (AQUORA) & AI Health (VisionDX Mega)
+      <i data-lucide="radio" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; color: var(--accent-emerald); margin-right: 4px;"></i> LIVE TELEMETRY: <strong>Muhammad Hamza</strong> • Google AI Seekho Top 12 Finalist • Published Play Store Developer @ DevTech Labs • Computer Science @ Institute of Space Technology (IST) • 25+ Active Projects • Deployed Water Remote Sensing (AQUORA) & AI Health (VisionDX Mega)
     </div>
   </div>
 
@@ -76,9 +77,10 @@
               <img src="assets/hamza_avatar.png" alt="Muhammad Hamza Avatar" style="width: 82px; height: 82px; border-radius: 50%; border: 3px solid var(--accent-cyan); box-shadow: var(--shadow-neon-cyan); object-fit: cover;">
             </div>
             <div>
-              <div class="hero-badge" style="margin-bottom: 0.35rem;">
+              <div class="hero-badge" style="margin-bottom: 0.35rem; display: inline-flex; align-items: center; gap: 0.4rem;">
                 <span class="status-dot"></span>
-                <span>🏆 Top 12 Finalist @ Google AI Seekho • Top 10 @ GDG IST</span>
+                <i data-lucide="trophy" style="width: 14px; height: 14px; color: var(--accent-amber);"></i>
+                <span>Top 12 Finalist @ Google AI Seekho • Top 10 @ GDG IST</span>
               </div>
               <h1 class="hero-title" style="margin-bottom: 0; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.15;">
                 Hi, I'm <span class="gradient-text">Muhammad Hamza</span>
@@ -108,10 +110,10 @@
 
           <div class="hero-cta">
             <a href="#projects" class="btn-primary">
-              🚀 Explore 25+ Projects
+              <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i> Explore 25+ Projects
             </a>
             <a href="#mobile-apps" class="btn-secondary">
-              📱 Google Play Apps
+              <i data-lucide="smartphone" style="width: 18px; height: 18px;"></i> Google Play Apps
             </a>
           </div>
 
@@ -140,7 +142,9 @@
         <div class="hero-banner-card">
           <img src="assets/vdx_hero.png" alt="VisionDX Mega Showcase" class="hero-banner-img">
           <div class="hero-banner-overlay">
-            <span class="banner-tag">🏆 Top 12 Google AI Seekho Finalist</span>
+            <span class="banner-tag" style="display: inline-flex; align-items: center; gap: 0.4rem;">
+              <i data-lucide="award" style="width: 14px; height: 14px;"></i> Top 12 Google AI Seekho Finalist
+            </span>
             <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 0.25rem;">VisionDX Mega AI Platform</h3>
             <p style="color: var(--text-secondary); font-size: 0.85rem;">Offline-first health diagnostics with 12 AI modules, 71 PSL Sign Gestures & VoiceDoc interface.</p>
           </div>
@@ -150,11 +154,11 @@
   </section>
 
   <!-- CORE CAPABILITIES OVERVIEW SECTION -->
-  <section class="section" id="capabilities" style="padding: 3.5rem 0 2.5rem 0; background: rgba(15, 23, 42, 0.4); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section class="section" id="capabilities" style="padding: 3.5rem 0 2.5rem 0; background: rgba(10, 24, 40, 0.4); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div class="section-header" style="margin-bottom: 2.25rem; text-align: center;">
-        <span class="section-tag" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan); border: 1px solid rgba(6, 182, 212, 0.3);">
-          ⚡ What I Do & Core Capabilities
+        <span class="section-tag" style="background: rgba(92, 200, 255, 0.12); color: var(--accent-cyan); border: 1px solid rgba(92, 200, 255, 0.25); display: inline-flex; align-items: center; gap: 0.4rem;">
+          <i data-lucide="zap" style="width: 14px; height: 14px;"></i> What I Do & Core Capabilities
         </span>
         <h2 class="section-title" style="font-size: clamp(1.8rem, 3.5vw, 2.5rem);">
           Engineering <span class="gradient-text">Impact-Driven Software & AI</span>
@@ -169,8 +173,8 @@
         <!-- Pillar 1: Published Mobile & Game App Dev -->
         <div class="glass-card" style="padding: 1.75rem; border-left: 4px solid var(--accent-pink);">
           <div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.85rem;">
-            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(236, 72, 153, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-              📱
+            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(244, 114, 182, 0.15); color: var(--accent-pink); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="smartphone" style="width: 22px; height: 22px;"></i>
             </div>
             <div>
               <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary);">Mobile & Game Apps</h3>
@@ -191,8 +195,8 @@
         <!-- Pillar 2: AI & Healthcare Systems -->
         <div class="glass-card" style="padding: 1.75rem; border-left: 4px solid var(--accent-cyan);">
           <div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.85rem;">
-            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(6, 182, 212, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-              🧠
+            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(92, 200, 255, 0.15); color: var(--accent-cyan); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="brain" style="width: 22px; height: 22px;"></i>
             </div>
             <div>
               <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary);">AI & HealthTech</h3>
@@ -213,8 +217,8 @@
         <!-- Pillar 3: Computer Vision & Sign Language -->
         <div class="glass-card" style="padding: 1.75rem; border-left: 4px solid var(--accent-purple);">
           <div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.85rem;">
-            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(168, 85, 247, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-              🤟
+            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(192, 132, 252, 0.15); color: var(--accent-purple); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="hand" style="width: 22px; height: 22px;"></i>
             </div>
             <div>
               <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary);">Assistive Computer Vision</h3>
@@ -235,8 +239,8 @@
         <!-- Pillar 4: Satellite Remote Sensing & Full-Stack -->
         <div class="glass-card" style="padding: 1.75rem; border-left: 4px solid var(--accent-emerald);">
           <div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.85rem;">
-            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(16, 185, 129, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-              🛰️
+            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(52, 211, 153, 0.15); color: var(--accent-emerald); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="satellite" style="width: 22px; height: 22px;"></i>
             </div>
             <div>
               <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary);">Satellite & Full-Stack</h3>
@@ -259,7 +263,7 @@
   </section>
 
   <!-- PUBLISHED MOBILE APPS & GOOGLE PLAY STORE SECTION -->
-  <section class="section" id="mobile-apps" style="padding: 4.5rem 0; background: rgba(13, 18, 29, 0.5);">
+  <section class="section" id="mobile-apps" style="padding: 4.5rem 0; background: rgba(10, 24, 40, 0.5);">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">DevTech Labs Store Listing</span>
@@ -272,8 +276,8 @@
       <div class="glass-card published-app-card">
         <div class="app-showcase-grid">
           <div>
-            <span class="banner-tag" style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple)); margin-bottom: 0.75rem;">
-              📱 Google Play Store • DevTech Labs
+            <span class="banner-tag" style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple)); margin-bottom: 0.75rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+              <i data-lucide="smartphone" style="width: 14px; height: 14px;"></i> Google Play Store • DevTech Labs
             </span>
             <h3 class="published-app-title gradient-text">Balloon Pop Deluxe</h3>
             <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
@@ -283,7 +287,9 @@
             <div class="app-stats-row">
               <div class="app-stat-box">
                 <div class="stat-box-label">PLAY STORE RATING</div>
-                <div class="stat-box-val val-amber">⭐ Rated 3+</div>
+                <div class="stat-box-val val-amber" style="display: inline-flex; align-items: center; gap: 0.3rem;">
+                  <i data-lucide="star" style="width: 14px; height: 14px; fill: currentColor;"></i> Rated 3+
+                </div>
               </div>
               <div class="app-stat-box">
                 <div class="stat-box-label">GAMEPLAY STAGE</div>
@@ -297,10 +303,10 @@
 
             <div class="published-app-actions">
               <a href="https://play.google.com/store/apps/details?id=com.devtechlabs.balloonpopdeluxe" target="_blank" class="btn-primary">
-                ▶️ Get on Google Play Store
+                <i data-lucide="play" style="width: 16px; height: 16px;"></i> Get on Google Play Store
               </a>
               <button onclick="scrollToArcade('balloon-pop-web')" class="btn-secondary">
-                🎮 Play Web Edition Live
+                <i data-lucide="gamepad-2" style="width: 16px; height: 16px;"></i> Play Web Edition Live
               </button>
             </div>
           </div>
@@ -407,7 +413,7 @@
         </div>
 
         <div class="search-box">
-          <span class="search-icon">🔍</span>
+          <span class="search-icon"><i data-lucide="search" style="width: 16px; height: 16px;"></i></span>
           <input type="text" id="project-search" placeholder="Search by tech stack (e.g. Gemini, OpenPose, Kotlin)...">
         </div>
       </div>
@@ -420,7 +426,7 @@
   </section>
 
   <!-- HONORS, COMPETITIONS & LITERATURE SECTION -->
-  <section class="section" id="honors" style="padding: 4.5rem 0; background: rgba(13, 18, 29, 0.6);">
+  <section class="section" id="honors" style="padding: 4.5rem 0; background: rgba(10, 24, 40, 0.6);">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Recognitions & Beyond Code</span>
@@ -432,8 +438,10 @@
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
         <!-- Card 1: Google AI Seekho Builders Day -->
-        <div class="glass-card" style="padding: 2rem; border: 1px solid rgba(245, 158, 11, 0.3);">
-          <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏆</div>
+        <div class="glass-card" style="padding: 2rem; border: 1px solid rgba(255, 180, 84, 0.35);">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(255, 180, 84, 0.15); color: var(--accent-amber); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <i data-lucide="trophy" style="width: 26px; height: 26px;"></i>
+          </div>
           <span class="banner-tag" style="background: var(--gradient-gold);">Top 12 Team • DevTech</span>
           <h3 style="font-size: 1.4rem; margin: 0.75rem 0 0.5rem 0;">Google AI Seekho Builders Day 2026</h3>
           <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
@@ -443,7 +451,9 @@
 
         <!-- Card 2: GDG IST Challenge -->
         <div class="glass-card" style="padding: 2rem;">
-          <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏆</div>
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(129, 140, 248, 0.15); color: var(--accent-indigo); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <i data-lucide="award" style="width: 26px; height: 26px;"></i>
+          </div>
           <span class="banner-tag" style="background: var(--accent-indigo);">Top 10 Finalist</span>
           <h3 style="font-size: 1.4rem; margin: 0.75rem 0 0.5rem 0;">GDGoc IST Innovators Challenge</h3>
           <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
@@ -453,7 +463,9 @@
 
         <!-- Card 3: Mind to Machine -->
         <div class="glass-card" style="padding: 2rem;">
-          <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">⚙️</div>
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(92, 200, 255, 0.15); color: var(--accent-cyan); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <i data-lucide="cpu" style="width: 26px; height: 26px;"></i>
+          </div>
           <span class="banner-tag" style="background: var(--accent-cyan);">Competition Finalist</span>
           <h3 style="font-size: 1.4rem; margin: 0.75rem 0 0.5rem 0;">Mind to Machine (MTM) Competition</h3>
           <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
@@ -463,27 +475,31 @@
 
         <!-- Card 4: Published Novel -->
         <div class="glass-card" style="padding: 2rem;">
-          <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📖</div>
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(192, 132, 252, 0.15); color: var(--accent-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <i data-lucide="book-open" style="width: 26px; height: 26px;"></i>
+          </div>
           <span class="banner-tag" style="background: var(--accent-purple);">Published Author • HAMANNAN</span>
           <h3 style="font-size: 1.4rem; margin: 0.75rem 0 0.5rem 0;">The Vase Beneath the Ashes</h3>
           <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
             Published historical fiction novel set during the 1258 CE Mongol destruction of Baghdad (under pen name HAMANNAN). Available on Amazon KDP.
           </p>
           <a href="https://www.amazon.com/dp/B08V51FLQ9" target="_blank" class="btn-card-action">
-            View on Amazon KDP →
+            View on Amazon KDP <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
           </a>
         </div>
 
         <!-- Card 5: Philanthropy YouTube -->
         <div class="glass-card" style="padding: 2rem;">
-          <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎥</div>
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(244, 114, 182, 0.15); color: var(--accent-pink); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <i data-lucide="heart" style="width: 26px; height: 26px;"></i>
+          </div>
           <span class="banner-tag" style="background: var(--accent-pink);">Humanitarian Initiative</span>
           <h3 style="font-size: 1.4rem; margin: 0.75rem 0 0.5rem 0;">Khairul Nas (خير الناس)</h3>
           <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
             Charitable channel documenting philanthropic work supporting hospital patients and distribution of community aid.
           </p>
           <a href="https://youtube.com/@KhairulNas" target="_blank" class="btn-card-action">
-            Visit YouTube Channel →
+            Visit YouTube Channel <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
           </a>
         </div>
       </div>
@@ -503,8 +519,12 @@
 
       <div class="arcade-container">
         <div class="arcade-tabs">
-          <button class="arcade-tab active" id="tab-neon" onclick="switchArcadeGame('neon')">⚡ Cyber Project Defender (Laser Target Shooter)</button>
-          <button class="arcade-tab" id="tab-balloon" onclick="switchArcadeGame('balloon')">🎈 Project Balloon Pop (Interactive Project Bubbles)</button>
+          <button class="arcade-tab active" id="tab-neon" onclick="switchArcadeGame('neon')" style="display: inline-flex; align-items: center; gap: 0.4rem;">
+            <i data-lucide="crosshair" style="width: 16px; height: 16px;"></i> Cyber Project Defender (Laser Target Shooter)
+          </button>
+          <button class="arcade-tab" id="tab-balloon" onclick="switchArcadeGame('balloon')" style="display: inline-flex; align-items: center; gap: 0.4rem;">
+            <i data-lucide="circle-dot" style="width: 16px; height: 16px;"></i> Project Balloon Pop (Interactive Project Bubbles)
+          </button>
         </div>
 
         <div class="arcade-stage">
@@ -533,7 +553,7 @@
         <!-- AI & Computer Vision Card -->
         <div class="glass-card skill-category-card">
           <div class="skill-category-title">
-            <div class="skill-icon-badge">🧠</div>
+            <div class="skill-icon-badge"><i data-lucide="brain" style="width: 20px; height: 20px;"></i></div>
             <h3>AI & Computer Vision</h3>
           </div>
           
@@ -558,7 +578,7 @@
         <!-- Full-Stack Web & Android Card -->
         <div class="glass-card skill-category-card">
           <div class="skill-category-title">
-            <div class="skill-icon-badge">💻</div>
+            <div class="skill-icon-badge"><i data-lucide="code-2" style="width: 20px; height: 20px;"></i></div>
             <h3>Full-Stack & Android</h3>
           </div>
 
@@ -583,7 +603,7 @@
         <!-- Game Engines & Remote Sensing Card -->
         <div class="glass-card skill-category-card">
           <div class="skill-category-title">
-            <div class="skill-icon-badge">🛰️</div>
+            <div class="skill-icon-badge"><i data-lucide="satellite" style="width: 20px; height: 20px;"></i></div>
             <h3>Remote Sensing & Game Engines</h3>
           </div>
 
@@ -627,7 +647,7 @@
           </p>
 
           <div class="contact-method">
-            <div class="contact-icon">📧</div>
+            <div class="contact-icon"><i data-lucide="mail" style="width: 22px; height: 22px;"></i></div>
             <div>
               <div style="font-size: 0.8rem; color: var(--text-muted);">Email Address</div>
               <a href="mailto:hamza302616@gmail.com" style="font-weight: 700; color: var(--accent-cyan); text-decoration:none;">hamza302616@gmail.com</a>
@@ -635,7 +655,7 @@
           </div>
 
           <div class="contact-method">
-            <div class="contact-icon">💼</div>
+            <div class="contact-icon"><i data-lucide="linkedin" style="width: 22px; height: 22px;"></i></div>
             <div>
               <div style="font-size: 0.8rem; color: var(--text-muted);">LinkedIn Profile</div>
               <a href="https://www.linkedin.com/in/muhammad-hamza-55368a3b4/" target="_blank" style="font-weight: 700; color: var(--accent-cyan); text-decoration:none;">linkedin.com/in/muhammad-hamza</a>
@@ -643,7 +663,7 @@
           </div>
 
           <div class="contact-method">
-            <div class="contact-icon">🐙</div>
+            <div class="contact-icon"><i data-lucide="github" style="width: 22px; height: 22px;"></i></div>
             <div>
               <div style="font-size: 0.8rem; color: var(--text-muted);">GitHub Workspace</div>
               <a href="https://github.com/hamza0312615" target="_blank" style="font-weight: 700; color: var(--accent-cyan); text-decoration:none;">github.com/hamza0312615</a>
@@ -651,7 +671,7 @@
           </div>
 
           <div class="contact-method">
-            <div class="contact-icon">📍</div>
+            <div class="contact-icon"><i data-lucide="map-pin" style="width: 22px; height: 22px;"></i></div>
             <div>
               <div style="font-size: 0.8rem; color: var(--text-muted);">Institution</div>
               <div style="font-weight: 700; color: var(--text-primary);">Institute of Space Technology (IST), Islamabad</div>
@@ -687,8 +707,8 @@
               <textarea id="contact-msg" class="form-control" placeholder="Write your message here..." required></textarea>
             </div>
 
-            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
-              🚀 Send Message to Hamza
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; display: inline-flex; align-items: center; gap: 0.5rem;">
+              <i data-lucide="send" style="width: 18px; height: 18px;"></i> Send Message to Hamza
             </button>
           </form>
         </div>
@@ -711,7 +731,7 @@
   <!-- MODAL CONTAINER -->
   <div class="modal-overlay" id="modal-overlay">
     <div class="modal-container">
-      <button class="modal-close" onclick="closeModal()">✕</button>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close modal"><i data-lucide="x" style="width: 20px; height: 20px;"></i></button>
       <div id="modal-content"></div>
     </div>
   </div>
