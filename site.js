@@ -96,7 +96,7 @@ document.querySelectorAll('.num').forEach(el=>{
   const btn=document.getElementById('sendBtn');
   form.addEventListener('submit', async e=>{
     e.preventDefault();
-    btn.disabled=true; btn.textContent='Sending…';
+    if(btn){ btn.disabled=true; btn.textContent='Sending…'; }
     note.className='fnote'; note.textContent='Sending your message…';
     const data={name:form.name.value.trim(), email:form.email.value.trim(), message:form.message.value.trim(), _subject:'New message from your portfolio website'};
     try{
@@ -105,7 +105,7 @@ document.querySelectorAll('.num').forEach(el=>{
       if(r.ok && (j.success===true || j.success==='true')){
         note.className='fnote ok'; note.textContent='Message sent ✓ — it is already in Hamza’s inbox. He replies fast.';
         form.reset();
-        btn.disabled=false; btn.textContent='Send message';
+        if(btn){ btn.disabled=false; btn.textContent='Send message'; }
       } else {
         note.textContent='Opening the secure send page…';
         form.submit();
@@ -114,7 +114,7 @@ document.querySelectorAll('.num').forEach(el=>{
       note.textContent='Opening the secure send page…';
       form.submit();
     }
-    btn.disabled=false; btn.textContent='Send message';
+    if(btn){ btn.disabled=false; btn.textContent='Send message'; }
   });
 })();
 const cv=document.getElementById('particles'),ctx=cv.getContext('2d');let W,H,ps=[];
