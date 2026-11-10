@@ -217,3 +217,28 @@ footer.site{border-top:1px solid var(--line);margin-top:40px}
 .svc-row li::before{content:'\2713';position:absolute;left:0;color:#ff6a4d;font-weight:800}
 @media (max-width:980px){.problems,.teaser-grid{grid-template-columns:1fr}.snapshot{grid-template-columns:repeat(2,1fr)}.foot-grid{grid-template-columns:1fr 1fr}.svc-row{grid-template-columns:1fr}}
 @media (max-width:760px){.nav-cta{display:none}header.site nav a{margin-left:13px;font-size:11px}}
+/* ===== v5.1 refinement polish (research design guidance + reference sites) ===== */
+html{scroll-behavior:smooth}
+::selection{background:#ff5f3d;color:#fff}
+section{padding:clamp(64px,9vw,104px) 4vw}
+h1.page,h2.sec,.sales-h1{letter-spacing:-.02em;text-wrap:balance}
+.sec-sub{max-width:65ch}
+header.site nav a{position:relative;padding:4px 0}
+header.site nav a::after{content:'';position:absolute;left:0;bottom:0;height:2px;width:0;background:linear-gradient(92deg,#ff4038,#ff8a4d);transition:width .25s ease}
+header.site nav a:hover::after,header.site nav a.on::after{width:100%}
+.btn{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.red:hover,.btn.wa:hover{box-shadow:0 14px 32px rgba(255,80,50,.28)}
+.card,.svc,.cnt,.pkg,.teaser,.prob,.snap{transition:transform .25s ease,border-color .25s ease}
+.svc:hover,.cnt:hover,.teaser:hover,.prob:hover{transform:translateY(-4px);border-color:#ff6a4d55}
+.card .shot img{transition:transform .35s ease}
+.card:hover .shot img{transform:scale(1.03)}
+.hero{background:radial-gradient(720px 420px at 85% 8%,rgba(255,95,61,.13),transparent 60%),radial-gradient(600px 380px at 8% 90%,rgba(255,64,56,.07),transparent 60%)}
+.portrait-wrap img{box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.cta-band{border-top:2px solid transparent;border-image:linear-gradient(92deg,#ff4038,#ff5f3d,#ff8a4d) 1}
+.chip{transition:border-color .2s ease,transform .2s ease}
+.chip:hover{border-color:#ff6a4d66;transform:translateY(-1px)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #ff6a4d;outline-offset:2px}
+details{transition:border-color .2s ease}
+details:hover{border-color:#ff6a4d44}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.btn:hover,.svc:hover,.cnt:hover,.teaser:hover,.prob:hover,.card:hover .shot img{transform:none}}
