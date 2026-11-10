@@ -3,201 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammad Hamza — Portfolio | DevTech Labs</title>
-<meta name="description" content="Portfolio of Muhammad Hamza — AI developer, CS student at IST Islamabad, founder of DevTech Labs. VisionDX, AQUORA, PSL Translator, AgriTwin and more.">
+<title>Muhammad Hamza — Websites & AI Agents That Bring You Customers | DevTech Labs</title>
+<meta name="description" content="I build fast business websites and AI agents that answer customers, take bookings and follow up for you. Real projects, real prices, fixed quote in writing.">
+<link rel="canonical" href="https://hamza-devtech2.vercel.app/">
+<meta property="og:title" content="Muhammad Hamza — Websites & AI Agents That Bring You Customers | DevTech Labs">
+<meta property="og:description" content="I build fast business websites and AI agents that answer customers, take bookings and follow up for you. Real projects, real prices, fixed quote in writing.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://hamza-devtech2.vercel.app/assets/portrait.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
-<style>
-:root{--red:#e5322d;--red2:#ff5a48;--coral:#ff7a45;--bg:#0a0a10;--panel:#121218;--line:#26262e;--txt:#f4f1ea;--mut:#a89f95}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;overflow-x:clip}
-body{overflow-x:clip;background:radial-gradient(1100px 550px at 85% -5%,rgba(255,96,64,.09),transparent 60%),radial-gradient(900px 500px at -10% 30%,rgba(229,50,45,.05),transparent 55%),var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;overflow-x:hidden}
-::selection{background:var(--red);color:#fff}
-#particles{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.4}
-header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:18px 4vw;background:linear-gradient(180deg,rgba(10,10,16,.92),rgba(10,10,16,0))}
-.logo{font-family:Anton,sans-serif;font-size:22px;letter-spacing:2px;color:#fff;text-decoration:none}
-.logo span{color:var(--red2)}
-nav a{color:var(--txt);text-decoration:none;font-weight:600;font-size:13px;letter-spacing:2px;margin-left:28px}
-nav a:hover{color:var(--red2)}
-main{position:relative;z-index:1}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:130px 4vw 60px;position:relative}
-.hero-grid{display:grid;grid-template-columns:1.5fr .8fr;gap:40px;align-items:center}
-.hero-grid>*{min-width:0}
-.hello{font-size:clamp(18px,2.4vw,28px);font-weight:600;color:var(--mut)}
-.hello b{color:#fff}
-h1.mega{font-family:Anton,sans-serif;font-size:clamp(52px,10.1vw,152px);line-height:.95;text-transform:uppercase;letter-spacing:0;margin:6px 0 4px;background:linear-gradient(94deg,#ff4038 5%,#ff5f3d 48%,#ff8a4d 90%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 26px rgba(255,80,50,.25))}
-h2.name2{font-family:Anton,sans-serif;font-size:clamp(30px,5vw,64px);letter-spacing:3px;text-transform:uppercase}
-.roleline{margin-top:16px;font-size:clamp(15px,1.6vw,19px);color:var(--mut);min-height:28px}
-.roleline #role{color:var(--red2);font-weight:800}
-.hero p.lead{margin-top:14px;max-width:560px;color:var(--mut);line-height:1.65;font-size:15.5px}
-.cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-weight:800;letter-spacing:1.5px;font-size:13px;text-decoration:none;border:1px solid var(--red);text-transform:uppercase;transition:.25s}
-.btn.red{background:linear-gradient(135deg,#e5322d,#ff5a3c);color:#fff;box-shadow:0 8px 24px rgba(229,50,45,.35)}
-.btn.red:hover{background:linear-gradient(135deg,#f0433a,#ff6a48);transform:translateY(-2px)}
-.btn.ghost{color:#fff;background:transparent}
-.btn.ghost:hover{border-color:#fff;transform:translateY(-2px)}
-.portrait-wrap{justify-self:center;position:relative;transition:transform .35s ease-out;transform-style:preserve-3d}
-.portrait-wrap::before{content:"";position:absolute;inset:0;transform:translate(16px,16px);border:2px solid var(--red)}
-.portrait-wrap img{position:relative;width:min(320px,72vw);aspect-ratio:1;object-fit:cover;display:block;filter:saturate(1.05)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:56px}
-.stat{background:var(--panel);padding:22px 18px;text-align:center}
-.stat .num{font-family:Anton,sans-serif;font-size:40px;color:#ff6a52}
-.stat .lbl{font-size:11.5px;letter-spacing:2px;color:var(--mut);text-transform:uppercase;margin-top:4px}
-.marquee{overflow:hidden;border-top:1px solid #3a1512;border-bottom:1px solid #3a1512;background:linear-gradient(90deg,#6d0f0b,#a31610 45%,#6d0f0b);transform:rotate(-1.2deg) scale(1.02);margin:30px 0 0}
-.marquee div{display:flex;gap:0;white-space:nowrap;font-family:Anton,sans-serif;font-size:24px;color:#fff;letter-spacing:2px;padding:10px 0;animation:mq 26s linear infinite}
-@keyframes mq{to{transform:translateX(-50%)}}
-section{padding:90px 4vw}
-.kicker{color:var(--red2);font-weight:800;letter-spacing:3px;font-size:12px;text-transform:uppercase}
-h2.sec{font-family:Anton,sans-serif;font-size:clamp(38px,6.5vw,84px);text-transform:uppercase;line-height:1;margin:10px 0 8px}
-.sec-sub{color:var(--mut);max-width:640px;line-height:1.65;font-size:15.5px}
-.filters{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0 26px}
-.fbtn{cursor:pointer;background:transparent;color:var(--txt);border:1px solid var(--line);padding:10px 18px;font-weight:700;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;transition:.2s}
-.fbtn:hover{border-color:var(--red)}
-.fbtn.on{background:linear-gradient(135deg,#e5322d,#ff5a3c);border-color:transparent;color:#fff}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;perspective:1400px}
-.card{background:linear-gradient(180deg,#15151c,#101016);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;transition:transform .35s ease,border-color .3s,box-shadow .35s;transform-style:preserve-3d;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-.card.hide{display:none!important}
-.card:hover{border-color:#ff5a48;box-shadow:0 24px 50px rgba(0,0,0,.55),0 0 0 1px rgba(255,90,72,.25)}
-.card.wide{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr}
-.card .shot{position:relative;overflow:hidden}
-.card .shot img{width:100%;height:100%;aspect-ratio:16/10;object-fit:cover;object-position:center;display:block;transition:transform .5s}
-.card .shot img.pos-top{object-position:top center}
-.card.wide .shot img{aspect-ratio:auto;height:100%}
-.card:hover .shot img{transform:scale(1.05)}
-.card .no{position:absolute;top:10px;left:12px;font-family:Anton,sans-serif;font-size:30px;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.85);z-index:2}
-.card .live-badge{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#e5322d,#ff5a3c);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:1.5px;padding:5px 10px;z-index:2}
-.card .body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
-.card h3{font-size:20px;font-weight:800}
-.card p{color:var(--mut);font-size:14px;line-height:1.6;flex:1}
-.tags{display:flex;gap:8px;flex-wrap:wrap}
-.tag{font-size:11px;border:1px solid var(--line);color:var(--mut);padding:4px 9px;letter-spacing:.5px}
-.links{display:flex;gap:10px;margin-top:4px}
-.links a{font-size:12px;font-weight:800;letter-spacing:1.5px;text-decoration:none;padding:9px 14px;text-transform:uppercase}
-.links .l-live{background:linear-gradient(135deg,#e5322d,#ff5a3c);color:#fff}
-.links .l-live:hover{background:var(--red2)}
-.links .l-git{border:1px solid var(--line);color:#fff}
-.links .l-git:hover{border-color:#fff}
-.repo-list{border:1px solid var(--line)}
-.repo-row{display:grid;grid-template-columns:280px 110px 1fr;gap:14px;padding:11px 16px;border-bottom:1px solid var(--line);align-items:baseline;background:var(--panel)}
-.repo-row:last-child{border-bottom:none}
-.repo-name{color:#fff;font-weight:700;text-decoration:none;word-break:break-all}
-.repo-name:hover{color:var(--red2)}
-.repo-lang{color:var(--red2);font-size:12px;font-weight:700;letter-spacing:1px}
-.repo-desc{color:var(--mut);font-size:13px}
-.repo-desc a{color:#fff}
-.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:start}
-.about-grid p{color:var(--mut);line-height:1.75;font-size:15.5px;margin-bottom:14px}
-.about-grid p b{color:#fff}
-.ach{border:1px solid var(--line);background:var(--panel);padding:22px}
-.ach h3{font-family:Anton,sans-serif;letter-spacing:1.5px;font-size:20px;margin-bottom:14px;color:#fff}
-.ach li{color:var(--mut);margin:0 0 10px 18px;line-height:1.55;font-size:14.5px}
-.ach li b{color:#fff}
-.contact{text-align:center;padding-bottom:110px}
-.contact h2{font-family:Anton,sans-serif;font-size:clamp(40px,8vw,110px);text-transform:uppercase;line-height:1}
-.contact h2 span{background:linear-gradient(94deg,#ff4038,#ff8a4d);-webkit-background-clip:text;background-clip:text;color:transparent}
-.contact p{color:var(--mut);margin:16px auto 26px;max-width:520px;line-height:1.65}
-footer{border-top:1px solid var(--line);padding:22px 4vw;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--mut);font-size:12.5px;position:relative;z-index:1}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
-.reveal.in{opacity:1;transform:none}
-@media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}.portrait-wrap{justify-self:start}.card.wide{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.repo-row{grid-template-columns:1fr;gap:2px}}
-@media (max-width:620px){.grid{grid-template-columns:1fr}nav a{margin-left:12px;font-size:10.5px}section{padding:64px 5vw}h1.mega{font-size:13.5vw}.hello{font-size:16px}h2.name2{font-size:8.2vw}.stat .num{font-size:32px}.card .no{font-size:24px}.hero{padding-top:104px}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
-
-.term{background:#0b0e14;border:1px solid #232833;border-radius:12px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.5);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;max-width:920px;margin-top:28px}
-.term-bar{display:flex;align-items:center;gap:8px;background:#12151d;padding:11px 14px;border-bottom:1px solid #232833}
-.term .dot{width:11px;height:11px;border-radius:50%}
-.term .dot.r{background:#ff5f57}.term .dot.y{background:#febc2e}.term .dot.g{background:#28c840}
-.term-title{color:#8b93a5;font-size:12px;margin-left:6px;letter-spacing:.5px}
-.term-live{margin-left:auto;color:#3ddc84;font-size:11px;font-weight:700;letter-spacing:1.5px}
-.term-body{padding:18px 20px;font-size:13.5px;line-height:1.95;color:#c9d4e3;min-height:238px;white-space:pre-wrap;word-break:break-word}
-.term-body .ok{color:#3ddc84;font-weight:700}
-.term-body .cmd{color:#fff;font-weight:700}
-.term-body .dim{color:#7c8698}
-.tcursor{display:inline-block;width:8px;height:15px;background:#ff5a48;vertical-align:-2px;margin-left:2px;animation:tblink 1s steps(1) infinite}
-@keyframes tblink{50%{opacity:0}}
-.btn.wa{background:linear-gradient(135deg,#1faa55,#25d366);color:#fff;border-color:transparent;box-shadow:0 8px 24px rgba(37,211,102,.3)}
-.btn.wa:hover{background:linear-gradient(135deg,#23bd5f,#2be073);transform:translateY(-2px)}
-.cform{max-width:640px;margin:34px auto 0;text-align:left;display:flex;flex-direction:column;gap:12px}
-.cform .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.cform input,.cform textarea{background:#12121a;border:1px solid var(--line);color:var(--txt);padding:13px 15px;font:inherit;font-size:14.5px;border-radius:8px;width:100%}
-.cform input:focus,.cform textarea:focus{border-color:#ff5a48;outline:none}
-.cform textarea{resize:vertical}
-.fnote{color:var(--mut);font-size:13px;text-align:center}
-.fnote.ok{color:#3ddc84;font-weight:700}
-.fnote.err{color:#ff7a6b;font-weight:700}
-.wafloat{position:fixed;right:18px;bottom:18px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(0,0,0,.5);font-size:25px;text-decoration:none;transition:transform .2s}
-.wafloat:hover{transform:scale(1.08)}
-.more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media (max-width:980px){.more-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:620px){.cform .frow{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr}.term-body{font-size:12.5px;min-height:250px}}
-
-.sales-h1{font-family:'Archivo Black',sans-serif;font-size:clamp(36px,4.9vw,66px);line-height:1.06;letter-spacing:.5px;margin:16px 0 6px;max-width:640px}
-.sales-h1 .grad{background:linear-gradient(92deg,#ff4038,#ff5f3d,#ff8a4d);-webkit-background-clip:text;background-clip:text;color:transparent}
-.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
-.chip{border:1px solid var(--line);background:#12121a;color:var(--txt);font-size:12.5px;font-weight:600;padding:8px 13px;border-radius:999px}
-.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:30px}
-.svc{background:var(--panel);border:1px solid var(--line);padding:28px;position:relative}
-.svc h3{font-size:21px;margin-bottom:8px}
-.svc p{color:var(--mut);font-size:14.5px;line-height:1.65}
-.svc ul{list-style:none;margin-top:14px}
-.svc li{color:var(--mut);font-size:14px;padding:5px 0 5px 22px;position:relative;line-height:1.5}
-.svc li::before{content:'\2713';position:absolute;left:0;color:#ff6a4d;font-weight:800}
-.svc .from{margin-top:16px;font-weight:800;font-size:15px}
-.svc .from b{color:#ff6a4d}
-.svc .badge{position:absolute;top:-11px;right:18px;background:linear-gradient(135deg,#ff4038,#ff7a3d);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:1.2px;padding:5px 11px;border-radius:999px}
-.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px;align-items:stretch}
-.pkg{background:var(--panel);border:1px solid var(--line);padding:30px 26px;position:relative;display:flex;flex-direction:column}
-.pkg.hot{border-color:#ff5a48;box-shadow:0 18px 50px rgba(255,64,56,.14)}
-.pkg .badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#ff4038,#ff7a3d);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:1.2px;padding:5px 13px;border-radius:999px;white-space:nowrap}
-.pkg h3{font-size:19px;letter-spacing:.4px}
-.pkg .tiers{margin:14px 0 4px;font-size:14px;color:var(--mut);line-height:1.9}
-.pkg .tiers b{color:var(--txt);font-size:19px}
-.pkg ul{list-style:none;margin:14px 0 22px}
-.pkg li{color:var(--mut);font-size:13.8px;padding:4.5px 0 4.5px 22px;position:relative;line-height:1.5}
-.pkg li::before{content:'\2713';position:absolute;left:0;color:#ff6a4d;font-weight:800}
-.pkg .pcta{margin-top:auto;display:flex;flex-direction:column;gap:9px}
-.count-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
-.cnt{background:var(--panel);border:1px solid var(--line);padding:24px}
-.cnt h3{font-size:16.5px;margin-bottom:7px}
-.cnt p{color:var(--mut);font-size:13.8px;line-height:1.6}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:30px}
-.step{background:var(--panel);border:1px solid var(--line);padding:24px}
-.step .n{font-family:'Archivo Black',sans-serif;font-size:30px;background:linear-gradient(92deg,#ff4038,#ff8a4d);-webkit-background-clip:text;background-clip:text;color:transparent}
-.step h3{font-size:16px;margin:10px 0 6px}
-.step p{color:var(--mut);font-size:13.5px;line-height:1.6}
-.audit{margin-top:34px;background:linear-gradient(120deg,#191118,#12121a);border:1px solid #ff5a4855;padding:30px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
-.audit h3{font-size:22px}
-.audit p{color:var(--mut);font-size:14.5px;max-width:640px;line-height:1.6;margin-top:6px}
-.faq details{background:var(--panel);border:1px solid var(--line);margin-top:12px;padding:0 22px}
-.faq summary{cursor:pointer;font-weight:700;font-size:15.5px;padding:17px 0;list-style:none}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:'+';float:right;color:#ff6a4d;font-size:20px;font-weight:800}
-.faq details[open ] summary::after{content:'\2212'}
-.faq details p{color:var(--mut);font-size:14.5px;line-height:1.65;padding:0 0 18px}
-@media (max-width:980px){.svc-grid{grid-template-columns:1fr}.pkg-grid{grid-template-columns:1fr}.count-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:620px){.count-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.sales-h1{font-size:9.4vw}}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"DevTech Labs — Muhammad Hamza","description":"Websites and AI agents for businesses, built by Muhammad Hamza.","url":"https://hamza-devtech2.vercel.app/","email":"hamzarajpoot0312615@gmail.com","telephone":"+92-305-2353337","address":{"@type":"PostalAddress","addressLocality":"Islamabad","addressCountry":"PK"},"areaServed":"Worldwide","founder":{"@type":"Person","name":"Muhammad Hamza","jobTitle":"Web Developer & AI Agent Builder","sameAs":["https://github.com/hamza0312615","https://www.linkedin.com/in/muhammad-hamza-55368a3b4"]}}
+</script>
 </head>
 <body>
 <canvas id="particles"></canvas>
-<header>
-  <a class="logo" href="#home">HAMZA<span>.</span></a>
+<header class="site">
+  <a href="/" class="logo">HAMZA<span>.</span></a>
   <nav>
-    <a href="#services">SERVICES</a><a href="#works">WORK</a><a href="#packages">PACKAGES</a><a href="#process">PROCESS</a><a href="#faq">FAQ</a><a href="#contact">CONTACT</a>
+    <a href="/services">SERVICES</a><a href="/work">WORK</a><a href="/pricing">PRICING</a><a href="/about">ABOUT</a><a href="/contact">CONTACT</a>
+    <a class="btn wa nav-cta" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener" style="padding:10px 18px">Start a Project</a>
   </nav>
 </header>
-<main>
+
 <div class="hero" id="home">
   <div class="hero-grid">
     <div>
-      <div class="hello">MUHAMMAD HAMZA &mdash; <b>DEVTECH LABS</b></div>
-      <h1 class="sales-h1">Websites &amp; <span class="grad">AI agents</span> that bring you customers.</h1>
+      <span class="avail"><i></i> Available for new projects</span>
+      <h1 class="sales-h1" style="margin-top:18px">Websites &amp; <span class="grad">AI agents</span> that bring you customers.</h1>
       <div class="roleline">I build <span id="role">business websites</span></div>
       <p class="lead">I design and build fast, modern websites and AI agents that answer your customers, take bookings and follow up for you &mdash; so you don&rsquo;t lose business while you sleep. You talk directly with me, the developer, from first message to launch. No agency middlemen, no hidden fees.</p>
       <div class="cta">
         <a class="btn wa" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener">Start a project</a>
-        <a class="btn ghost" href="#works">See my work</a>
-        <a class="btn ghost" href="#packages">See packages</a>
+        <a class="btn ghost" href="/work">See my work</a>
+        <a class="btn ghost" href="/pricing">See packages</a>
       </div>
       <div class="chips">
         <span class="chip">★ Top 12 Finalist &mdash; Google AI Seekho 2026</span>
@@ -205,7 +46,7 @@ footer{border-top:1px solid var(--line);padding:22px 4vw;display:flex;justify-co
         <span class="chip">✓ Fixed quote in writing, before we start</span>
       </div>
     </div>
-    <div class="portrait-wrap"><img src="assets/portrait.jpg" alt="Muhammad Hamza"></div>
+    <div class="portrait-wrap"><img src="/assets/portrait.jpg" alt="Muhammad Hamza" fetchpriority="high"></div>
   </div>
   <div class="stats">
     <div class="stat"><div class="num" data-count="33">33</div><div class="lbl">GitHub repositories</div></div>
@@ -214,41 +55,79 @@ footer{border-top:1px solid var(--line);padding:22px 4vw;display:flex;justify-co
     <div class="stat"><div class="num" data-count="2">2</div><div class="lbl">National finalist finishes</div></div>
   </div>
 </div>
+<div class="proof-strip"><span><b>Top 12</b> Google AI Seekho 2026</span><span><b>Top 10</b> GDG IST Innovators</span><span><b>NASA Space Apps</b> Team DevTech</span><span><b>5★</b> Fiverr buyer rating</span><span><b>15</b> real projects live below</span></div>
 <div class="marquee"><div id="mq"><span>VISIONDX ✦ AQUORA ✦ PSL TRANSLATOR ✦ AGRITWIN ✦ RESQNET ✦ NEON CIRCUIT ✦ MEDICONNECT AI ✦ RAPIDAID AI ✦ WORLD EXPLORER ✦ BALLOON POP DELUXE ✦ </span><span>VISIONDX ✦ AQUORA ✦ PSL TRANSLATOR ✦ AGRITWIN ✦ RESQNET ✦ NEON CIRCUIT ✦ MEDICONNECT AI ✦ RAPIDAID AI ✦ WORLD EXPLORER ✦ BALLOON POP DELUXE ✦ </span></div></div>
 
-<section id="services">
+<section id="problems">
+  <div class="kicker">The problem</div>
+  <h2 class="sec">Losing customers quietly?</h2>
+  <div class="problems">
+    <div class="prob"><h3>Slow replies lose sales</h3><p>A customer messages your business and waits hours for an answer. By then, they have already bought from someone faster.</p></div>
+    <div class="prob"><h3>An old website leaks trust</h3><p>Most visitors judge your business in seconds, on a phone. A slow, outdated site sends them straight to a competitor.</p></div>
+    <div class="prob"><h3>Enquiries you never see</h3><p>No follow-up, no reminders, no capture system &mdash; enquiries slip away silently, every single week.</p></div>
+  </div>
+  <p class="sec-sub" style="margin-top:22px">A modern website + an AI agent fixes all three &mdash; it answers instantly, follows up automatically, and never sleeps. <a href="/services" style="color:#ff6a4d;font-weight:700">See how &rarr;</a></p>
+</section>
+
+<section id="services" style="padding-top:0">
   <div class="kicker">Services</div>
   <h2 class="sec">What I can build for you</h2>
-  <p class="sec-sub">Four services, one goal: more customers for your business. Every project starts with a free chat and a fixed quote in writing.</p>
   <div class="svc-grid">
     <div class="svc"><span class="badge">MOST IN DEMAND</span>
       <h3>AI Agents</h3>
-      <p>An agent that works for your business around the clock. Not just a chatbot &mdash; an agent that <b>does the work</b>: answers customers, captures enquiries, takes bookings and follows up, so no customer waits and no lead is lost.</p>
-      <ul><li>Customer enquiries answered instantly, 24/7</li><li>Bookings, orders &amp; lead capture</li><li>Follow-ups and reminders, automatically</li><li>Connected to your website and WhatsApp</li></ul>
-      <div class="from">From <b>$120</b> &mdash; <a href="#packages" style="color:#ff6a4d">see packages</a></div>
+      <p>An agent that works for your business around the clock &mdash; answers customers, captures enquiries, takes bookings and follows up. Not just a chatbot: an agent that does the work.</p>
+      <div class="from">From <b>$120</b> &mdash; <a href="/services/ai-agents" style="color:#ff6a4d">details &amp; pricing</a></div>
     </div>
     <div class="svc">
       <h3>Business Websites</h3>
-      <p>For schools, restaurants, clinics, shops and service businesses &mdash; a fast, modern website that turns visitors into calls, bookings and customers.</p>
-      <ul><li>Mobile-first design that loads fast</li><li>WhatsApp &amp; call buttons everywhere</li><li>Google-friendly (basic SEO setup)</li><li>You own your website 100%</li></ul>
-      <div class="from">From <b>$80</b> &mdash; <a href="#packages" style="color:#ff6a4d">see packages</a></div>
+      <p>For schools, restaurants, clinics, shops and services &mdash; a fast, modern website that turns visitors into calls, bookings and customers.</p>
+      <div class="from">From <b>$80</b> &mdash; <a href="/services/business-websites" style="color:#ff6a4d">details &amp; pricing</a></div>
     </div>
     <div class="svc">
       <h3>Web Apps &amp; AI Tools</h3>
-      <p>Dashboards, MVPs and AI-powered tools. My own VisionDX platform runs 12 AI diagnostic tools &mdash; imagine what a tool like that does for your business.</p>
-      <ul><li>Custom dashboards &amp; admin panels</li><li>AI features: chat, vision, OCR, reports</li><li>Logins, data and smart forms</li><li>Working prototype in days, not months</li></ul>
-      <div class="from">From <b>$95</b> &mdash; <a href="#packages" style="color:#ff6a4d">see packages</a></div>
+      <p>Dashboards, MVPs and AI-powered tools. My own VisionDX platform runs 12 AI diagnostic tools &mdash; imagine a tool like that for your business.</p>
+      <div class="from">From <b>$95</b> &mdash; <a href="/services/web-apps" style="color:#ff6a4d">details &amp; pricing</a></div>
     </div>
     <div class="svc">
       <h3>AI Video Ads</h3>
       <p>Short, scroll-stopping videos for your brand &mdash; product ads and promos made with AI and editing craft, ready to post.</p>
-      <ul><li>Reels, TikTok &amp; YouTube Shorts ready</li><li>Captions and your brand styling</li><li>Product, food &amp; service ads</li><li>Fast turnaround</li></ul>
-      <div class="from">From <b>$45</b> &mdash; <a href="#packages" style="color:#ff6a4d">see packages</a></div>
+      <div class="from">From <b>$45</b> &mdash; <a href="/services/ai-video-ads" style="color:#ff6a4d">details &amp; pricing</a></div>
     </div>
   </div>
 </section>
 
-<section id="agent" style="padding-top:64px">
+<section id="featured" style="padding-top:0">
+  <div class="kicker">Featured work</div>
+  <h2 class="sec">Real projects, live now</h2>
+  <div class="grid" style="margin-top:28px">
+    <article class="card" data-cat="health" data-live="1">
+      <div class="shot"><span class="no">01</span><span class="live-badge">● LIVE</span><img loading="lazy" class="" src="assets/visiondx-mega.jpg" alt="VisionDX Mega screenshot"></div>
+      <div class="body"><h3>VisionDX Mega</h3><p>AI diagnostics suite with 12 tools — eye, skin, hair, wound, cough-sound, sleep and lab-report analysis, medicine verification, a WhatsApp triage bot and a six-language UI.</p>
+      <div class="tags"><span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">Hugging Face</span></div>
+      <div class="links"><a class="l-live" href="https://visiondxmega.vercel.app" target="_blank" rel="noopener">Visit live</a><a class="l-live" href="/work/visiondx-mega">Case study</a><a class="l-git" href="https://github.com/hamza0312615/visiondxmega" target="_blank" rel="noopener">GitHub</a></div></div>
+    </article>
+    <article class="card" data-cat="climate" data-live="0">
+      <div class="shot"><span class="no">02</span><img loading="lazy" class="pos-top" src="assets/aquora.jpg" alt="AQUORA screenshot"></div>
+      <div class="body"><h3>AQUORA</h3><p>Satellite water intelligence for the Indus Basin — monitoring water bodies and giving early warning from Earth-observation data.</p>
+      <div class="tags"><span class="tag">React</span><span class="tag">Leaflet</span><span class="tag">Satellite data</span></div>
+      <div class="links"><a class="l-git" href="https://github.com/hamza0312615/AQUORA" target="_blank" rel="noopener">GitHub</a></div></div>
+    </article>
+    <article class="card" data-cat="health" data-live="1">
+      <div class="shot"><span class="no">03</span><span class="live-badge">● LIVE</span><img loading="lazy" class="" src="assets/psl.jpg" alt="PSL Translator — PakSign Portal screenshot"></div>
+      <div class="body"><h3>PSL Translator — PakSign Portal</h3><p>Real-time Pakistan Sign Language translator with native hand tracking and coherent sentence stitching — signs become text and speech, live.</p>
+      <div class="tags"><span class="tag">MediaPipe Hands</span><span class="tag">React</span><span class="tag">Accessibility</span></div>
+      <div class="links"><a class="l-live" href="https://sign-translation-1fwu.vercel.app" target="_blank" rel="noopener">Visit live</a><a class="l-live" href="/work/paksign">Case study</a><a class="l-git" href="https://github.com/hamza0312615/visiondxmega" target="_blank" rel="noopener">GitHub</a></div></div>
+    </article>
+    <article class="card" data-cat="climate" data-live="0">
+      <div class="shot"><span class="no">04</span><img loading="lazy" class="" src="assets/agritwin.jpg" alt="AgriTwin — TerraTwin screenshot"></div>
+      <div class="body"><h3>AgriTwin — TerraTwin</h3><p>Climate-twin farming intelligence built for NASA Space Apps 2026 (Field Shift): match your farm to regions already living its future climate, with live NASA POWER data, water and disease guidance.</p>
+      <div class="tags"><span class="tag">Next.js</span><span class="tag">NASA POWER</span><span class="tag">Team DevTech</span></div>
+      <div class="links"><a class="l-live" href="/work/agritwin">Case study</a><a class="l-git" href="https://github.com/hamza0312615/AgriTwin" target="_blank" rel="noopener">GitHub</a></div></div>
+    </article>
+  </div>
+  <p style="margin-top:26px"><a class="btn red" href="/work">See all 15 projects</a></p>
+</section>
+<section id="agent" style="padding-top:0">
   <div class="kicker">AI agent at work</div>
   <h2 class="sec">Built by an agent</h2>
   <p class="sec-sub">Like the agent in the reel — a Cursor-style AI agent scanned my GitHub, captured live screenshots of my real projects, applied the design and deployed this page. This console is live on this page, watch it work:</p>
@@ -264,201 +143,6 @@ footer{border-top:1px solid var(--line);padding:22px 4vw;display:flex;justify-co
 <span class="dim">$ agent idle — say the word and I build the next one…</span></div>
   </div>
 </section>
-
-<section id="works">
-  <div class="kicker">Selected works</div>
-  <h2 class="sec">Let the work speak</h2>
-  <p class="sec-sub">Real screenshots from my own live deployments and codebases &mdash; Vercel, GitHub Pages, and GitHub-only projects run and captured for this page.</p>
-  <div class="filters">
-    <button class="fbtn on" data-f="all">All</button>
-    <button class="fbtn" data-f="health">AI &amp; Health</button>
-    <button class="fbtn" data-f="climate">Climate &amp; Data</button>
-    <button class="fbtn" data-f="games">Games &amp; Apps</button>
-    <button class="fbtn" data-f="live">Live sites</button>
-  </div>
-  <div class="grid" id="grid">
-    <article class="card" data-cat="health" data-live="1">
-      <div class="shot"><span class="no">01</span><span class="live-badge">● LIVE</span><img loading="lazy" class="" src="assets/visiondx-mega.jpg" alt="VisionDX Mega screenshot"></div>
-      <div class="body"><h3>VisionDX Mega</h3><p>AI diagnostics suite with 12 tools — eye, skin, hair, wound, cough-sound, sleep and lab-report analysis, medicine verification, a WhatsApp triage bot and a six-language UI.</p>
-      <div class="tags"><span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">Hugging Face</span></div>
-      <div class="links"><a class="l-live" href="https://visiondxmega.vercel.app" target="_blank" rel="noopener">Visit live</a><a class="l-git" href="https://github.com/hamza0312615/visiondxmega" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card" data-cat="climate" data-live="0">
-      <div class="shot"><span class="no">02</span><img loading="lazy" class="pos-top" src="assets/aquora.jpg" alt="AQUORA screenshot"></div>
-      <div class="body"><h3>AQUORA</h3><p>Satellite water intelligence for the Indus Basin — monitoring water bodies and giving early warning from Earth-observation data.</p>
-      <div class="tags"><span class="tag">React</span><span class="tag">Leaflet</span><span class="tag">Satellite data</span></div>
-      <div class="links"><a class="l-git" href="https://github.com/hamza0312615/AQUORA" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card" data-cat="health" data-live="1">
-      <div class="shot"><span class="no">03</span><span class="live-badge">● LIVE</span><img loading="lazy" class="" src="assets/psl.jpg" alt="PSL Translator — PakSign Portal screenshot"></div>
-      <div class="body"><h3>PSL Translator — PakSign Portal</h3><p>Real-time Pakistan Sign Language translator with native hand tracking and coherent sentence stitching — signs become text and speech, live.</p>
-      <div class="tags"><span class="tag">MediaPipe Hands</span><span class="tag">React</span><span class="tag">Accessibility</span></div>
-      <div class="links"><a class="l-live" href="https://sign-translation-1fwu.vercel.app" target="_blank" rel="noopener">Visit live</a><a class="l-git" href="https://github.com/hamza0312615/visiondxmega" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card" data-cat="climate" data-live="0">
-      <div class="shot"><span class="no">04</span><img loading="lazy" class="" src="assets/agritwin.jpg" alt="AgriTwin — TerraTwin screenshot"></div>
-      <div class="body"><h3>AgriTwin — TerraTwin</h3><p>Climate-twin farming intelligence built for NASA Space Apps 2026 (Field Shift): match your farm to regions already living its future climate, with live NASA POWER data, water and disease guidance.</p>
-      <div class="tags"><span class="tag">Next.js</span><span class="tag">NASA POWER</span><span class="tag">Team DevTech</span></div>
-      <div class="links"><a class="l-git" href="https://github.com/hamza0312615/AgriTwin" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card" data-cat="climate" data-live="1">
-      <div class="shot"><span class="no">05</span><span class="live-badge">● LIVE</span><img loading="lazy" class="" src="assets/resqnet.jpg" alt="ResQNet screenshot"></div>
-      <div class="body"><h3>ResQNet</h3><p>AI-powered disaster response dashboard — live incidents, deployed teams, evacuations, an AI damage analyzer and a tactical map, in Urdu and English.</p>
-      <div class="tags"><span class="tag">JavaScript</span><span class="tag">Leaflet</span><span class="tag">AI</span></div>
-      <div class="links"><a class="l-live" href="https://hamza0312615.github.io/ResQNet/" target="_blank" rel="noopener">Visit live</a><a class="l-git" href="https://github.com/hamza0312615/ResQNet" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card" data-cat="health" data-live="1">
-      <div class="shot"><span class="no">06</span><span class="live-badge">● LIVE</span><img loading="lazy" class="" src="assets/mediconnect.jpg" alt="MediConnect AI screenshot"></div>
-      <div class="body"><h3>MediConnect AI</h3><p>Smart doctor-connect platform for Pakistan — find the right specialist instantly with AI matching, booking and seamless care.</p>
-      <div class="tags"><span class="tag">JavaScript</span><span class="tag">Vercel</span><span class="tag">Healthcare</span></div>
-      <div class="links"><a class="l-live" href="https://mediconnect22-mu.vercel.app" target="_blank" rel="noopener">Visit live</a><a class="l-git" href="https://github.com/hamza0312615/mediconnect22" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card" data-cat="games" data-live="1">
-      <div class="shot"><span class="no">07</span><span class="live-badge">● LIVE</span><img loading="lazy" class="" src="assets/neon-circuit.jpg" alt="Neon Circuit screenshot"></div>
-      <div class="body"><h3>Neon Circuit</h3><p>High-octane top-down cyber combat game — neon arena battles, a garage with upgrades, and high-score chasing.</p>
-      <div class="tags"><span class="tag">JavaScript</span><span class="tag">Vite</span><span class="tag">Canvas game</span></div>
-      <div class="links"><a class="l-live" href="https://neon-game-murex.vercel.app" target="_blank" rel="noopener">Visit live</a><a class="l-git" href="https://github.com/hamza0312615/neon-game-" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card" data-cat="climate" data-live="1">
-      <div class="shot"><span class="no">08</span><span class="live-badge">● LIVE</span><img loading="lazy" class="" src="assets/rapidaid.jpg" alt="RapidAid AI screenshot"></div>
-      <div class="body"><h3>RapidAid AI</h3><p>AI-powered disaster response platform — analyzes disaster images, estimates severity, alerts rescue teams and guides people to safety in real time.</p>
-      <div class="tags"><span class="tag">TypeScript</span><span class="tag">Vercel</span><span class="tag">AI</span></div>
-      <div class="links"><a class="l-live" href="https://disaster-manag1.vercel.app" target="_blank" rel="noopener">Visit live</a><a class="l-git" href="https://github.com/hamza0312615/disaster-manag1" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card" data-cat="climate" data-live="1">
-      <div class="shot"><span class="no">09</span><span class="live-badge">● LIVE</span><img loading="lazy" class="" src="assets/world-weather.jpg" alt="World Explorer screenshot"></div>
-      <div class="body"><h3>World Explorer</h3><p>Explore any place on Earth — click the world map to get real-time weather, elevation, local time and forecasts for that exact spot.</p>
-      <div class="tags"><span class="tag">JavaScript</span><span class="tag">Maps</span><span class="tag">Weather API</span></div>
-      <div class="links"><a class="l-live" href="https://hamza0312615.github.io/world-weather/" target="_blank" rel="noopener">Visit live</a><a class="l-git" href="https://github.com/hamza0312615/world-weather" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card" data-cat="health" data-live="1">
-      <div class="shot"><span class="no">10</span><span class="live-badge">● LIVE</span><img loading="lazy" class="" src="assets/digital-doctor.jpg" alt="Digital Doctor Pakistan screenshot"></div>
-      <div class="body"><h3>Digital Doctor Pakistan</h3><p>The VisionDX diagnostics suite, Pakistan edition — the full AI diagnostic toolset presented for Pakistani users.</p>
-      <div class="tags"><span class="tag">React</span><span class="tag">Vercel</span><span class="tag">AI diagnostics</span></div>
-      <div class="links"><a class="l-live" href="https://pakistani-problem.vercel.app" target="_blank" rel="noopener">Visit live</a><a class="l-git" href="https://github.com/hamza0312615/pakistani-problem-" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card" data-cat="games" data-live="0">
-      <div class="shot"><span class="no">11</span><img loading="lazy" class="pos-top" src="assets/studylens.jpg" alt="StudyLens AI screenshot"></div>
-      <div class="body"><h3>StudyLens AI</h3><p>AI study companion app — scan study material, keep a personal library, and learn faster with AI help.</p>
-      <div class="tags"><span class="tag">Kotlin</span><span class="tag">Android</span><span class="tag">AI</span></div>
-      <div class="links"><a class="l-git" href="https://github.com/hamza0312615/study-lens-" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card" data-cat="games" data-live="0">
-      <div class="shot"><span class="no">12</span><img loading="lazy" class="pos-top" src="assets/balloon-pop.jpg" alt="Balloon Pop Deluxe screenshot"></div>
-      <div class="body"><h3>Balloon Pop Deluxe</h3><p>Tap-to-pop balloon game: 200 stages across 7 zones, endless modes, a skill vault and a full shop — on its way to Google Play under DevTech Labs.</p>
-      <div class="tags"><span class="tag">Kotlin</span><span class="tag">Game</span><span class="tag">Play Store</span></div>
-      <div class="links"><a class="l-git" href="https://github.com/hamza0312615/ballon-pop-game-" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card" data-cat="health" data-live="1">
-      <div class="shot"><span class="no">14</span><span class="live-badge">● LIVE</span><img loading="lazy" src="assets/vision-dx.jpg" alt="Vision DX screenshot"></div>
-      <div class="body"><h3>Vision DX</h3><p>AI-powered medical assistant web app — instant health insights from symptoms and reports, with OCR and medicine verification on top of the VisionDX engine.</p>
-      <div class="tags"><span class="tag">JavaScript</span><span class="tag">Hugging Face</span><span class="tag">OCR</span></div>
-      <div class="links"><a class="l-live" href="https://visiondxmeganew.vercel.app" target="_blank" rel="noopener">Visit live</a><a class="l-git" href="https://github.com/hamza0312615/Vision_DX" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card" data-cat="health" data-live="1">
-      <div class="shot"><span class="no">15</span><span class="live-badge">● LIVE</span><img loading="lazy" src="assets/smart-doctor.jpg" alt="Smart Doctor Connect screenshot"></div>
-      <div class="body"><h3>Smart Doctor Connect</h3><p>AI-Powered Doctor Discovery — enter your symptoms and get matched with the best available specialists in Pakistan for online or physical consultations. Built at a COMSATS hackathon.</p>
-      <div class="tags"><span class="tag">TypeScript</span><span class="tag">Vercel</span><span class="tag">Hackathon</span></div>
-      <div class="links"><a class="l-live" href="https://meditech-rho.vercel.app" target="_blank" rel="noopener">Visit live</a><a class="l-git" href="https://github.com/hamza0312615/hackhton-comsat-22" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card wide" data-cat="health" data-live="0">
-      <div class="shot"><span class="no">16</span><img loading="lazy" class="" src="assets/vital-sensing.jpg" alt="Contactless Vital Sensing screenshot"></div>
-      <div class="body"><h3>Contactless Vital Sensing</h3><p>Contactless health sensing — measuring vital signs without any wearable, by reading tiny changes in WiFi signals. Research-stage work pushing healthcare monitoring toward zero-contact screening.</p>
-      <div class="tags"><span class="tag">Research</span><span class="tag">WiFi sensing</span><span class="tag">Health tech</span></div>
-      <div class="links"><a class="l-git" href="https://github.com/hamza0312615/vital-scan-" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-  </div>
-</section>
-
-<section id="more" style="padding-top:0">
-  <div class="kicker">More builds</div>
-  <h2 class="sec" style="font-size:clamp(30px,4.5vw,56px)">Fresh from the lab</h2>
-  <div style="height:26px"></div>
-  <div class="more-grid">
-    <article class="card">
-      <div class="shot"><img loading="lazy" src="assets/civicai.jpg" alt="CivicAI screenshot"></div>
-      <div class="body"><h3>CivicAI</h3><p>AI-powered city complaint management — citizens report issues like potholes and leaks, Gemini AI classifies, cleans and deduplicates them, and city admins run everything from one intelligent dashboard.</p>
-      <div class="tags"><span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag">Gemini AI</span></div>
-      <div class="links"><a class="l-git" href="https://github.com/hamza0312615/CivicAI" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-    <article class="card">
-      <div class="shot"><img loading="lazy" src="assets/recruitment.jpg" alt="AI Recruitment Agent repository"></div>
-      <div class="body"><h3>AI Recruitment Agent</h3><p>An AI agent for hiring — a web app built to help screen and shortlist candidates faster, from the same agent-first toolbox as this portfolio.</p>
-      <div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">AI agent</span></div>
-      <div class="links"><a class="l-git" href="https://github.com/hamza0312615/AI-recruitment-agent-ver2-" target="_blank" rel="noopener">GitHub</a></div></div>
-    </article>
-  </div>
-</section>
-
-<section id="packages">
-  <div class="kicker">Transparent pricing</div>
-  <h2 class="sec">Packages, with the price in the open</h2>
-  <p class="sec-sub">Real packages from my Fiverr shop &mdash; no hidden fees, ever. Order there with payment protection, or message me on WhatsApp for a custom quote.</p>
-  <div class="pkg-grid">
-    <div class="pkg">
-      <h3>BUSINESS WEBSITE</h3>
-      <div class="tiers">Basic <b>$80</b> &middot; Standard <b>$120</b> &middot; Premium <b>$240</b></div>
-      <ul>
-        <li>Modern, mobile-first design</li>
-        <li>Your content placed and formatted</li>
-        <li>WhatsApp button + contact form</li>
-        <li>Basic SEO setup</li>
-        <li>Revisions before launch</li>
-        <li>Delivery in 3&ndash;7 days</li>
-      </ul>
-      <div class="pcta">
-        <a class="btn red" href="https://www.fiverr.com/hamza61699/build-a-modern-business-school-or-restaurant-website" target="_blank" rel="noopener">Order on Fiverr</a>
-        <a class="btn ghost" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener">Ask on WhatsApp</a>
-      </div>
-    </div>
-    <div class="pkg hot"><span class="badge">MOST IN DEMAND</span>
-      <h3>AI AGENT FOR YOUR BUSINESS</h3>
-      <div class="tiers">Basic <b>$120</b> &middot; Standard <b>$250</b> &middot; Premium <b>$450</b></div>
-      <ul>
-        <li>Agent set up for your business</li>
-        <li>Trained on your services &amp; FAQs</li>
-        <li>Connected to your website</li>
-        <li>Enquiries, bookings &amp; follow-ups</li>
-        <li>Tested with you before launch</li>
-        <li>Handover + support window</li>
-      </ul>
-      <div class="pcta">
-        <a class="btn red" href="https://www.fiverr.com/hamza61699/set-up-and-configure-an-ai-agent-for-your-business" target="_blank" rel="noopener">Order on Fiverr</a>
-        <a class="btn ghost" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener">Ask on WhatsApp</a>
-      </div>
-    </div>
-    <div class="pkg">
-      <h3>AI VIDEO ADS</h3>
-      <div class="tiers">Basic <b>$45</b> &middot; Standard <b>$95</b> &middot; Premium <b>$195</b></div>
-      <ul>
-        <li>Short-form ad video (Reels / TikTok / Shorts)</li>
-        <li>Script and scenes planned with you</li>
-        <li>Captions + your brand colours</li>
-        <li>Music and voice options</li>
-        <li>Ready-to-post files</li>
-      </ul>
-      <div class="pcta">
-        <a class="btn red" href="https://www.fiverr.com/hamza61699/create-ai-video-ads-and-short-form-videos-for-your-brand" target="_blank" rel="noopener">Order on Fiverr</a>
-        <a class="btn ghost" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener">Ask on WhatsApp</a>
-      </div>
-    </div>
-  </div>
-  <p class="sec-sub" style="margin-top:22px">Custom project in mind &mdash; a web app, a dashboard, something bigger? <a href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener" style="color:#ff6a4d;font-weight:700">Message me</a> and get a fixed quote in writing. I also take hourly work on Upwork at $18/hr.</p>
-</section>
-
-<section id="counton" style="padding-top:0">
-  <div class="kicker">How I work</div>
-  <h2 class="sec">What you can count on</h2>
-  <div class="count-grid">
-    <div class="cnt"><h3>Fixed quote in writing</h3><p>Scope, price and timeline agreed before any work starts. The price you approve is the price you pay.</p></div>
-    <div class="cnt"><h3>You own everything</h3><p>Your website, code, content and design are 100% yours after final payment. No lock-in, ever.</p></div>
-    <div class="cnt"><h3>Direct developer access</h3><p>No account managers passing messages. You talk directly with me &mdash; the person building your project.</p></div>
-    <div class="cnt"><h3>Revisions included</h3><p>You review a live preview and give feedback. We refine it together until it looks and works right.</p></div>
-    <div class="cnt"><h3>Fast &amp; mobile-first</h3><p>Most customers visit on phones. Every build is responsive, quick to load and easy to use on any screen.</p></div>
-    <div class="cnt"><h3>Support after launch</h3><p>Launch is not goodbye. Every project includes a support window for fixes and questions.</p></div>
-  </div>
-</section>
-
 <section id="process" style="padding-top:0">
   <div class="kicker">Simple process</div>
   <h2 class="sec">From first message to launch</h2>
@@ -474,250 +158,72 @@ footer{border-top:1px solid var(--line);padding:22px 4vw;display:flex;justify-co
   <div class="kicker">Proof, not promises</div>
   <h2 class="sec">Results on the record</h2>
   <div class="count-grid">
-    <div class="cnt"><h3>🏆 Top 12 Finalist &mdash; Google AI Seekho 2026</h3><p>VisionDX Mega, my AI health-diagnostics platform, reached the national finals of Google&rsquo;s AI competition.</p></div>
+    <div class="cnt"><h3>🏆 Top 12 Finalist &mdash; Google AI Seekho 2026</h3><p>VisionDX Mega, my AI health-diagnostics platform, reached the national finals of Google&rsquo;s AI competition. <a href="/work/visiondx-mega" style="color:#ff6a4d;font-weight:700">Read the case study</a></p></div>
     <div class="cnt"><h3>🏆 Top 10 &mdash; GDG IST Innovators Challenge</h3><p>Top-ten finish in the Google Developer Groups innovation challenge at IST Islamabad.</p></div>
-    <div class="cnt"><h3>🚀 NASA Space Apps 2026</h3><p>Team DevTech, Islamabad &mdash; AgriTwin, a farm-planning tool built on NASA satellite data.</p></div>
-    <div class="cnt"><h3>🎓 A real client website, live</h3><p>FG Public School Boys, Kharian Cantt &mdash; a complete school website, designed and built by me. <a href="https://fg-public-school-kharian.vercel.app" target="_blank" rel="noopener" style="color:#ff6a4d;font-weight:700">See it live</a></p></div>
+    <div class="cnt"><h3>🚀 NASA Space Apps 2026</h3><p>Team DevTech, Islamabad &mdash; AgriTwin, a farm-planning tool built on NASA satellite data. <a href="/work/agritwin" style="color:#ff6a4d;font-weight:700">Read the case study</a></p></div>
+    <div class="cnt"><h3>🎓 A real client website, live</h3><p>FG Public School Boys, Kharian Cantt &mdash; a complete school website, designed and built by me. <a href="/work/fg-school" style="color:#ff6a4d;font-weight:700">Read the case study</a></p></div>
     <div class="cnt"><h3>⭐ 5-star rated on Fiverr</h3><p>My first Fiverr website order earned a 5-star buyer rating (July 2025) &mdash; and the shop has grown to four services since.</p></div>
-    <div class="cnt"><h3>💻 15 real projects, live</h3><p>Not mockups &mdash; real, working websites and apps you can open right now in the <a href="#works" style="color:#ff6a4d;font-weight:700">work section</a> above.</p></div>
+    <div class="cnt"><h3>💻 15 real projects, live</h3><p>Not mockups &mdash; real, working websites and apps you can open right now on the <a href="/work" style="color:#ff6a4d;font-weight:700">work page</a>.</p></div>
   </div>
   <div class="audit">
     <div>
       <h3>Already have a website? Get a free check.</h3>
-      <p>Send me your link and I&rsquo;ll check its speed, mobile experience and SEO basics &mdash; then send you a short, honest report within 48 hours. No obligation, no spam.</p>
+      <p>Send me your link and I&rsquo;ll check its speed, mobile experience and SEO basics &mdash; a short, honest report within 48 hours. No obligation, no spam.</p>
     </div>
-    <a class="btn wa" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20please%20check%20my%20website%3A%20" target="_blank" rel="noopener">Get my free check</a>
+    <a class="btn wa" href="/free-website-check">Get my free check</a>
   </div>
+</section>
+
+<section id="pricing-teaser" style="padding-top:0">
+  <div class="kicker">Transparent pricing</div>
+  <h2 class="sec">Prices in the open</h2>
+  <div class="teaser-grid">
+    <div class="teaser"><h3>Business Website</h3><div class="tp">from $80</div><p style="color:var(--mut);font-size:14px;line-height:1.6">Launch site to full business website. Delivery in 3&ndash;7 days.</p></div>
+    <div class="teaser"><h3>AI Agent</h3><div class="tp">from $120</div><p style="color:var(--mut);font-size:14px;line-height:1.6">Set up, trained on your business, connected to your website.</p></div>
+    <div class="teaser"><h3>AI Video Ads</h3><div class="tp">from $45</div><p style="color:var(--mut);font-size:14px;line-height:1.6">Short-form ads ready for Reels, TikTok and Shorts.</p></div>
+  </div>
+  <p style="margin-top:24px"><a class="btn red" href="/pricing">See all packages</a></p>
 </section>
 
 <section id="faq" class="faq" style="padding-top:0">
   <div class="kicker">Questions</div>
   <h2 class="sec">Before you ask</h2>
-  <details><summary>How fast can my website be ready?</summary><p>Most business websites take 3&ndash;7 days. Bigger projects &mdash; web apps, AI agents with many connections &mdash; get an exact timeline in your written quote before we start.</p></details>
+  <details><summary>How fast can my website be ready?</summary><p>Most business websites take 3&ndash;7 days. Bigger projects get an exact timeline in your written quote before we start.</p></details>
   <details><summary>How do we start?</summary><p>Message me on WhatsApp, or order through Fiverr where your payment stays protected until delivery. Either way, you get the fixed quote in writing first.</p></details>
-  <details><summary>How do I pay?</summary><p>Through Fiverr or Upwork (both protect your payment), or a method we agree in writing. You never pay for surprises &mdash; the quote is fixed before work begins.</p></details>
-  <details><summary>Do I own my website?</summary><p>Yes &mdash; 100%. The code, content and design are yours after final payment. No lock-in and no monthly ransom to keep your own site.</p></details>
-  <details><summary>Can you add an AI agent to my existing website?</summary><p>Yes. Agents can be added to most existing websites and connected to your contact forms and WhatsApp, so enquiries are answered and followed up automatically.</p></details>
-  <details><summary>Do you work with clients outside Pakistan?</summary><p>Yes &mdash; I work remotely with clients worldwide. We talk on WhatsApp, you review live preview links, and everything is agreed in writing.</p></details>
+  <details><summary>Do I own my website?</summary><p>Yes &mdash; 100%. The code, content and design are yours after final payment. No lock-in.</p></details>
+  <details><summary>Can you add an AI agent to my existing website?</summary><p>Yes. Agents can be added to most existing websites and connected to your forms and WhatsApp.</p></details>
+  <details><summary>Do you work with clients outside Pakistan?</summary><p>Yes &mdash; I work remotely with clients worldwide, with live preview links and everything agreed in writing.</p></details>
 </section>
 
-<section id="index">
-  <div class="kicker">Everything, in the open</div>
-  <h2 class="sec">Full GitHub index</h2>
-  <p class="sec-sub">All 33 public repositories under <b style="color:#fff">@hamza0312615</b> &mdash; name, main language, and what each one is.</p>
-  <div style="height:26px"></div>
-  <div class="repo-list">
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/AgriTwin" target="_blank" rel="noopener">AgriTwin</a><span class="repo-lang">Kotlin</span><span class="repo-desc">nasa field change challange</span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/ai-recruit" target="_blank" rel="noopener">ai-recruit</a><span class="repo-lang">—</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/ai-recruitment" target="_blank" rel="noopener">ai-recruitment</a><span class="repo-lang">—</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/AI-recruitment-agent-ver2-" target="_blank" rel="noopener">AI-recruitment-agent-ver2-</a><span class="repo-lang">JavaScript</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/AI-recruittment-agent" target="_blank" rel="noopener">AI-recruittment-agent</a><span class="repo-lang">—</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/AQUORA" target="_blank" rel="noopener">AQUORA</a><span class="repo-lang">JavaScript</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/ballon-pop-game-" target="_blank" rel="noopener">ballon-pop-game-</a><span class="repo-lang">Kotlin</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/CivicAI" target="_blank" rel="noopener">CivicAI</a><span class="repo-lang">TypeScript</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/CivicAI-verA1" target="_blank" rel="noopener">CivicAI-verA1</a><span class="repo-lang">TypeScript</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/CRC-BUSINESS-MODEL" target="_blank" rel="noopener">CRC-BUSINESS-MODEL</a><span class="repo-lang">PHP</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/devtech" target="_blank" rel="noopener">devtech</a><span class="repo-lang">TypeScript</span><span class="repo-desc">about</span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/disaster-manag1" target="_blank" rel="noopener">disaster-manag1</a><span class="repo-lang">TypeScript</span><span class="repo-desc"> · <a href="https://disaster-manag1.vercel.app" target="_blank" rel="noopener">Live</a></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/Forge-AI-" target="_blank" rel="noopener">Forge-AI-</a><span class="repo-lang">JavaScript</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/GDG-Builders-day-DEVTECH-" target="_blank" rel="noopener">GDG-Builders-day-DEVTECH-</a><span class="repo-lang">Kotlin</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/hacjhton-comsat" target="_blank" rel="noopener">hacjhton-comsat</a><span class="repo-lang">JavaScript</span><span class="repo-desc"> · <a href="https://hacjhton-comsat.vercel.app" target="_blank" rel="noopener">Live</a></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/hackhton-comsat-22" target="_blank" rel="noopener">hackhton-comsat-22</a><span class="repo-lang">TypeScript</span><span class="repo-desc"> · <a href="https://meditech-rho.vercel.app" target="_blank" rel="noopener">Live</a></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/hackhtoncomsat-anti" target="_blank" rel="noopener">hackhtoncomsat-anti</a><span class="repo-lang">—</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/hamza0312615" target="_blank" rel="noopener">hamza0312615</a><span class="repo-lang">—</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/mediconnect" target="_blank" rel="noopener">mediconnect</a><span class="repo-lang">JavaScript</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/mediconnect22" target="_blank" rel="noopener">mediconnect22</a><span class="repo-lang">JavaScript</span><span class="repo-desc"> · <a href="https://mediconnect22-mu.vercel.app" target="_blank" rel="noopener">Live</a></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/mobcontrol-game-" target="_blank" rel="noopener">mobcontrol-game-</a><span class="repo-lang">JavaScript</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/neon-game-" target="_blank" rel="noopener">neon-game-</a><span class="repo-lang">JavaScript</span><span class="repo-desc"> · <a href="https://neon-game-murex.vercel.app" target="_blank" rel="noopener">Live</a></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/pakistani-problem-" target="_blank" rel="noopener">pakistani-problem-</a><span class="repo-lang">JavaScript</span><span class="repo-desc"> · <a href="https://pakistani-problem.vercel.app" target="_blank" rel="noopener">Live</a></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/Portfolio" target="_blank" rel="noopener">Portfolio</a><span class="repo-lang">JavaScript</span><span class="repo-desc"> · <a href="https://portfolio-devtech2.vercel.app" target="_blank" rel="noopener">Live</a></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/ResQNet" target="_blank" rel="noopener">ResQNet</a><span class="repo-lang">HTML</span><span class="repo-desc"> · <a href="https://hamza0312615.github.io/ResQNet/" target="_blank" rel="noopener">Live</a></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/sleep-sense-" target="_blank" rel="noopener">sleep-sense-</a><span class="repo-lang">JavaScript</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/study-lens-" target="_blank" rel="noopener">study-lens-</a><span class="repo-lang">Kotlin</span><span class="repo-desc">studylens app </span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/test" target="_blank" rel="noopener">test</a><span class="repo-lang">JavaScript</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/Vision_DX" target="_blank" rel="noopener">Vision_DX</a><span class="repo-lang">JavaScript</span><span class="repo-desc">An AI-Powered medical assistant web application designed to provide instant health insight</span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/visiondxmega" target="_blank" rel="noopener">visiondxmega</a><span class="repo-lang">JavaScript</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/vital-scan-" target="_blank" rel="noopener">vital-scan-</a><span class="repo-lang">—</span><span class="repo-desc">vital scan ai app </span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/voiceDoc" target="_blank" rel="noopener">voiceDoc</a><span class="repo-lang">Python</span><span class="repo-desc"></span></div>
-<div class="repo-row"><a class="repo-name" href="https://github.com/hamza0312615/world-weather" target="_blank" rel="noopener">world-weather</a><span class="repo-lang">JavaScript</span><span class="repo-desc"></span></div>  </div>
-</section>
-
-<section id="about">
-  <div class="kicker">About</div>
-  <h2 class="sec">Builder first</h2>
-  <div style="height:22px"></div>
-  <div class="about-grid">
+<footer class="site">
+  <div class="cta-band">
+    <h2>Let&rsquo;s build something that brings you customers.</h2>
+    <p>Tell me about your business in one WhatsApp message. You get a fixed quote in writing &mdash; no pressure, no hidden fees.</p>
+    <a class="btn wa" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener">Start a project on WhatsApp</a>
+    <a class="btn ghost" href="/contact" style="margin-left:10px">Or use the contact form</a>
+  </div>
+  <div class="foot-grid">
     <div>
-      <p>I&rsquo;m <b>Muhammad Hamza</b>, a Computer Science student at the <b>Institute of Space Technology (IST), Islamabad</b>, and the builder behind <b>DevTech Labs</b>.</p>
-      <p>My work sits where AI meets real problems: <b>VisionDX</b> brings AI diagnostics to people who can&rsquo;t reach specialists, <b>AQUORA</b> watches the Indus Basin&rsquo;s water from satellite data, the <b>PSL Translator</b> turns Pakistan Sign Language into text and speech, and <b>AgriTwin</b> helps farmers adapt using NASA Earth data.</p>
-      <p>I also ship games and apps to the Play Store, and I compete &mdash; hackathons and national challenges are where most of these projects were born.</p>
+      <a href="/" class="logo" style="margin-bottom:12px">HAMZA<span>.</span></a>
+      <p>DevTech Labs &mdash; websites &amp; AI agents for businesses, built by Muhammad Hamza, CS student at IST Islamabad and national hackathon finalist.</p>
+      <p style="margin-top:10px"><a href="https://github.com/hamza0312615" target="_blank" rel="noopener" style="display:inline;padding:0">GitHub</a> &middot; <a href="https://www.linkedin.com/in/muhammad-hamza-55368a3b4" target="_blank" rel="noopener" style="display:inline;padding:0">LinkedIn</a> &middot; <a href="https://www.fiverr.com/hamza61699" target="_blank" rel="noopener" style="display:inline;padding:0">Fiverr</a></p>
     </div>
-    <div class="ach">
-      <h3>RECOGNITION</h3>
-      <ul>
-        <li><b>Top 12 Finalist</b> &mdash; Google AI Seekho 2026</li>
-        <li><b>Top 10</b> &mdash; GDG IST Innovators Challenge</li>
-        <li><b>Developer Advocate</b> &mdash; GDG on Campus IST, 2026&ndash;27</li>
-        <li><b>Team DevTech</b> &mdash; NASA Space Apps Challenge 2026, Islamabad</li>
-      </ul>
+    <div><h4>Pages</h4>
+      <a href="/">Home</a><a href="/services">Services</a><a href="/work">Work</a><a href="/pricing">Pricing</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/free-website-check">Free Website Check</a>
+    </div>
+    <div><h4>Services</h4>
+      <a href="/services/ai-agents">AI Agents</a><a href="/services/business-websites">Business Websites</a><a href="/services/web-apps">Web Apps &amp; AI Tools</a><a href="/services/ai-video-ads">AI Video Ads</a><a href="/pricing">Packages &amp; Pricing</a>
+    </div>
+    <div><h4>Contact</h4>
+      <a href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener">WhatsApp: +92 305 2353337</a>
+      <a href="mailto:hamzarajpoot0312615@gmail.com">hamzarajpoot0312615@gmail.com</a>
+      <a href="/contact">Contact form</a>
+      <p style="margin-top:8px">Islamabad, Pakistan &middot; working worldwide, remotely</p>
     </div>
   </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="kicker">Contact</div>
-  <h2>Let&rsquo;s work <span>together</span></h2>
-  <p>Have a project, a hackathon team, or an opportunity? WhatsApp is fastest, or use the form below — it emails me directly.</p>
-  <div class="cta" style="justify-content:center">
-    <a class="btn wa" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20talk." target="_blank" rel="noopener">WhatsApp me</a>
-    <a class="btn red" href="mailto:hamzarajpoot0312615@gmail.com">Email me</a>
-    <a class="btn ghost" href="https://www.linkedin.com/in/muhammad-hamza-55368a3b4" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="btn ghost" href="https://github.com/hamza0312615" target="_blank" rel="noopener">GitHub</a>
-  </div>
-  <form id="cform" class="cform" action="https://formsubmit.co/hamzarajpoot0312615@gmail.com" method="POST">
-    <input type="hidden" name="_subject" value="New message from your portfolio website">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://hamza-devtech2.vercel.app/?sent=1#contact">
-    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-    <div class="frow">
-      <input required name="name" placeholder="Your name" autocomplete="name">
-      <input required type="email" name="email" placeholder="Your email" autocomplete="email">
-    </div>
-    <textarea required name="message" rows="4" placeholder="Your message…"></textarea>
-    <button class="btn red" type="submit" id="sendBtn" style="align-self:center">Send message</button>
-    <p class="fnote" id="fnote">Write here and press Send — your message lands straight in my email inbox. No mail app opens.</p>
-  </form>
-</section>
-</main>
-<footer>
-  <span>&copy; 2026 Muhammad Hamza &mdash; DevTech Labs</span>
-  <span>Built &amp; deployed on Vercel</span>
+  <div class="foot-bottom">&copy; 2026 Muhammad Hamza &mdash; DevTech Labs. Every project on this site is real and live.</div>
 </footer>
-
-<script>
-// Filters: cards are static HTML, JS only shows/hides (works even if JS partially fails)
-document.querySelectorAll('.fbtn').forEach(b=>b.addEventListener('click',()=>{
-  document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('on'));
-  b.classList.add('on');
-  const f=b.dataset.f;
-  document.querySelectorAll('#grid .card').forEach(c=>{
-    const show = f==='all' || (f==='live' ? c.dataset.live==='1' : c.dataset.cat===f);
-    c.classList.toggle('hide',!show);
-  });
-}));
-// 3D tilt on cards + gentle hero parallax (fine pointers only, respects reduced motion)
-const finePointer = matchMedia('(pointer:fine)').matches;
-const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-if(finePointer && !reducedMotion){
-  document.querySelectorAll('#grid .card').forEach(card=>{
-    card.addEventListener('pointermove',e=>{
-      const r=card.getBoundingClientRect();
-      const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
-      card.style.transform=`translateY(-6px) rotateY(${x*7}deg) rotateX(${-y*7}deg)`;
-    });
-    card.addEventListener('pointerleave',()=>{card.style.transform='';});
-  });
-  const pw=document.querySelector('.portrait-wrap');
-  const hero=document.querySelector('.hero');
-  if(pw&&hero){
-    hero.addEventListener('pointermove',e=>{
-      const x=e.clientX/innerWidth-.5, y=e.clientY/innerHeight-.5;
-      pw.style.transform=`translate(${x*14}px,${y*10}px) rotateY(${x*6}deg)`;
-    });
-    hero.addEventListener('pointerleave',()=>{pw.style.transform='';});
-  }
-}
-const roles=["business websites","AI agents","web apps & dashboards","AI video ads","AI health systems","Play Store games"];
-let ri=0;const roleEl=document.getElementById('role');
-setInterval(()=>{ri=(ri+1)%roles.length;roleEl.textContent=roles[ri];},2400);
-
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-document.querySelectorAll('.num').forEach(el=>{
-  const target=+el.dataset.count;let cur=0;const step=Math.max(1,Math.ceil(target/40));
-  const t=setInterval(()=>{cur+=step;if(cur>=target){cur=target;clearInterval(t)}el.textContent=cur;},45);
-});
-// AI agent terminal: re-types its build log like a live coding agent (static log stays if JS is off)
-(function(){
-  const body=document.getElementById('termBody');
-  if(!body) return;
-  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduce) return;
-  const lines=body.innerHTML.split('\n');
-  let started=false;
-  function typeAll(){
-    body.innerHTML='';
-    let li=0;
-    function nextLine(){
-      if(li>=lines.length){
-        body.insertAdjacentHTML('beforeend','<span class="tcursor"></span>');
-        setTimeout(()=>{ if(body.isConnected) typeAll(); }, 14000);
-        return;
-      }
-      const line=lines[li++];
-      const span=document.createElement('span');
-      body.appendChild(span);
-      const tmp=document.createElement('div'); tmp.innerHTML=line;
-      const text=tmp.textContent;
-      let ci=0;
-      const speed = line.includes('$ agent') ? 34 : 7;
-      const t=setInterval(()=>{
-        span.textContent=text.slice(0,++ci);
-        if(ci>=text.length){
-          clearInterval(t);
-          span.innerHTML=line;
-          body.insertAdjacentHTML('beforeend','\n');
-          setTimeout(nextLine, line.includes('$ agent')?500:260);
-        }
-      }, speed);
-    }
-    nextLine();
-  }
-  const io2=new IntersectionObserver(es=>es.forEach(e=>{
-    if(e.isIntersecting && !started){ started=true; typeAll(); io2.disconnect(); }
-  }),{threshold:.25});
-  io2.observe(body);
-})();
-// Returned from FormSubmit after a successful send?
-(function(){
-  if(!/[?&]sent=1/.test(location.search)) return;
-  const note=document.getElementById('fnote');
-  if(note){ note.className='fnote ok'; note.textContent='Message sent ✓ — it is already in Hamza’s inbox. He replies fast.'; }
-})();
-// Contact form: send straight to Hamza's inbox via FormSubmit AJAX (no mail app)
-(function(){
-  const form=document.getElementById('cform');
-  if(!form) return;
-  const note=document.getElementById('fnote');
-  const btn=document.getElementById('sendBtn');
-  form.addEventListener('submit', async e=>{
-    e.preventDefault();
-    btn.disabled=true; btn.textContent='Sending…';
-    note.className='fnote'; note.textContent='Sending your message…';
-    const data={name:form.name.value.trim(), email:form.email.value.trim(), message:form.message.value.trim(), _subject:'New message from your portfolio website'};
-    try{
-      const r=await fetch('https://formsubmit.co/ajax/hamzarajpoot0312615@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
-      const j=await r.json().catch(()=>({}));
-      if(r.ok && (j.success===true || j.success==='true')){
-        note.className='fnote ok'; note.textContent='Message sent ✓ — it is already in Hamza’s inbox. He replies fast.';
-        form.reset();
-        btn.disabled=false; btn.textContent='Send message';
-      } else {
-        note.textContent='Opening the secure send page…';
-        form.submit();
-      }
-    }catch(err){
-      note.textContent='Opening the secure send page…';
-      form.submit();
-    }
-    btn.disabled=false; btn.textContent='Send message';
-  });
-})();
-const cv=document.getElementById('particles'),ctx=cv.getContext('2d');let W,H,ps=[];
-function size(){W=cv.width=innerWidth;H=cv.height=innerHeight;ps=Array.from({length:55},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.4,s:Math.random()*.35+.08,o:Math.random()*.5+.15}));}
-size();addEventListener('resize',size);
-(function loop(){ctx.clearRect(0,0,W,H);ps.forEach(p=>{p.y-=p.s;if(p.y<-4){p.y=H+4;p.x=Math.random()*W}ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,7);ctx.fillStyle=`rgba(255,110,88,${p.o})`;ctx.fill();});requestAnimationFrame(loop);})();
-</script>
-<a class="wafloat" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20talk." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+<a class="wafloat" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+<script src="/site.js"></script>
 </body>
 </html>
