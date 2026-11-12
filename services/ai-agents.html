@@ -44,6 +44,12 @@
   <h2 class="sec" style="font-size:clamp(28px,4vw,44px)">Three simple steps</h2>
   <div class="steps" style="grid-template-columns:repeat(3,1fr)"><div class="step"><div class="n">1</div><h3>Tell me your business</h3><p>One WhatsApp chat: your services, your common questions, how you take bookings.</p></div><div class="step"><div class="n">2</div><h3>I build &amp; train your agent</h3><p>The agent learns your business, gets connected to your website, and we test it together.</p></div><div class="step"><div class="n">3</div><h3>It starts working 24/7</h3><p>Enquiries answered instantly, leads captured and followed up &mdash; you just see the results.</p></div></div>
   <div class="faq" style="margin-top:36px"><div class="kicker">Questions</div><h2 class="sec" style="font-size:clamp(28px,4vw,44px)">Before you ask</h2><details><summary>How is an agent different from a chatbot?</summary><p>A chatbot only talks. An agent also acts: it captures the lead, books the slot, sends the follow-up. Talking is one of its tools, not the whole job.</p></details><details><summary>Do I need a new website for an agent?</summary><p>No. Agents can be added to most existing websites, and connected to your forms and WhatsApp.</p></details><details><summary>What does the agent need from me?</summary><p>Your service list, prices and common questions &mdash; one short chat is enough for me to train it.</p></details></div>
+</section><section style="padding-top:0">
+  <div class="kicker">See it working</div>
+  <h2 class="sec" style="font-size:clamp(28px,4vw,44px)">Agents I have already built</h2>
+  <a class="live-card" href="/work/visiondx-mega"><span class="lc-k">Live example</span><span class="lc-t">WhatsApp Triage Bot &mdash; VisionDX Mega</span><span class="lc-u">Patients message their symptoms on WhatsApp; the bot triages them and guides them to the right care.</span><span class="lc-b">Read the case study</span></a>
+  <div class="cnt" style="margin-top:18px"><h3>🤖 Try an agent right here</h3><p style="color:var(--mut);line-height:1.7;font-size:15px">The assistant on this page answers questions about my services and prices instantly &mdash; a small taste of what your own customers would get, on your website, 24/7.</p><p style="margin-top:12px"><button class="btn red open-ai" type="button">Ask the assistant</button></p></div>
+  <p style="margin-top:18px"><a class="btn ghost" href="/ai-agents">See my full AI Agents portfolio page &rarr;</a></p>
 </section>
 <footer class="site">
   <div class="cta-band">
@@ -59,7 +65,7 @@
       <p style="margin-top:10px"><a href="https://github.com/hamza0312615" target="_blank" rel="noopener" style="display:inline;padding:0">GitHub</a> &middot; <a href="https://www.linkedin.com/in/muhammad-hamza-55368a3b4" target="_blank" rel="noopener" style="display:inline;padding:0">LinkedIn</a> &middot; <a href="https://www.fiverr.com/hamza61699" target="_blank" rel="noopener" style="display:inline;padding:0">Fiverr</a></p>
     </div>
     <div><h4>Pages</h4>
-      <a href="/">Home</a><a href="/services">Services</a><a href="/work">Work</a><a href="/pricing">Pricing</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/free-website-check">Free Website Check</a>
+      <a href="/">Home</a><a href="/ai-agents">AI Agents Portfolio</a><a href="/services">Services</a><a href="/work">Work</a><a href="/pricing">Pricing</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/free-website-check">Free Website Check</a>
     </div>
     <div><h4>Services</h4>
       <a href="/services/ai-agents">AI Agents</a><a href="/services/business-websites">Business Websites</a><a href="/services/web-apps">Web Apps &amp; AI Tools</a><a href="/services/ai-video-ads">AI Video Ads</a><a href="/pricing">Packages &amp; Pricing</a>
@@ -73,6 +79,26 @@
   </div>
   <div class="foot-bottom">&copy; 2026 Muhammad Hamza &mdash; DevTech Labs. Every project on this site is real and live.</div>
 </footer>
+<button id="aiFab" type="button" aria-label="Open Hamza's AI assistant" aria-expanded="false">🤖<span>Ask my AI</span></button>
+<div id="aiChat" role="dialog" aria-label="Hamza's AI assistant" hidden>
+  <div class="ai-head">
+    <div><div class="ai-name">Hamza&rsquo;s AI Assistant</div><div class="ai-status"><i></i> Online &mdash; instant answers</div></div>
+    <button id="aiClose" type="button" aria-label="Close assistant">&times;</button>
+  </div>
+  <div class="ai-msgs" id="aiMsgs"></div>
+  <div class="ai-chips" id="aiChips">
+    <button type="button" data-q="What are your prices?">💰 Prices</button>
+    <button type="button" data-q="What can an AI agent do for my business?">🤖 AI agents</button>
+    <button type="button" data-q="Tell me about your WhatsApp bot">💬 WhatsApp bot</button>
+    <button type="button" data-q="Show me your projects">🚀 Projects</button>
+    <button type="button" data-q="How do I start a project?">✅ Start a project</button>
+  </div>
+  <form class="ai-input" id="aiForm">
+    <input id="aiText" type="text" placeholder="Ask about services, prices, projects…" autocomplete="off" maxlength="300">
+    <button type="submit" aria-label="Send">➤</button>
+  </form>
+  <div class="ai-foot">Instant answers about Hamza&rsquo;s work &mdash; for a real project, <a href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener">message him on WhatsApp</a>.</div>
+</div>
 <a class="wafloat" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 <script>document.querySelectorAll('.svc,.cnt,.card,.pkg,.step,.prob,.teaser,.snap').forEach(function(el){el.classList.add('reveal')});</script><script src="/site.js"></script>
 </body>

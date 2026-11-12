@@ -143,6 +143,21 @@
 <span class="dim">$ agent idle — say the word and I build the next one…</span></div>
   </div>
 </section>
+<section id="agents" style="padding-top:0">
+  <div class="kicker">AI agents, live</div>
+  <h2 class="sec">Meet the agents</h2>
+  <p class="sec-sub">Not promises &mdash; agents I have actually built and shipped. One of them is on this page right now: ask it anything about my services, prices or projects.</p>
+  <div class="count-grid">
+    <div class="cnt"><h3>🤖 Portfolio AI Assistant</h3><p>Live on this website. It answers visitor questions about my services, prices and projects instantly &mdash; the same kind of agent I can put on your business website.</p><p style="margin-top:12px"><button class="btn red open-ai" type="button">Try it &mdash; ask a question</button></p></div>
+    <div class="cnt"><h3>💬 WhatsApp Triage Bot</h3><p>Built into VisionDX Mega, my AI health platform: patients describe their symptoms on WhatsApp and the bot triages them and guides them to the right care. The platform itself speaks six languages.</p><p style="margin-top:12px"><a href="/work/visiondx-mega" style="color:#ff6a4d;font-weight:700">Read the case study &rarr;</a></p></div>
+    <div class="cnt"><h3>🏪 Business AI Agent</h3><p>For clinics, restaurants, schools and shops: answers customers 24/7, takes bookings, captures leads and follows up &mdash; on your website and WhatsApp. From $120.</p><p style="margin-top:12px"><a href="/services/ai-agents" style="color:#ff6a4d;font-weight:700">Details &amp; pricing &rarr;</a> &middot; <a href="https://www.fiverr.com/hamza61699/set-up-and-configure-an-ai-agent-for-your-business" target="_blank" rel="noopener" style="color:#ff6a4d;font-weight:700">Order on Fiverr</a></p></div>
+    <div class="cnt"><h3>🧠 AI Health Agents</h3><p>VisionDX Mega runs 12 AI diagnostic tools &mdash; medical report analysis, symptom checking and a sign-language translator &mdash; a Top 12 finalist at Google AI Seekho 2026.</p><p style="margin-top:12px"><a href="/work/visiondx-mega" style="color:#ff6a4d;font-weight:700">See it &rarr;</a></p></div>
+    <div class="cnt"><h3>🧩 AI Chatbot &amp; Web App MVP</h3><p>A custom chatbot or AI tool for your business idea &mdash; dashboards, OCR, smart forms &mdash; with a working prototype in days, from $95.</p><p style="margin-top:12px"><a href="https://www.fiverr.com/hamza61699/build-an-ai-chatbot-and-web-app-mvp-for-your-business" target="_blank" rel="noopener" style="color:#ff6a4d;font-weight:700">Order on Fiverr &rarr;</a></p></div>
+    <div class="cnt"><h3>📲 Your agent, next</h3><p>Every agent above started as one WhatsApp message. Tell me what your business needs and you get a fixed quote in writing &mdash; no pressure, no hidden fees.</p><p style="margin-top:12px"><a class="btn wa" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener">Start on WhatsApp</a></p></div>
+  </div>
+  <p style="margin-top:26px"><a class="btn red" href="/ai-agents">See the full AI Agents portfolio &rarr;</a></p>
+</section>
+
 <section id="process" style="padding-top:0">
   <div class="kicker">Simple process</div>
   <h2 class="sec">From first message to launch</h2>
@@ -209,7 +224,7 @@
       <p style="margin-top:10px"><a href="https://github.com/hamza0312615" target="_blank" rel="noopener" style="display:inline;padding:0">GitHub</a> &middot; <a href="https://www.linkedin.com/in/muhammad-hamza-55368a3b4" target="_blank" rel="noopener" style="display:inline;padding:0">LinkedIn</a> &middot; <a href="https://www.fiverr.com/hamza61699" target="_blank" rel="noopener" style="display:inline;padding:0">Fiverr</a></p>
     </div>
     <div><h4>Pages</h4>
-      <a href="/">Home</a><a href="/services">Services</a><a href="/work">Work</a><a href="/pricing">Pricing</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/free-website-check">Free Website Check</a>
+      <a href="/">Home</a><a href="/ai-agents">AI Agents Portfolio</a><a href="/services">Services</a><a href="/work">Work</a><a href="/pricing">Pricing</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/free-website-check">Free Website Check</a>
     </div>
     <div><h4>Services</h4>
       <a href="/services/ai-agents">AI Agents</a><a href="/services/business-websites">Business Websites</a><a href="/services/web-apps">Web Apps &amp; AI Tools</a><a href="/services/ai-video-ads">AI Video Ads</a><a href="/pricing">Packages &amp; Pricing</a>
@@ -223,6 +238,26 @@
   </div>
   <div class="foot-bottom">&copy; 2026 Muhammad Hamza &mdash; DevTech Labs. Every project on this site is real and live.</div>
 </footer>
+<button id="aiFab" type="button" aria-label="Open Hamza's AI assistant" aria-expanded="false">🤖<span>Ask my AI</span></button>
+<div id="aiChat" role="dialog" aria-label="Hamza's AI assistant" hidden>
+  <div class="ai-head">
+    <div><div class="ai-name">Hamza&rsquo;s AI Assistant</div><div class="ai-status"><i></i> Online &mdash; instant answers</div></div>
+    <button id="aiClose" type="button" aria-label="Close assistant">&times;</button>
+  </div>
+  <div class="ai-msgs" id="aiMsgs"></div>
+  <div class="ai-chips" id="aiChips">
+    <button type="button" data-q="What are your prices?">💰 Prices</button>
+    <button type="button" data-q="What can an AI agent do for my business?">🤖 AI agents</button>
+    <button type="button" data-q="Tell me about your WhatsApp bot">💬 WhatsApp bot</button>
+    <button type="button" data-q="Show me your projects">🚀 Projects</button>
+    <button type="button" data-q="How do I start a project?">✅ Start a project</button>
+  </div>
+  <form class="ai-input" id="aiForm">
+    <input id="aiText" type="text" placeholder="Ask about services, prices, projects…" autocomplete="off" maxlength="300">
+    <button type="submit" aria-label="Send">➤</button>
+  </form>
+  <div class="ai-foot">Instant answers about Hamza&rsquo;s work &mdash; for a real project, <a href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener">message him on WhatsApp</a>.</div>
+</div>
 <a class="wafloat" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 <script>document.querySelectorAll('.svc,.cnt,.card,.pkg,.step,.prob,.teaser,.snap').forEach(function(el){el.classList.add('reveal')});</script><script src="/site.js"></script>
 </body>
