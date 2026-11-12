@@ -290,3 +290,8 @@ details:hover{border-color:#ff6a4d44}
 .wa-msg.user{background:#005c4b;align-self:flex-end;border-top-right-radius:2px}
 .wa-msg .ur{font-size:15.5px;text-align:right}
 .wa-msg .tr{color:#aebac1;font-size:12.5px;font-style:italic;margin-top:5px}
+
+/* ===== v5.3.2 enquiry flow options ===== */
+.ai-opts{display:flex;flex-wrap:wrap;gap:8px;align-self:flex-start;max-width:92%}
+.ai-opts button{background:#ffffff10;border:1px solid #ff6a4d88;color:var(--txt);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;cursor:pointer;font-family:Inter,system-ui,sans-serif}
+.ai-opts button:hover{background:#ff6a4d33}
