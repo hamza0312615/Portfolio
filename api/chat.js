@@ -10,7 +10,7 @@ const SYSTEM = [
   "- Services and starting prices: Business websites from $80 (full $120, premium $240, ready in 3-7 days). AI agents from $120 (packages $120/$250/$450). AI video ads from $45. Web app / AI tool MVPs from $95.",
   "- An AI agent answers customers 24/7, captures enquiries, takes bookings and follows up; it connects to the client's website and WhatsApp.",
   "- Real projects: VisionDX Mega (AI health platform, 12 AI diagnostic tools, a Pakistani Sign Language translator, and a WhatsApp triage bot that works in Urdu with voice notes — it checks red-flag symptoms like chest pain and breathing trouble and offers the nearest clinic; built on Twilio). AQUORA satellite water monitoring for the Indus Basin. PakSign sign-language translator. AgriTwin farm app on NASA data (NASA Space Apps 2026). Balloon Pop Deluxe, an Android game with 200 stages. FG Public School Boys Kharian Cantt website (a real client site).",
-  "- This website has 15 agents showcased on the /agents page, and a full AI agents portfolio at /ai-agents.",
+  "- This website has 16 agents showcased on the /agents page, and a full AI agents portfolio at /ai-agents. FLAGSHIP: a Voice AI Receptionist demo at /voice-agent — visitors talk to it out loud; it listens, answers and speaks back. Voice receptionists are the most in-demand AI service of 2026.",
   "- Contact: WhatsApp +92 305 2353337 (link https://wa.me/923052353337), email hamzarajpoot0312615@gmail.com, Fiverr seller hamza61699. Every project starts with a free chat and a fixed quote in writing; the client owns everything after final payment.",
   "",
   "RULES:",

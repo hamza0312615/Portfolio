@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice AI Receptionist — Talk to the Flagship Agent | DevTech Labs, Muhammad Hamza</title>
+<meta name="description" content="Talk out loud to Muhammad Hamza's flagship AI voice receptionist: it listens, answers questions about his services and prices, and speaks back. The hardest, most valuable agent in the 2026 market — live on this page.">
+<link rel="canonical" href="https://hamza-devtech2.vercel.app/voice-agent">
+<meta property="og:title" content="Voice AI Receptionist — Talk to the Flagship Agent | DevTech Labs, Muhammad Hamza">
+<meta property="og:description" content="Talk out loud to Muhammad Hamza's flagship AI voice receptionist: it listens, answers questions about his services and prices, and speaks back. The hardest, most valuable agent in the 2026 market — live on this page.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://hamza-devtech2.vercel.app/assets/portrait.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+</head>
+<body>
+<canvas id="particles"></canvas>
+<header class="site">
+  <a href="/" class="logo">HAMZA<span>.</span></a>
+  <nav>
+    <a href="/services">SERVICES</a><a href="/work">WORK</a><a href="/pricing">PRICING</a><a href="/about">ABOUT</a><a href="/contact">CONTACT</a>
+    <a class="btn wa nav-cta" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener" style="padding:10px 18px">Start a Project</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="crumbs"><a href="/">Home</a> / <a href="/agents">AI Agents</a> / Voice Agent</div>
+  <h1 class="page">Talk to my <span class="grad">Voice Agent</span></h1>
+  <p class="sec-sub" style="margin-top:0">This is the flagship — the hardest agent in the market, working live. Tap the mic, ask out loud, and it answers back in voice. Trained on a real business, the same agent answers a company&rsquo;s customers 24/7 and never misses one.</p>
+</div><section style="padding-top:10px">
+  <div class="voice-box">
+    <div class="voice-status" id="vStatus">Tap the mic and ask out loud — try &ldquo;What are your prices?&rdquo;</div>
+    <button id="vMic" class="v-mic" type="button" aria-label="Start talking">🎤</button>
+    <div class="v-chips">
+      <button class="v-chip" type="button" data-q="What are your prices?">💰 Prices</button>
+      <button class="v-chip" type="button" data-q="What is an AI voice agent?">🤖 What is a voice agent?</button>
+      <button class="v-chip" type="button" data-q="Tell me about the WhatsApp bot">💬 WhatsApp bot</button>
+      <button class="v-chip" type="button" data-q="I want a website">🌐 I want a website</button>
+      <button class="v-chip" type="button" data-q="How do I get a quote?">📋 Get a quote</button>
+    </div>
+    <div style="margin-top:14px"><button class="v-chip" id="vMute" type="button">🔊 Voice: ON</button></div>
+    <form class="v-form" id="vForm"><input id="vText" type="text" placeholder="…or type a question here" autocomplete="off"><button class="btn red" type="submit">Ask</button></form>
+    <div class="v-log" id="vLog"></div>
+    <p class="v-note">Works best in Chrome on Android or PC, with mic permission allowed. No voice in your browser? Type instead — the agent still speaks its answers. Answers come from the same AI brain as the site assistant.</p>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="kicker">Why this one</div>
+  <h2 class="sec" style="font-size:clamp(28px,4vw,44px)">The hardest agent to build well</h2>
+  <div class="count-grid">
+    <div class="cnt"><h3>🎧 Real-time conversation</h3><p>It listens, understands, thinks and speaks in one live flow — and stops the moment you interrupt. Chat is easy; natural voice is not.</p></div>
+    <div class="cnt"><h3>🧠 Trained on a real business</h3><p>It answers from real facts — services, prices, projects — not generic small talk. Swap in any client&rsquo;s business and it becomes their receptionist.</p></div>
+    <div class="cnt"><h3>📞 Built to win customers</h3><p>Every answer moves the caller somewhere useful: a price, a case study, or a quote. That is what businesses actually pay for.</p></div>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="kicker">The market, in numbers</div>
+  <h2 class="sec" style="font-size:clamp(28px,4vw,44px)">Why voice, why now</h2>
+  <div class="count-grid">
+    <div class="cnt"><h3 style="font-size:34px">#1</h3><p><b style="color:var(--txt)">“AI receptionist” is the most-searched AI business service of 2026</b> — about 450,000 searches a month in the US alone, up 12,400% in a year (Rising Trends, 2026).</p></div>
+    <div class="cnt"><h3 style="font-size:34px">62%</h3><p><b style="color:var(--txt)">of small-business calls go unanswered</b> — every missed call is a customer lost to whoever picks up first (411 Locals call study).</p></div>
+    <div class="cnt"><h3 style="font-size:34px">$4.64B</h3><p><b style="color:var(--txt)">virtual receptionist market in 2026</b>, heading to about $9B by 2033 — agencies charge $3,500–$7,000 to build one, plus monthly retainers.</p></div>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="cta">
+    <h2>Want this answering <span class="grad">your</span> business&rsquo;s calls?</h2>
+    <p>I build voice agents as part of my AI agent service — trained on your services, your prices and your FAQs, connected to your WhatsApp. Packages from $120; voice builds quoted per business after a free chat.</p>
+    <p style="margin-top:18px"><a class="btn wa" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20voice%20agent%20for%20my%20business." target="_blank" rel="noopener">Start on WhatsApp</a> <a class="btn ghost" href="/agents" style="margin-left:10px">See all 16 agents</a></p>
+  </div>
+</section>
+<script>
+(function(){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  var mic=document.getElementById('vMic'),statusEl=document.getElementById('vStatus'),log=document.getElementById('vLog'),
+      form=document.getElementById('vForm'),input=document.getElementById('vText'),mute=document.getElementById('vMute');
+  if(!mic) return;
+  var voiceOn=true,listening=false,recog=null,hist=[];
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function fmt(s){var t=esc(s);t=t.replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>');t=t.replace(/(https?:\/\/[^\s<]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>');return t.replace(/\n/g,'<br>');}
+  function plain(html){var d=document.createElement('div');d.innerHTML=html;return (d.textContent||'').replace(/\s+/g,' ').trim();}
+  function bubble(html,who){var d=document.createElement('div');d.className='v-msg '+who;d.innerHTML=html;log.appendChild(d);log.scrollTop=log.scrollHeight;return d;}
+  function setStatus(t){statusEl.textContent=t;}
+  var VRULES=[
+   [/price|cost|how much|charge/, 'Here are Hamza\'s starting prices. Business websites from $80. AI agents from $120. AI video ads from $45. And web app MVPs from $95. Every project gets a fixed quote in writing before it starts. Would you like a quote? Just say: get a quote.'],
+   [/voice agent|receptionist|what can you do|what do you do/, 'I am a voice AI receptionist — the flagship agent Hamza builds for businesses. I listen, answer questions out loud, and point customers to the next step. For a business, an agent like me answers 24/7 and never misses a customer. Voice agents are the most in-demand agents of 2026, and Hamza builds them as part of his AI agent service, with packages from $120.'],
+   [/whats ?app/, 'Hamza built a WhatsApp health triage bot for VisionDX Mega. Patients send voice notes in Urdu, and the bot triages them, checks danger symptoms like chest pain and breathing trouble, and offers the nearest clinic. You can read the real conversation on the VisionDX case study page.'],
+   [/website/, 'Business websites start at $80, and most are live within 3 to 7 days. They are mobile-first, with a WhatsApp button and a contact form built in. Shall I take your enquiry? Say: get a quote.'],
+   [/video/, 'AI video ads start at $45. That covers the script, the scenes, captions and your brand styling — ready for Reels, TikTok and Shorts.'],
+   [/book|appointment|quote|start|order|hire/, 'Let us start your enquiry. Tap Get a quote under the Ask my AI button at the bottom of any page, answer 4 quick questions, and your enquiry lands on Hamza\'s WhatsApp, ready for a fixed quote. Or message him directly on WhatsApp: plus 92 305 2353337.'],
+   [/\bwho\b|hamza|about you/, 'Muhammad Hamza is a Computer Science student at IST Islamabad, and the founder of DevTech Labs. He builds websites, AI agents and apps, and he was a Top 12 finalist at Google AI Seekho 2026. I am his flagship demo — a voice agent you can talk to.'],
+   [/project|portfolio|built|agents/, 'Hamza has 15 live projects — including VisionDX Mega, satellite water monitoring, a sign language translator, and an Android game with 200 stages — and 16 agents showcased on the agents page. This voice agent is the flagship.'],
+   [/\b(hello|hi|hey|salam|assalam)\b/, 'Hello! I am Hamza\'s voice receptionist. Ask me about prices, AI agents, websites, or his WhatsApp bot — and I will answer out loud.'],
+   [/thank/, 'You are very welcome. If you would like your own voice agent like me, tap Get a quote, or WhatsApp Hamza any time.']
+  ];
+  var VDEF='I can talk about Hamza\'s prices, AI agents, websites, video ads and projects. Try asking: what are your prices? Or say: get a quote.';
+  function localBrain(q){var s=' '+q.toLowerCase()+' ';for(var i=0;i<VRULES.length;i++){if(VRULES[i][0].test(s))return VRULES[i][1];}return VDEF;}
+  function brain(q){
+    var ctrl=('AbortController' in window)?new AbortController():null;
+    var to=ctrl?setTimeout(function(){ctrl.abort();},12000):null;
+    return fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},signal:ctrl?ctrl.signal:undefined,body:JSON.stringify({message:q,history:hist})})
+     .then(function(r){if(to)clearTimeout(to);if(!r.ok)throw new Error('x');return r.json();})
+     .then(function(j){if(!j||!j.reply)throw new Error('x');hist.push({role:'user',text:q});hist.push({role:'model',text:j.reply});if(hist.length>12)hist=hist.slice(-12);return j.reply;})
+     .catch(function(){if(to)clearTimeout(to);return localBrain(q);});
+  }
+  function speak(text){
+    if(!voiceOn||!('speechSynthesis' in window))return;
+    window.speechSynthesis.cancel();
+    var u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=1.02;u.pitch=1;
+    var vs=window.speechSynthesis.getVoices();
+    for(var i=0;i<vs.length;i++){if(/^en/i.test(vs[i].lang)){u.voice=vs[i];if(/US/i.test(vs[i].lang))break;}}
+    u.onend=function(){setStatus('Tap the mic and ask me something else.');};
+    u.onerror=function(){setStatus('Tap the mic and ask me something else.');};
+    setStatus('Speaking… tap the mic to interrupt.');
+    window.speechSynthesis.speak(u);
+  }
+  function ask(q){
+    if(!q)return;
+    bubble(esc(q),'user'); setStatus('Thinking…');
+    brain(q).then(function(ans){ var h=fmt(ans); bubble(h,'bot'); speak(plain(h)); });
+  }
+  function startListen(){
+    if(listening&&recog){recog.stop();return;}
+    if(window.speechSynthesis)window.speechSynthesis.cancel();
+    if(!SR){setStatus('Voice input is not supported in this browser. Type your question below — I will still speak my answer.');input.focus();return;}
+    recog=new SR();recog.lang='en-US';recog.interimResults=true;recog.continuous=false;
+    recog.onstart=function(){listening=true;mic.classList.add('on');setStatus('Listening… speak now.');};
+    recog.onresult=function(e){var fin='',inter='';for(var i=e.resultIndex;i<e.results.length;i++){if(e.results[i].isFinal)fin+=e.results[i][0].transcript;else inter+=e.results[i][0].transcript;}if(inter)setStatus('Hearing: '+inter);if(fin){ask(fin.trim());}};
+    recog.onerror=function(e){if(e.error==='not-allowed'){setStatus('The mic is blocked. Please allow microphone access — or type your question below.');}else if(e.error!=='aborted'){setStatus('I did not catch that. Tap the mic and try again — or type below.');}};
+    recog.onend=function(){listening=false;mic.classList.remove('on');};
+    try{recog.start();}catch(e){}
+  }
+  mic.addEventListener('click',function(){ if(window.speechSynthesis&&window.speechSynthesis.speaking){window.speechSynthesis.cancel();setStatus('Tap the mic and ask me something.');return;} startListen(); });
+  form.addEventListener('submit',function(e){e.preventDefault();var v=input.value.trim();if(!v)return;input.value='';ask(v);});
+  document.querySelectorAll('.v-chip').forEach(function(b){ if(b.id==='vMute')return; b.addEventListener('click',function(){ask(b.dataset.q||b.textContent);}); });
+  mute.addEventListener('click',function(){voiceOn=!voiceOn;mute.textContent=voiceOn?'🔊 Voice: ON':'🔇 Voice: OFF';if(!voiceOn&&window.speechSynthesis)window.speechSynthesis.cancel();if(voiceOn)setStatus('Voice on. Tap the mic and talk to me.');});
+  if('speechSynthesis' in window){window.speechSynthesis.getVoices();}
+  if(!SR){setStatus('This browser cannot hear voice (try Chrome). Type a question below — I will still speak my answers.');}
+})();
+</script>
+<footer class="site">
+  <div class="cta-band">
+    <h2>Let&rsquo;s build something that brings you customers.</h2>
+    <p>Tell me about your business in one WhatsApp message. You get a fixed quote in writing &mdash; no pressure, no hidden fees.</p>
+    <a class="btn wa" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener">Start a project on WhatsApp</a>
+    <a class="btn ghost" href="/contact" style="margin-left:10px">Or use the contact form</a>
+  </div>
+  <div class="foot-grid">
+    <div>
+      <a href="/" class="logo" style="margin-bottom:12px">HAMZA<span>.</span></a>
+      <p>DevTech Labs &mdash; websites &amp; AI agents for businesses, built by Muhammad Hamza, CS student at IST Islamabad and national hackathon finalist.</p>
+      <p style="margin-top:10px"><a href="https://github.com/hamza0312615" target="_blank" rel="noopener" style="display:inline;padding:0">GitHub</a> &middot; <a href="https://www.linkedin.com/in/muhammad-hamza-55368a3b4" target="_blank" rel="noopener" style="display:inline;padding:0">LinkedIn</a> &middot; <a href="https://www.fiverr.com/hamza61699" target="_blank" rel="noopener" style="display:inline;padding:0">Fiverr</a></p>
+    </div>
+    <div><h4>Pages</h4>
+      <a href="/">Home</a><a href="/ai-agents">AI Agents Portfolio</a><a href="/agents">All 16 Agents</a><a href="/voice-agent">Voice Agent ⭐</a><a href="/services">Services</a><a href="/work">Work</a><a href="/pricing">Pricing</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/free-website-check">Free Website Check</a>
+    </div>
+    <div><h4>Services</h4>
+      <a href="/services/ai-agents">AI Agents</a><a href="/services/business-websites">Business Websites</a><a href="/services/web-apps">Web Apps &amp; AI Tools</a><a href="/services/ai-video-ads">AI Video Ads</a><a href="/pricing">Packages &amp; Pricing</a>
+    </div>
+    <div><h4>Contact</h4>
+      <a href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener">WhatsApp: +92 305 2353337</a>
+      <a href="mailto:hamzarajpoot0312615@gmail.com">hamzarajpoot0312615@gmail.com</a>
+      <a href="/contact">Contact form</a>
+      <p style="margin-top:8px">Islamabad, Pakistan &middot; working worldwide, remotely</p>
+    </div>
+  </div>
+  <div class="foot-bottom">&copy; 2026 Muhammad Hamza &mdash; DevTech Labs. Every project on this site is real and live.</div>
+</footer>
+<button id="aiFab" type="button" aria-label="Open Hamza's AI assistant" aria-expanded="false">🤖<span>Ask my AI</span></button>
+<div id="aiChat" role="dialog" aria-label="Hamza's AI assistant" hidden>
+  <div class="ai-head">
+    <div><div class="ai-name">Hamza&rsquo;s AI Assistant</div><div class="ai-status"><i></i> Online &mdash; instant answers</div></div>
+    <button id="aiClose" type="button" aria-label="Close assistant">&times;</button>
+  </div>
+  <div class="ai-msgs" id="aiMsgs"></div>
+  <div class="ai-chips" id="aiChips">
+    <button type="button" data-flow="quote">📋 Get a quote</button>
+    <button type="button" data-q="What are your prices?">💰 Prices</button>
+    <button type="button" data-q="What can an AI agent do for my business?">🤖 AI agents</button>
+    <button type="button" data-q="Tell me about your WhatsApp bot">💬 WhatsApp bot</button>
+    <button type="button" data-q="Show me your projects">🚀 Projects</button>
+    <button type="button" data-q="How do I start a project?">✅ Start a project</button>
+  </div>
+  <form class="ai-input" id="aiForm">
+    <input id="aiText" type="text" placeholder="Ask about services, prices, projects…" autocomplete="off" maxlength="300">
+    <button type="submit" aria-label="Send">➤</button>
+  </form>
+  <div class="ai-foot">Instant answers about Hamza&rsquo;s work &mdash; for a real project, <a href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener">message him on WhatsApp</a>.<span id="aiMode"></span></div>
+</div>
+<a class="wafloat" href="https://wa.me/923052353337?text=Hi%20Hamza%2C%20I%20want%20a%20website%20%2F%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+<script>document.querySelectorAll('.svc,.cnt,.card,.pkg,.step,.prob,.teaser,.snap').forEach(function(el){el.classList.add('reveal')});</script><script src="/site.js"></script>
+</body>
+</html>
