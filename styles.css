@@ -94,18 +94,6 @@ footer{border-top:1px solid var(--line);padding:22px 4vw;display:flex;justify-co
 @media (max-width:620px){.grid{grid-template-columns:1fr}nav a{margin-left:12px;font-size:10.5px}section{padding:64px 5vw}h1.mega{font-size:13.5vw}.hello{font-size:16px}h2.name2{font-size:8.2vw}.stat .num{font-size:32px}.card .no{font-size:24px}.hero{padding-top:104px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 
-.term{background:#0b0e14;border:1px solid #232833;border-radius:12px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.5);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;max-width:920px;margin-top:28px}
-.term-bar{display:flex;align-items:center;gap:8px;background:#12151d;padding:11px 14px;border-bottom:1px solid #232833}
-.term .dot{width:11px;height:11px;border-radius:50%}
-.term .dot.r{background:#ff5f57}.term .dot.y{background:#febc2e}.term .dot.g{background:#28c840}
-.term-title{color:#8b93a5;font-size:12px;margin-left:6px;letter-spacing:.5px}
-.term-live{margin-left:auto;color:#3ddc84;font-size:11px;font-weight:700;letter-spacing:1.5px}
-.term-body{padding:18px 20px;font-size:13.5px;line-height:1.95;color:#c9d4e3;min-height:238px;white-space:pre-wrap;word-break:break-word}
-.term-body .ok{color:#3ddc84;font-weight:700}
-.term-body .cmd{color:#fff;font-weight:700}
-.term-body .dim{color:#7c8698}
-.tcursor{display:inline-block;width:8px;height:15px;background:#ff5a48;vertical-align:-2px;margin-left:2px;animation:tblink 1s steps(1) infinite}
-@keyframes tblink{50%{opacity:0}}
 .btn.wa{background:linear-gradient(135deg,#1faa55,#25d366);color:#fff;border-color:transparent;box-shadow:0 8px 24px rgba(37,211,102,.3)}
 .btn.wa:hover{background:linear-gradient(135deg,#23bd5f,#2be073);transform:translateY(-2px)}
 .cform{max-width:640px;margin:34px auto 0;text-align:left;display:flex;flex-direction:column;gap:12px}
@@ -120,7 +108,7 @@ footer{border-top:1px solid var(--line);padding:22px 4vw;display:flex;justify-co
 .wafloat:hover{transform:scale(1.08)}
 .more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 @media (max-width:980px){.more-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:620px){.cform .frow{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr}.term-body{font-size:12.5px;min-height:250px}}
+@media (max-width:620px){.cform .frow{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr}}
 
 .sales-h1{font-family:'Archivo Black',sans-serif;font-size:clamp(36px,4.9vw,66px);line-height:1.06;letter-spacing:.5px;margin:16px 0 6px;max-width:640px}
 .sales-h1 .grad{background:linear-gradient(92deg,#ff4038,#ff5f3d,#ff8a4d);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -277,7 +265,7 @@ details:hover{border-color:#d0785644}
 .ai-input button{background:linear-gradient(92deg,#ff4038,#ff8a4d);border:none;color:#fff;border-radius:10px;width:44px;font-size:16px;cursor:pointer;flex:none}
 .ai-foot{padding:8px 14px 12px;font-size:12px;color:var(--mut);line-height:1.5}
 .ai-foot a{color:#ff8a4d;font-weight:700}
-@media (max-width:620px){#aiFab span{display:none}#aiFab{padding:14px 16px}}
+@media (max-width:620px){#aiFab{padding:12px 18px;font-size:13.5px}}
 
 /* ===== v5.3.1 WhatsApp triage transcript ===== */
 .wa-chat{max-width:560px;margin-top:26px;border:1px solid #33333f;border-radius:18px;overflow:hidden;background:#0b141a;box-shadow:0 24px 60px rgba(0,0,0,.5)}
@@ -297,7 +285,7 @@ details:hover{border-color:#d0785644}
 .ai-opts button:hover{background:#d0785633}
 
 /* ===== v5.5 voice agent demo ===== */
-.voice-box{max-width:640px;margin-top:26px;background:var(--card);border:1px solid #33333f;border-radius:22px;padding:28px 24px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.voice-box{max-width:640px;margin-top:26px;background:var(--panel);border:1px solid #33333f;border-radius:22px;padding:28px 24px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.35)}
 .voice-status{color:var(--mut);font-size:15px;min-height:44px;line-height:1.5}
 .v-mic{width:92px;height:92px;border-radius:50%;border:none;background:linear-gradient(135deg,#ff3b30,#ff7a45);font-size:40px;cursor:pointer;margin:14px auto;display:block;box-shadow:0 14px 34px rgba(255,80,60,.35);transition:transform .15s}
 .v-mic:hover{transform:scale(1.05)}
@@ -366,6 +354,40 @@ header.site nav a::after{background:var(--red2)}
 ::selection{background:var(--red)}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline-color:var(--red2)}
 .wafloat{background:#1f9d55;box-shadow:0 10px 24px rgba(0,0,0,.45)}
-.term{box-shadow:0 18px 44px rgba(0,0,0,.45)}
 .svc:hover,.cnt:hover,.teaser:hover,.prob:hover{border-color:#4d463c}
 .btn.red:hover,.btn.wa:hover{box-shadow:none}
+
+/* ===== v7: real-screenshot presentation (uniform 16:10 captures) ===== */
+.card .shot{border-bottom:1px solid var(--line)}
+.card .shot::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.05),inset 0 -34px 38px -30px rgba(0,0,0,.5)}
+.card .shot img{background:#0c0b0a}
+.case-shot{box-shadow:0 18px 44px rgba(0,0,0,.35)}
+.case-shot img{aspect-ratio:16/10;object-fit:cover;object-position:top center}
+
+/* ===== v8 REFINEMENT — 21 Nov 2026: missing component styles, warm widget tones, pricing tiers ===== */
+.cta-band h2{font-family:Inter,system-ui,sans-serif;font-weight:800;letter-spacing:-.02em}
+.chip{background:#1b1917}
+#aiChat{background:#171310;border-color:#35302a}
+.ai-msg.bot{background:#221c17}
+.ai-input input{background:#100d0b}
+.voice-box{border-color:#35302a}
+.v-form input{background:#171310;border-color:#35302a}
+.v-msg.bot{background:#221c17}
+.v-chip{border-color:#35302a}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.cbtns{display:flex;flex-direction:column;gap:12px}
+.cbtns .btn{text-align:center}
+.fine{color:var(--mut);font-size:13px;line-height:1.65;margin-top:14px}
+.fine a{color:var(--red2)}
+#cform,#aform{display:flex;flex-direction:column;gap:12px}
+#cform label,#aform label{display:block;font-weight:600;font-size:13.5px;color:var(--txt)}
+#cform input,#cform textarea,#aform input,#aform textarea{display:block;width:100%;margin-top:6px;background:#171310;border:1px solid var(--line);color:var(--txt);padding:13px 15px;font:inherit;font-size:14.5px;font-weight:400;border-radius:8px}
+#cform textarea{resize:vertical;min-height:120px}
+#cform input:focus,#cform textarea:focus,#aform input:focus,#aform textarea:focus{border-color:var(--red2);outline:none}
+.pkg .tier{padding:11px 0;border-top:1px solid var(--line)}
+.pkg .tier:first-of-type{border-top:none;padding-top:2px}
+.pkg .tier b{display:block;font-size:15.5px;color:var(--txt)}
+.pkg .tier span{display:block;color:var(--mut);font-size:13.5px;line-height:1.55;margin-top:2px}
+.steps3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:980px){.contact-grid{grid-template-columns:1fr}.steps3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.steps3{grid-template-columns:1fr}}
